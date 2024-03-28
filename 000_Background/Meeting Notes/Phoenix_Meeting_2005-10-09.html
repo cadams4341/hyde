@@ -1,0 +1,182 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>2005-10-09 Meeting Notes</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H3><CENTER><FONT COLOR="#009900">Phoenix Ambulatory Blood Pressure
+Monitor Project<BR>
+<U>10/9/2005 Meeting Notes</U></FONT></CENTER></H3>
+
+<H3><BR>
+Attendees</H3>
+
+<UL>
+  <LI>Chris Adams
+  <LI>Michael Balow
+  <LI>Larry Beatty
+  <LI>John Gould
+  <LI>El Nolley
+  <LI>Dave Skramstad
+  <LI>Gerry Werth<BR>
+</UL>
+
+<H3>&nbsp;</H3>
+
+<H3>Discussion</H3>
+
+<P>Michael Balow of Freescale joined us.  Larry looking for software
+that can emulate a microprocessor or micro-controller, for test
+driven design and automated testing.  Mike said he can provide
+it, any of 8 bit, 16 bit, or 32 bit processors. Also, he can provide
+emulators. </P>
+
+<P>Dave Skramstad has built a piezo film blood pressure sensor,
+Dan Glumac and Mary Jo Rawson are building another two.  Now,
+he is looking at using Labview to measure the time using cross
+correlation techniques where Labview is a virtual instrument for
+realtime digital signal processing.  John suggested going to National
+Instrument's website and seeing their online tutorials and manual.
+ John Gould suggested several contacts for people who are knowledgeable
+of Labview.  By next meeting he hopes to investigate Labview.</P>
+
+<P>Gerry is working on the minitopics on Clinical information
+systems. El will send the open source copyright text to use on
+his presentations so that they can be posted on the Phoenix website.</P>
+
+<P>John has been working with Mike on the 3-D Star accelerometer.
+ Then, he will have a board for testing. He is changing the software.
+He wants to work with Gerrmaine to determine sampling rates, output
+information, and perhaps activity, and especially wants to determine
+the precision needed. </P>
+
+<P>Chris Adams led us in a requirements discussion.  He talked
+about the subsystem requirements, especially the Diary Subsystem.
+ His has a question for Gerry: we envision two software packages:
+1) physiologists work on who populations with all data ever collected,
+exporting data that meet profiles structured by subject (e.g.
+patients, healthy subjects) characteristics.  2) Do clinical care
+support systems span patient support and decision support?  Gerry
+says it is a decision support system for physicians caring for
+patients, so that they can identify the characteristics, with
+different modes, eg. population characteristics, compared with
+individual patients that help0 the clinicial and patient make
+a good decision in real time.  We may have overlap of some functions
+across the interface between the Phoenix monitor and the clinical
+care support system. </P>
+
+<P>We discussed the functions of signal, amplifier, A/D, analysis
+(e.g. labview), perhaps the interface between the local and remote
+subsystems are the A/D vs Analysis.</P>
+
+<P>The data might look like:<BR>
+T, A1, A2, x, y, z,<BR>
+and then repeat,<BR>
+where T is time, A1, A2 are amplitudes,  and<BR>
+x,y,z are the 3 d accelerometers coordinates.</P>
+
+<P>Gerry presented on Clinical Information Systems, &quot;How
+is it Different?&quot;  1) Mobile workflow, 2) patient centered,
+3) clinician-centered.  </P>
+
+<P>Traditional business workflow is often stationary, while clinician
+workflow is mobile.  For example, there is no time to login. 
+</P>
+
+<P>Clinician workflow is mobile: local mobility: moving form room
+to room, patient to patient.  Extended Mobility: physicians move
+from clinic to hospital and back. </P>
+
+<P>Interacting with an informaion fountain: clinicians interact
+with a clinical computer like people interact with a drinking
+fountain: Walk up, Drink Briefly, and Leave. </P>
+
+<P>Physicians were early adopters of telephones, they aren't adopting
+computers because it doesn't fit the workflow. </P>
+
+<P>Patient-Centered Clinical Workflow:<BR>
+* Schedule appointments<BR>
+  - leave time for Same-Day Urgent visits.<BR>
+* Appointment Reminder<BR>
+* Check-in<BR>
+* Pre-Process<BR>
+  - Weight &amp; Height, Vital Signs, ROS (review of systems),
+UA (urine analysis &amp; routine bloodwork), rooming<BR>
+* Clinician Encounter<BR>
+* Post-Process<BR>
+  - Lab, X-rayl, Shots, Handouts, Re-Rooming &amp; Re-Encounter<BR>
+* Check-out<BR>
+* In-Practice flow-up scheduling: appointments &amp; phone calls.<BR>
+* Outside referral and prescriptions.</P>
+
+<P>Opportunities for change are integrating: medical records,
+patient historyy, lab results..</P>
+
+<P>Clinician-Centered Workflow:<BR>
+* Today's clnic patients<BR>
+- Morning /afternoon/Evening ..<BR>
+- Avoid clusters of complicated patients who will likely need
+more than average time: multiple chronic illneses, need interpreter,
+...<BR>
+* Curent Hospital Patients, by hospital and unit<BR>
+* Recent Patients, <BR>
+  - Pending dictation and to do<BR>
+  - Pending Resutls aned consults<BR>
+* Curent Results<BR>
+ - by urgency<BR>
+ - by patient</P>
+
+<P>Work Smarter, Not Harder<BR>
+* Learn from Experience<BR>
+- Which clinicans work here<BR>
+- Which inrformation is most used<BR>
+* Pre-Fetch Information for each clinician<BR>
+- Patients of Interest: <BR>
+- Results of Interest. <BR>
+* Track Patients Status while in Clinic <BR>
+- Coordinate among physician and other staff<BR>
+* Coordinate Flow-up<BR>
+- In practice flow-up<BR>
+- External Referrals and Prescriptions</P>
+
+<P>Issue: <BR>
+- Doing what hasn't been able to do well before: tracking results
+&amp; referrals coming back to the clinician, like lab results.
+ It never gets back to the physician in time to be useful unless
+the patient carries it. </P>
+
+<H3>&nbsp;</H3>
+
+<H3>&nbsp;</H3>
+
+<H3>About This Page</H3>
+
+<P><FONT FACE="Times New Roman">This page is maintained by <A
+HREF="mailto:e.nolley@ieee.org?subject=Phoenix_meeting_2004-06-27">Ellis
+S Nolley</A>. It was last updated on 10 December 2005.</FONT></P>
+
+<P><FONT FACE="Times New Roman">The author(s) provide this information
+as a public service, and agree to place any novel and useful inventions
+disclosed herein into the public domain. They are not aware that
+this material infringes on the patent, copyright, trademark or
+trade secret rights of others. However, there is a possibility
+that such infringement may exist without their knowledge. The
+user assumes all responsibility for determining if this information
+infringes on the intellectual property rights of others before
+applying it to products or services.</FONT></P>
+
+<P><FONT FACE="Times New Roman">Copyright (C) 2005 Ellis S. Nolley.
+Copying and distribution of this page is permitted in any medium,
+provided this notice is preserved.</FONT></P>
+
+<BLOCKQUOTE>
+  <P><CENTER><A HREF="Phoenix_Meeting_Archive.htm"><FONT FACE="Times New Roman">Back
+  to the Meeting Archive Page</FONT></A></CENTER></P></BLOCKQUOTE>
+
+<P><CENTER><A HREF="../../index.htm"><FONT FACE="Times New Roman">Back
+to the Phoenix Home Page</FONT></A><BR>
+</CENTER>
+
+</BODY>
+</HTML>

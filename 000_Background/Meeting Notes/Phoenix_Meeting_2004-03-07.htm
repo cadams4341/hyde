@@ -1,0 +1,130 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>2004-03-07 Meeting Notes</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<BLOCKQUOTE>
+  <H2><CENTER><FONT COLOR="#009900">Phoenix Ambulatory Blood Pressure
+  Monitor Project<BR>
+  <U>3/7/2004 Meeting Notes</U></FONT></CENTER></H2>
+  <P>&nbsp;</P>
+  <P><B>Attendees</B><BR>
+  Bob Schlentz<BR>
+  El Nolley<BR>
+  Jay Rabel, jrabel@emlabs.com,<BR>
+  Wade Peterson<BR>
+  Srilakshimi Bathina<BR>
+  Srikanta Kolluru</P>
+  <P>&nbsp;</P>
+  <P><B>Discussion: </B><BR>
+  Wade Peterson<BR>
+  Two approaches, pressure cuff &amp; blood velocimeter. <BR>
+  Cited Blood Pressure Measurement, from 1999 CRC Press, LLC <BR>
+  Auscultatory: blood pressure cuff, increases blood pressure,
+  reduces pressure until some blood gets through (systolic pressure),
+  then reduce until the sound ceases (diastolic pressure). From
+  artery partially open to completely open, highest pressure to
+  lowest pressure. <BR>
+  Oscillometric Method:</P>
+  <P>So, Wade has been looking at low power approaches. Piezo-electric
+  film: 90 volts &amp; very low current. Piezofoil from Amp/MSI.
+  Navy uses for passive sonor, piezo-cable typically used for high
+  frequency 10's of kHz, but what about low frequency. So he designed
+  a low pass filter. 1 - 12 Hz. Bob Schlentz says that for long
+  time period, 1/10 Hz. The circuit will use a 10 Ohm , 33 dB at
+  the 50 Hz point. TLB 2244 at $1.46 in quad pack. Want low current
+  amps at low voltages. If under 14 mA, can use AA batteries. Maybe
+  200 uA total. Through Express PCB, about $50 to produce the board.
+  To put in into the Public Domain, uses Richard Stallman's Copyleft,
+  it allows anyone to use or disseminate it as long as they retain
+  it, &quot;Copy and Distribution is preserved in any medium, as
+  long as the Copyleft statement is preserved.&quot; The copyright
+  is an expression of an idea, does not protect the underlying
+  design. To protect the design, use a patent. To place the patent
+  in the public domain, either give it away or use a Patent Invention
+  and place it in the public domain.</P>
+  <P>Using a DSP uses a lot of power and decreases battery life.
+  Alternatively, just collect data and post-process.</P>
+  <P>Wade suggests that we make a prototype, get two boards built,
+  about $60 per board, total ~$120,</P>
+  <P>Bob suggests using A/D to flash memory, USB/RS422 to main
+  instrument, which accepts , parses the data packet of date,name,
+  time, info transferred into people readable information at frequent
+  intervals (1/sec), into a memory in main instrument, process
+  data and show an envelop of the peak of pressure and minimum
+  for the time, process the envelop and produce the CHAD for use
+  by the Chronobiology lab. Then, we need to calibrate, measure
+  actual blood pressure vs our measurement. If the sensor were
+  oscillometric, must have that sort of measurement, the cuff measurement
+  and our distal peripheral measurement, a display/report that
+  determines the match to the cuff measurement, and repeat the
+  calibration points frequently to show that the ambulatory instrument
+  hasn't been damaged or wanders. Now, can we get any new information
+  that would be useful for Chronobiology.</P>
+  <P>Wade says Compact Flash Card typically uses 300 mA, $20-$30
+  each. USB ~ $20. Ethernet ~ $30. Alternatively, just remove the
+  card and transfer it to the collector unit. However, using the
+  card pushes price so high it can't be exchanged for &quot;a bushel
+  of yams.&quot;</P>
+  <P>Bob suggests that we collect raw data and process it to blood
+  pressure measurements in central non-worn unit.</P>
+  <P>Wade has reviewed Pulse Velocity patents and simulated them
+  to determine their components. Found that they are putting a
+  DC current and reading . Wade has drafted two project proposals.
+  Piezo-film sensor - a blood flow sensor with deliverables: evaluate
+  the completed sensor with Public Invention Release and written
+  report. Second is Pulse deliverables, IR parts, layout, BOM,
+  evaluated completed sensor, PIR, and written report. Another
+  project: movement sensor: only take measurements when the body
+  is steady. Bob suggests that 2 people per project, total of 13
+  people.</P>
+  <P>Bob suggests that when we use any polyester film (piezo-electric
+  films are such), what are the guidelines in using them on people.</P>
+  <P>Get a website. Have it globally available. Wade will start,
+  El will get an IEEE website for the Phoenix group.</P>
+  <P>Diabetes, 0.01 mm per mm rise in blood pressure, small but
+  useful for a blood pressure gain measurement for capacitance,
+  and gain afterwards. Eg. the arterial wall is a dialectric material.
+  How big a signal, how much motion, for blood pressure &amp; vessel
+  measurement</P>
+  <P>Another measurement: How to measure the relative position
+  of the senor wrt to the top of the heart. Perhaps use a distance
+  transducer.</P>
+  <P>Another idea: How to make blood flow measurements using the
+  time to measure the wave passage. Then, measure the forward and
+  backward/retrograde wave,</P>
+  <P>Bob: Would like to have this project done in 6 weeks.</P>
+  <P>Wade: will start the website and begin the design of the board.
+  Will send El the projects. We need a project list &amp; a bibliography,
+  a hit counter.</P>
+  <P>El: get a website<BR>
+  Bob: Present his results<BR>
+  Next meeting 3/21 2:30p,<BR>
+  </P>
+  <P>&nbsp;</P>
+  <H3>About This Page</H3>
+  <P><FONT FACE="Times New Roman">This page is maintained by <A
+  HREF="mailto:e.nolley@ieee.org?subject=Phoenix_meeting_2004-03-07">Ellis
+  S Nolley</A>. It was last updated on 28 October 2004.</FONT></P>
+  <P><FONT FACE="Times New Roman">The author(s) provide this information
+  as a public service, and agree to place any novel and useful
+  inventions disclosed herein into the public domain. They are
+  not aware that this material infringes on the patent, copyright,
+  trademark or trade secret rights of others. However, there is
+  a possibility that such infringement may exist without their
+  knowledge. The user assumes all responsibility for determining
+  if this information infringes on the intellectual property rights
+  of others before applying it to products or services.</FONT></P>
+  <P><FONT FACE="Times New Roman">Copyright (C) 2004 Ellis S. Nolley.
+  Copying and distribution of this page is permitted in any medium,
+  provided this notice is preserved.</FONT></P>
+  <P><CENTER><A HREF="Phoenix_Meeting_Archive.htm"><FONT FACE="Times New Roman">Back
+  to the Meeting Archive Page</FONT></A></CENTER></P>
+  <P><CENTER><A HREF="../../index.htm"><FONT FACE="Times New Roman">Back
+  to the Phoenix Home Page</FONT></A></CENTER>
+</BLOCKQUOTE>
+
+</BODY>
+</HTML>

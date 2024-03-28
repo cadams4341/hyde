@@ -1,0 +1,511 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html templateref="file://///Cotton-picker/tabletpcshare/Phoenix/SphygmochronProjectWebSite/NVu/PhoenixNVuTemplate2.mzt">
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta content="text/html; charset=ISO-8859-15" http-equiv="content-type">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <title>Sphygmochron Spreadsheet version 3 User Guide</title>
+</head>
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="Section1">
+<blockquote style="margin-top: 5pt; margin-bottom: 5pt;">
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h2 style="text-align: center;">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <center><st1:city><st1:place><span style="color: rgb(0, 153, 0);"><font color="#009900">Phoenix</font></span></st1:place></st1:city><span style="color: rgb(0, 153, 0);"><font color="#009900"> Ambulatory Blood Pressure Monitor Project<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <u>Sub-project:&nbsp;</u></font></span><span style="color: rgb(0, 153, 0); text-decoration: underline;" editable="true" id="SubprojectName">Sphygmochron Spreadsheet User Guide</span></center>
+
+
+
+
+
+
+
+
+
+
+
+
+  </h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3><a class="mozTocH3" name="mozTocId244142"></a>Project Description</h3>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  <p>The purpose of this page is to serve as a staging area for writing a User Guide for the Sphygmochron Spreadsheet.</p>
+  <p>At this time, all that's here is the very beginning of the User
+Guide that I envision we'll eventually have. &nbsp;I expect that we'll
+(eventually) write all the text here in a style accessible to lay
+people.</p>
+  <h3><a class="mozTocH3" name="mozTocId449436"></a>Project Deliverables</h3>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  <ul id="mozToc">
+
+
+
+
+
+
+<!--mozToc h3 1-->
+  
+  
+  </ul>
+  <h4>Table of Contents</h4>
+  <h4>Background Information</h4>
+An Excel program to analyze a blood pressure profile can be
+downloaded&nbsp;from our website at: ________________ . The program
+provides a parametric&nbsp;and non-parametric assessment of the data
+for the purposes described in a&nbsp;Healthwatch (URL: _______). <br>
+  <br>
+Parametrically, a two-component model consisting of cosine curves
+with&nbsp;periods of 24 and 12 hours is fitted by least squares to the
+data. The&nbsp;parameters: MESOR (rhythm-adjusted mean), double
+circadian amplitude&nbsp;(extent of change within a day predictable by
+the 24-hour component), and&nbsp;circadian acrophase (measure of timing
+of overall high values recurring&nbsp;each day) are compared with 90%
+prediction limits established from an&nbsp;admittedly interim still to
+be extended database on presumably&nbsp;'clinically' healthy subjects
+of the same gender and similar age (rather&nbsp;than on individuals
+with proved outcome over a complete lifespan, as&nbsp;should eventually
+be the case). <br>
+  <br>
+Non-parametrically, the data are stacked over an idealized 24-hour
+span&nbsp;and the average circadian profile thus obtained is compared
+by computer&nbsp;with the upper time-specified 95% prediction limit of
+healthy peers&nbsp;matched by gender and age, yielding the following
+endpoints: the&nbsp;percentage time elevation (the percentage time the
+average profile is&nbsp;above acceptable time-varying limits), the
+timing of excess (calculated&nbsp;as the center of gravity of the area
+of excess delineated by the profile&nbsp;when it is excessive and the
+upper limit of acceptability itself), and&nbsp;the
+hyperbaric/tachycardic index (a measure of the area of excess
+defined&nbsp;above). <br>
+  <br>
+The program also provides a list of the data, a plot of the
+time&nbsp;course of systolic and diastolic blood pressure and heart
+rate, global&nbsp;and daily mean values and standard deviations
+(calculated from midnight&nbsp;to midnight), global and daily estimates
+of daytime, nighttime and&nbsp;24-hour means and standard deviations as
+well as day-night ratios&nbsp;(calculated over 24 hours from time to
+awakening and/or bedtime), and&nbsp;plots of average circadian systolic
+and diastolic blood pressure and&nbsp;heart rate profiles with their
+respective chronodesmic limits, computed&nbsp;as time-specified 90%
+prediction limits.
+  <h4>Instructions</h4>
+To use the program, the data need to be retrieved from the monitor
+(e.g., the TM-2421 or TM-2430 from A&amp;D) . &nbsp;Two data files must
+be prepared, with a specific column-oriented structure.
+&nbsp;The&nbsp;file containing the data needs to have the suffix "<span style="font-family: Courier New,Courier,monospace;">.pr0</span>". &nbsp;The "setup" file containing control information and patient data must have the suffix "<span style="font-family: Courier New,Courier,monospace;">.s</span>". &nbsp;&nbsp;An illustrative case (<span style="font-family: Courier New,Courier,monospace;">.pr0</span> and <span style="font-family: Courier New,Courier,monospace;">.s</span> files) can also be downloaded.<br>
+  <br>
+Data file format (the <span style="font-family: Courier New,Courier,monospace;">.pr0</span> file):<br>
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;Cols.&nbsp; 1- 5: identification</span><br style="font-family: Courier New,Courier,monospace;">
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;Col.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6: ','</span><br style="font-family: Courier New,Courier,monospace;">
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;Cols.&nbsp; 7-18: date and time of actual data collection as year (4 chars),</span><br style="font-family: Courier New,Courier,monospace;">
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; month, day, hour, and minute (2 chars each)</span><br style="font-family: Courier New,Courier,monospace;">
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;Cols. 19-21: ', ,'</span><br style="font-family: Courier New,Courier,monospace;">
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;Cols. 22-24: value of systolic blood pressure (oscillometric)</span><br style="font-family: Courier New,Courier,monospace;">
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;Cols. 25-29: ',&nbsp;&nbsp; ,'</span><br style="font-family: Courier New,Courier,monospace;">
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;Cols. 30-32: value of diastolic blood pressure (oscillometric)</span><br style="font-family: Courier New,Courier,monospace;">
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;Col.&nbsp;&nbsp;&nbsp;&nbsp; 33: ','</span><br style="font-family: Courier New,Courier,monospace;">
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;Cols. 34-36: value of heart rate</span><br style="font-family: Courier New,Courier,monospace;">
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;Col.&nbsp;&nbsp;&nbsp;&nbsp; 37: ','</span><br style="font-family: Courier New,Courier,monospace;">
+  <br>
+Control and Patient information file (the <span style="font-family: Courier New,Courier,monospace;">.s</span> file):<br>
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;Line&nbsp; 1: Col.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4: '1'</span><br style="font-family: Courier New,Courier,monospace;">
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;Line&nbsp; 2: Cols.&nbsp; 1-10: '24.0'</span><br style="font-family: Courier New,Courier,monospace;">
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Col&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12: '0'</span><br style="font-family: Courier New,Courier,monospace;">
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cols. 13-14: '10'</span><br style="font-family: Courier New,Courier,monospace;">
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cols. 16-20: '0.050'</span><br style="font-family: Courier New,Courier,monospace;">
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;Line&nbsp; 3: Cols.&nbsp; 1-80: Title 'Ambulatory Cardiovascular Monitoring'</span><br style="font-family: Courier New,Courier,monospace;">
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;Line&nbsp; 4: Cols.&nbsp; 1-80: Format to read the values of systolic blood pressure</span><br style="font-family: Courier New,Courier,monospace;">
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+'(6x,6f2.0,3x,f3.0)'</span><br style="font-family: Courier New,Courier,monospace;">
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;Line&nbsp; 5: Cols.&nbsp; 1-80: Format to read the values of diastolic blood pressure</span><br style="font-family: Courier New,Courier,monospace;">
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+'(6x,6f2.0,11x,f3.0)'</span><br style="font-family: Courier New,Courier,monospace;">
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;Line&nbsp; 6: Cols.&nbsp; 1-80: Format to read the values of heart rate</span><br style="font-family: Courier New,Courier,monospace;">
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+'(6x,6f2.0,15x,f3.0)'</span><br style="font-family: Courier New,Courier,monospace;">
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;Line&nbsp; 7: Col.&nbsp;&nbsp;&nbsp;&nbsp; 25: '1'</span><br style="font-family: Courier New,Courier,monospace;">
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;Line&nbsp; 8: Cols.&nbsp; 1- 4: (right-adjusted): number of lines in data (.pr0)</span><br style="font-family: Courier New,Courier,monospace;">
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+file to be analyzed</span><br style="font-family: Courier New,Courier,monospace;">
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;Line&nbsp; 9: Cols.&nbsp; 1-16: Identification</span><br style="font-family: Courier New,Courier,monospace;">
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Col.&nbsp;&nbsp;&nbsp;&nbsp; 17: M for male subject, F for female
+subject,</span><br style="font-family: Courier New,Courier,monospace;">
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+and P for pregnant woman</span><br style="font-family: Courier New,Courier,monospace;">
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cols. 19-20: Age in years (needs to be between 20 and 99)</span><br style="font-family: Courier New,Courier,monospace;">
+  <span style="font-family: Courier New,Courier,monospace;">&nbsp;Line 10: Col.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4: '2' (number of components in model)</span><br style="font-family: Courier New,Courier,monospace;">
+  <br>
+  <br>
+  <h4><a name="Disclaimer"></a>Disclaimer</h4>
+Results depend in part on the reference database, which
+presently&nbsp;consists mostly of Caucasians 20 to 99 years of age.
+Efforts are&nbsp;needed to improve the current reference limits, that
+are intended to replace targets now prevailing for adults irrespective
+of age and gender.<br>
+  <br>
+It must be emphasized that our data base is not<span style="background-color: rgb(255, 255, 153);"> yet</span> checked for the degree to&nbsp;which it is representative of healthy people following their usual daytime activities <span style="background-color: rgb(255, 255, 153);">and schedules</span>,
+and sleeping at night, yet it includes valuable information on the
+anticipated circadian variation in blood pressure and heart rate
+in&nbsp;health. <br>
+  <h4>BIOCOS Project</h4>
+
+
+  <span style="background-color: rgb(255, 255, 153);">The&nbsp;</span><span style="font-weight: bold;">BIOCOS Project</span> (<a href="http://www.msi.umn.edu/%7Ehalberg/">http://www.msi.umn.edu/~halberg/</a>)&nbsp; <span style="background-color: rgb(255, 255, 153);">collects
+blood pressure profiles (time-series blood pressure measurements) from
+volunteers around the world. &nbsp;It focuses on group results as a
+requisite for joint publications, for improving the reference database,
+and for initiating outcome studies which will be indispensable as our
+chronobiological approach becomes more common among physicians and
+at-home users.<br>
+  <br>
+To improve the Reference Database that is built into the Sphygmochron,</span>
+efforts are needed to obtain data on children and on
+healthy&nbsp;people from different ethnic groups, different social
+classes in&nbsp;different geographic locations, and to extend
+longitudinal focus to
+individuals studied until demise monitored around the clock, as
+some&nbsp;individuals now do for decades. Clinically healthy
+volunteers&nbsp;as well as individuals with blood pressure disorders
+are invited
+to&nbsp;participate in the <span style="font-weight: bold;">BIOCOS Project </span>(<a href="http://www.msi.umn.edu/%7Ehalberg/">http://www.msi.umn.edu/~halberg/</a>) by&nbsp; contacting the Halberg Chronobiology Center at&nbsp;<a href="mailto://corne001@umn.edu">corne001@umn.edu</a>.<span style="font-weight: bold;"><br>
+  <br>
+  </span>We encourage people to run their own analyses. A copy of the
+data,&nbsp;preferably with the accompanying Sphygmochron, the proper
+identification&nbsp;and subject information (gender, age, ethnicity,
+health status, any&nbsp;medication, including dose and timing of
+administration, ...) is still&nbsp;requested as a basis for
+participation in the <span style="font-weight: bold;">BIOCOS Project</span> (<a href="http://www.msi.umn.edu/%7Ehalberg/">http://www.msi.umn.edu/~halberg/</a>). <br>
+  <br>
+It is anticipated that those using this program will credit its source
+on&nbsp;this website and will provide batches of time series as these
+accumulate&nbsp;on a quarterly basis to&nbsp;<a href="mailto://corne001@umn.edu">corne001@umn.edu</a>.<br>
+
+
+  
+  
+  <p></p>
+  <h3><font face="Times New Roman">About This Page</font></h3>
+  <p>This page is maintained by <a href="mailto:labeaty@ieee.org?subject=Sphygmochron_Spreadsheet_Project"><span editable="true" id="Name">Larry A. Beaty</span></a>. It was last updated on <span editable="true" id="Day">10 </span>&nbsp;<span editable="true" id="Month">December</span> <span editable="true" id="Year">2006</span>.</p>
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <p>The author(s) provide this information as a public service,
+and agree to place any novel and useful inventions disclosed herein
+into the public domain. They are not aware that this material
+infringes on the patent, copyright, trademark or trade secret
+rights of others. However, there is a possibility that such infringement
+may exist without their knowledge. The user assumes all responsibility
+for determining if this information infringes on the intellectual
+property rights of others before applying it to products or services.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <p style="width: 600px;">(C) &nbsp;<span editable="true" id="Year2">2006</span> <span editable="true" id="Name2">Larry A. Beaty</span>.&nbsp; Copying and distribution of this
+page is permitted in any medium, provided this notice is preserved.
+
+
+
+
+
+
+  
+  
+  
+  
+  </p>
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  <p class="MsoNormal" style="text-align: center;"></p>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <center><a href="http://www.phoenix.tc-ieee.org/">Back
+to the Phoenix Home Page</a></center>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <p></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

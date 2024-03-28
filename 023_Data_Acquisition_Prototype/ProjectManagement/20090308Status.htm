@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+  <title>Data Acquisition Device Prototype</title></head>
+<body style="background-color: rgb(255, 255, 255);">
+
+<div class="Section1">
+<blockquote style="margin-top: 5pt; margin-bottom: 5pt;">
+  <h2 style="text-align: center;"><a name="mozTocId861890"></a></h2>
+
+  <h2>
+  <center><st1:city><st1:place><span style="color: rgb(0, 153, 0);"><font color="#009900">Phoenix</font></span></st1:place></st1:city><span style="color: rgb(0, 153, 0);"><font color="#009900">
+Ambulatory Blood Pressure Monitor Project<br>
+
+  <u>Sub-project:&nbsp;</u></font></span><span style="color: rgb(0, 153, 0); text-decoration: underline;" editable="true" id="SubprojectName">Data Acquisition
+Prototype</span></center>
+
+  </h2>
+
+  <h3>Status Report</h3></blockquote><blockquote style="margin-top: 5pt; margin-bottom: 5pt;">Notes from the Phoenix IEEE lab, 2009/03/08<br><br><span style="font-weight: bold;">Our categories of work</span>:<br>&nbsp; - Improving the sensors and amplifier/filter boards<br>&nbsp; - Investigating the Chen patent<br>&nbsp; - Building a prototype microcontroller/DAQ board<br>&nbsp; - Reducing the cost of the $200 Home ABPM kit to $100<br>&nbsp; - Investigating optoelectronic sensors<br><br><span style="font-weight: bold;">Recent activities</span>:<br><br>Between
+Christmas break (mid-December to late January) and the water pipes
+breaking in the building (most of February), we have had almost no time
+in the lab for the past two and a half months. &nbsp;We've been using
+temporary space such as the lounge in the EE building and a classroom
+in the Mayo building that Dr. Halber and Dr. Cornelissen were able to
+arrange for us. &nbsp;The access to the lab seems to have stabilized
+now, and we've moved all our equipment back into the locker.<br><br>Erik
+programmed the TI MSP430 microcontroller to act as a timer for the
+Omron wrist monitor. &nbsp;This is the first version of the code, and
+uses simple busy-wait loops for timing. &nbsp;It's currently triggering
+the monitor every 38 minutes or so, and the first set of full batteries
+lasted a little over 3 days, as predicted. &nbsp;I've been wearing the
+monitor for about 5 days now, collecting the data. &nbsp;Germaine did
+an initial analysis on the first couple of days of data, which raises
+more questions than answers at that early stage.<br><br>Steven and
+William are designing a surface-mount miniaturized version of the
+analog timer, and I'm ordering parts and tools so they can build one.<br><br>Jason has installed dual-boot "Puppy Linux" and MPLAB on his laptop, for programming PIC microprocessors.<br><br><br><span style="font-weight: bold;">Active tasks</span>:<br><br>Erik is looking into how to use the timers built into the TI microcontroller for better accuracy and reduced power consumption.<br><br>Chase is summarizing some of
+the commercial product technology he's been reading about, considering
+buying another NI DAQ device, and looking into whether we should get a
+second piezoelectric film kit.<br><br>I
+am working with Germaine to design more statistical tests to determine
+if the wrist monitor can really produce useful Sphygmochrons.<br><br>Steven
+and I are looking at details of how to add a buzzer to the digital
+timers, to provide a warning a few seconds ahead of a reading being
+taken (the wearer needs to stop moving and prevent the monitor from
+being bumped while the reading is in progress, and the current monitor
+doesn't give such a warning because it wasn't designed to be triggered
+while the wearer is not expecting it).<br><br>Dr. Holte is looking into how we can get access to the campus wireless network or the EE/CS wireless network.<br><br>I will talk to the coordination team about doing some recruiting to get a few more people involved.<br><br>I will be contacting Wade Peterson to recover lost project information from the past.<br><br>Steven is making some project managment notes.<br><br>Steven is looking at Wade's schematic in the hopes of being able to describe the details or design changes to it.<br><br>Vince
+is investigating where we can get some optoelectronic sensors to start
+playing with, and will give me a shopping list.&nbsp; Checking out
+Nonin (Phil Isakson), Hutchinson Technologies, etc.<br><br>Vince is going to ask the student branch (Hans) for a computer account in the lab and a door pass.<br><br><br><span style="font-weight: bold;">Future tasks</span>:<br><br>We need to come up with some more test leads and connectors, and a battery tester.<br><br>I'd
+like to have a detailed description of Wade's schematic, including
+details about each subcircuit, the test points, the power supply, and
+the input impedence.<br><br>We need a little project to identify and
+mark the various piezo-electric films.&nbsp; It seems likely that that
+we cannot trust any of the packaging any more, because of the number of
+hands that have moved things around.<br><br>We need projects to
+characterize AND DOCUMENT simple characteristics of the piezoelectric
+films - specifically to understand whether thick backing vs. thin
+backing is better, whether large surface areas vs. small surface areas
+are better, etc.<br><br>We need to consider getting a BP device OTHER
+THAN A CUFF to take continuous BP measurements while we're testing our
+sensors and devices, for calibration and comparison purposes.&nbsp;
+This is likely to be a high-dollar purchase, or donation from a
+philanthropic organization.<br><br>-Larry<br><h3>Volunteers Are Needed</h3>
+
+  <p>Would you like to work on any part of this project? &nbsp;Envision a prototype, propose a way to implement it, and
+send
+your suggestion
+to <a href="mailto:labeaty@ieee.org?Subject=Data_Acquisition_Prototype">Larry</a>. &nbsp;Or start out by just asking questions.
+
+  </p>
+
+  <h3><a name="mozTocId667544"></a><font face="Times New Roman">About
+This Page</font></h3>
+
+  <p>This page is maintained by <a href="mailto:labeaty@ieee.org?Subject=Data_Acquisition_Prototype">Larry
+A. Beaty</a>. &nbsp;It was last updated on 8 March 2009.</p>
+
+  <p>The author(s) provide this information as a public service,
+and agree to place any novel and useful inventions disclosed herein
+into the public domain. They are not aware that this material
+infringes on the patent, copyright, trademark or trade secret
+rights of others. However, there is a possibility that such
+infringement
+may exist without their knowledge. The user assumes all responsibility
+for determining if this information infringes on the intellectual
+property rights of others before applying it to products or services.</p>
+
+  <p>(C) 2009 Larry A. Beaty. Copying and distribution of this
+page
+is permitted in any medium, provided this notice is preserved.</p>
+
+  <p></p>
+
+  <center><a href="../index.htm">Back to the Phoenix
+Home Page</a></center>
+
+  <p></p>
+
+  <p>&nbsp;</p>
+
+</blockquote>
+
+</div>
+
+</body></html>

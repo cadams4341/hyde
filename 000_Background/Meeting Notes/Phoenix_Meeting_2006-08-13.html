@@ -1,0 +1,174 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>2006-08-13 Meeting Notes</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H3><CENTER><FONT COLOR="#009900">Phoenix Ambulatory Blood Pressure
+Monitor Project<BR>
+<U>8/13/2006 Meeting Notes</U></FONT></CENTER></H3>
+
+<H3><BR>
+Attendees</H3>
+
+<UL>
+  <LI>Larry Beaty
+  <LI>Mike Callaghan
+  <LI>Alex Krasnopeev
+  <LI>El Nolley
+  <LI>Mary Jo Rawson
+  <LI>Bob Schlentz
+  <LI>Dave Skramsted
+  <LI>Gerry Werth
+</UL>
+
+<H3>&nbsp;</H3>
+
+<H3>Discussion</H3>
+
+<P><B>Status Review:</B></P>
+
+<P>* Larry Beatty, getting Visual Basic Unit test framework, enabling
+him to write tests, then apply to Germaine's Sphygmochron prototype.</P>
+
+<P>* Bob: Why is piezo film signal so big when you put it on a
+human. The amplifier has 30 dB of gain.</P>
+
+<P>* Mary Jo: Working on the piezo file sensor and looking at
+how we are gathering the data. She is working on the second set
+of data and refining it. We are comparing the Systolic with the
+Chen data. We get a strong S wave, stronger than Chen, probably
+because ours is mechanical, while Chen's is opto-electric. But,
+the diastolic signal is weak. Next step is to get more data.</P>
+
+<P>* Dave: Been meeting in the lab, taking various data sets,
+got the oscilloscope software installed and operating, Alex has
+written MatLab applications to create time series with brachial
+and radial measurements, we get a good peak, but are having trouble
+getting the valleys, from which the diastolic pressure is computed.
+We need LabView, can obtain a student version for ~$259 that could
+be transferred to the project for use. Mary Jo could buy it and
+transfer ownership to the project, and Dave Skramstad sign as
+Sensor project lead for the Phoenix Project. Mary Jo will examine
+the license to make sure there is no prohibit on transferring
+ownership to the project, make the purchase and send El the receipt.
+El will use Phoenix funds reimburse Mary Jo.</P>
+
+<P>* Mike: Will define the pressure wave as a Finite Element Analysis
+(FEA) using Ansys.</P>
+
+<P>* Alex: Developing a framework in Mathlab for analyzing waverforms.
+Analyzed the first series of measurements, got a best mean squared
+errors, 7 mmHg, and worst was 18 mmHg, uncertainty in the measurement.
+Looking a ways to improve, look at a single measurement and average
+out the noise. The way it is done is with two waveforms, on the
+elbow and wrist and perform a cross correlation, using the entire
+waveform. Dave said the FDA requires that error be within 8 mmHg.
+Then, Penrose tubing may be another need.</P>
+
+<P>* Gerry: Working on the clinical side, and make a more flexible
+way to provide slide show presentations, web-based presentations
+and files.</P>
+
+<P><B>Topic: Systolic &amp; Diastolic Waveform questions for Germaine.</B></P>
+
+<P>Alex: We drew graphs of the systolic and diastolic waveforms.
+We got nice peaks, but very noisy measurements in the valleys.
+How are these measurements performed in practice? Are there features
+in the wave itself that can be used to extract the valleys?</P>
+
+<P>Germaine: When we look at the composite pressure wave, the
+systolic corresponds to the peak and the diastolic corresponds
+to the valley. Some assume that 1/3 of the time in spent in Systole,
+while 2/3 is spend on Diastole, though the time spent in Diastole
+is variable. So you need a start point, perhaps an inflection
+point of the systole rise or the peak, and use the time lag from
+one point to another.</P>
+
+<P>&nbsp;</P>
+
+<P><B>Gerry Werth - Clinical Information Systems Minitopic</B></P>
+
+<P>Diagnosis - Why Clinical Diagnosis is Different?</P>
+
+<P>Technical Diagnosis<BR>
+* Troubleshooting Man Made Systems<BR>
+- Technological artifacts: Cars/Computers<BR>
+* Patterns of Signs and Symptoms<BR>
+- Sign: visible to an External Observable<BR>
+- Symptom: Noted and Reported by the System (like computer or
+car).<BR>
+* Not Man-Made Systems (Yet have the Variability and Complexity
+of Biological System. <BR>
+- Physicians talk about differential diagnosis, sometimes a specific
+set of signs and symptoms are unique to a disease and are referred
+to as pathopneumonic.</P>
+
+<P>Troubleshooting Biological Systems<BR>
+- Living Organisms (and Ecosystems)<BR>
+* Patterns of Signs and Symptoms (SSx)<BR>
+- Signs: Visible to an External Observer<BR>
+- Symptom: Known by the Organism/ Person<BR>
+* Emotions: Fear / Embarrassment...<BR>
+- Embarrassment to Talk about Symptoms<BR>
+- Fear of Illness and Death.</P>
+
+<P>Clinical Diagnosis<BR>
+* Is your car ever Embarrassed?<BR>
+* Is your Computer ever afraid?<BR>
+* Clinical Diagnosis is Different from Technical Diagnosis because:<BR>
+* Cars and Computer have no conscious or unconscious incentives
+to conceal their Signs and Symptoms.<BR>
+* People Do.</P>
+
+<P>Summary: Why Clinical Diagnosis is Different from Technical
+Diagnosis?<BR>
+* Technical Diagnosis<BR>
+- Troubleshooting Man-Made Systems<BR>
+- Signs and Symptoms (SSx)<BR>
+- No Man-Made Systems (Yet) Have the Variability and Complexity
+of Biological Systems<BR>
+* Clinical Diagnosis<BR>
+- Troubleshooting Biological Systems<BR>
+- Signs and Symptoms (SSx)<BR>
+- Emotions: Fear/ Embarrassment<BR>
+</P>
+
+<P><B>Next Phoenix Project meeting: Sunday, August 27 at 2:30
+p.m. in Mayo 748</B></P>
+
+<H3>&nbsp;</H3>
+
+<H3>&nbsp;</H3>
+
+<H3>About This Page</H3>
+
+<P><FONT FACE="Times New Roman">This page is maintained by <A
+HREF="mailto:e.nolley@ieee.org?subject=Phoenix_meeting_2004-06-27">Ellis
+S Nolley</A>. It was last updated on 25 October 2006.</FONT></P>
+
+<P><FONT FACE="Times New Roman">The author(s) provide this information
+as a public service, and agree to place any novel and useful inventions
+disclosed herein into the public domain. They are not aware that
+this material infringes on the patent, copyright, trademark or
+trade secret rights of others. However, there is a possibility
+that such infringement may exist without their knowledge. The
+user assumes all responsibility for determining if this information
+infringes on the intellectual property rights of others before
+applying it to products or services.</FONT></P>
+
+<P><FONT FACE="Times New Roman">Copyright (C) 2006 Ellis S. Nolley.
+Copying and distribution of this page is permitted in any medium,
+provided this notice is preserved.</FONT></P>
+
+<BLOCKQUOTE>
+  <P><CENTER><A HREF="Phoenix_Meeting_Archive.htm"><FONT FACE="Times New Roman">Back
+  to the Meeting Archive Page</FONT></A></CENTER></P></BLOCKQUOTE>
+
+<P><CENTER><A HREF="../../index.htm"><FONT FACE="Times New Roman">Back
+to the Phoenix Home Page</FONT></A><BR>
+</CENTER>
+
+</BODY>
+</HTML>

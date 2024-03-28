@@ -1,6 +1,6 @@
 # Hyde
 
-**Hyde** is an archive of The Phoenix Chronobiology Projects' original website, at `phoenix.tc-ieee.org`. That site was retired when the host site was refactored.
+**Hyde** is an archive of The Phoenix Chronobiology Projects' original website, at `www.phoenix.tc-ieee.org`. That site was retired when the host site was refactored.
 
 The archived content deployed with <a href="https://jekyllrb.com" target="_blank">Jekyll</a>, a static site generator.
 

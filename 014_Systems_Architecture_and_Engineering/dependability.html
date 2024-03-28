@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../015_Methodology_and_Systems_Management/css/readyset.css" />
+		<link rel="stylesheet" type="text/css" href="../015_Methodology_and_Systems_Management/css/inst.css" />
+		<link rel="stylesheet" type="text/css" href="../015_Methodology_and_Systems_Management/css/print.css" media="print" />
+		<title>System Requirements Specification</title>
+	</head>
+<body>
+<div class="app">
+<div class="readyset">
+<h2>
+	<p class="print_only"><font color="green">Phoenix Ambulatory Blood Pressure Monitor</font></p>
+	<hr color="darkgray" size="1" width="25%" align="left" align="left" class="print_only">
+	<p><a href="sysrs.html">SysRS</a> &gt; <a href="nfr.html">Nonfunctional (Quality) Requirements Specification</a> &gt; Dependability</p>
+</h2>
+
+<div id="releaseinfo">
+	<h3>Release Information</h3>
+	<table class="axial" border="1" cellpadding="3" cellspacing="2">
+		<tbody>
+			<tr>
+				<th>Project:</th>
+				<td><a href="http://www.phoenix.tc-ieee.org/014_Systems_Architecture_and_Engineering/index.html">Phoenix Systems Architecture and Engineering</a></td>
+			</tr>
+			<tr>
+				<th>Internal Release Number:</th>
+				<td>X.Y.Z</td>
+			</tr>
+			<tr>
+				<th>Attached worksheets:</th>
+				<td>
+					<div>LINKS TO WORKSHEETS</div>
+				</td>
+			</tr>
+			<tr>
+				<th>Related Documents:</th>
+				<td>
+					<div>
+						Project proposal <small>[LINK TO BE PROVIDED]</small>
+					</div>
+					<div>LINKS TO RELEVANT STANDARDS</div>
+					<div>LINKS TO OTHER DOCUMENTS</div>
+					<div><a href="nfr.html#usage-oriented-functional-concerns">Other Usage-Oriented Functional Concerns</a></div>
+					<div><a href="shared/glossary.html">Glossary</a></div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div> <!-- /releaseinfo -->
+
+
+<div id="introduction">
+	<h3>Introduction</h3>
+	<div class="section-help">
+		<p><strong>Dependability:</strong> that property of a computer system such that reliance can justifiably be placed on the service it delivers.</p>
+		<p>Sources of taxonomy:
+			<ul>
+				<li>Barbacci, Mario; Klein, Mark H.; Longstaff, Thomas A.; and Weinstock, Charles B. "Quality Attributes", <i>SEI Technical Report, CMU/SEI-95-TR-021.</i> December 1995.</li>
+				<li>Weigers, Karl E. <i>Software Requirements.</i> 2nd ed. 2003, Microsoft Press.</li>
+				<li>Withall, Stephen. <i>Software Requirement Patterns.</i> 2007, Microsoft Press.</li>
+			</ul>
+		</p>
+	</div> <!-- section-help -->
+	<table>
+		<caption>Concerns</caption>
+		<col class="id_column"></col>
+		<tr><th>ID</th><th>Attribute</th><th>Concern</hd></tr>
+		<tr>
+			<td>DE-01</td>
+			<td><a href="#availability">Availability</a></td>
+			<td>
+				<ul>
+					<li>Operational availability</li>	
+					<li>Readiness for usage.</li>
+					<li>The degree to which a system, subsystem, or equipment is operable and in a committable state at the start of a mission, when the mission is called for at an unknown, i.e., a random, time.</li>
+					<li>A measure of the planned <em>up time</em> during which the system is actually available for use and fully operational.</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>DE-02</td>
+			<td><a href="#biocompatibility">Biocompatibility</a></td>
+			<td>
+				<ul>
+					<li>
+						The ability of a device to perform its intended function,
+						with the desired degree of incorporation in or application to the (biological) host, without eliciting any undesirable local or systemic effects in that host.
+					</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>DE-03</td>
+			<td><a href="#privacy">Privacy</a></td>
+			<td>
+				<ul>
+					<li>Ensurance that information about a person is free from any intrusion not sanctioned by the person.</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>DE-04</td>
+			<td><a href="#reliability">Reliability</a></td>
+			<td>
+				<ul>
+					<li>Continuity of service.</li>
+					<li>The rate of failure in the system that renders the system unusable.</li>
+					<li>The ability of the system to keep operating over time.</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>DE-05</td>
+			<td><a href="#robustness">Robustness</a></td>
+			<td>
+				<ul>
+					<li>Graceful handling of invalid inputs.</li>
+					<li>Ensurance that user input cannot crash the system or corrupt data, even if that user input is abnormal, unexpected, or malicious.</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>DE-06</td>
+			<td><a href="#safety">Safety</a></td>
+			<td>
+				<ul>
+					<li>Non-occurrence of catastrophic consequences on the environment</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="2">DE-07</td>
+			<td><a href="#security">Security</a></td>
+			<td>
+				<ul>
+					<li>Ensurance that information is accessible only to those authorized to have access.</li>
+					<li>A condition of not being threatened, especially physically, psychologically, emotionally, or financially.</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="#integrity">Integrity</a></td>
+			<td>
+				<ul>
+					<li>Non-occurrence of improper alterations of information.</li>
+					<li>Ensurance that data is "whole" or complete.</li>
+					<li>The condition in which data is identically maintained during any operation, such as during transfer, storage or retrieval.</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>DE-08</td>
+			<td><a href="#survivabilty">Survivabilty</a></td>
+			<td>
+				<ul>
+					<li>The degree to which a system can fulfill its mission, in a timely manner, in the presence of attacks, failures, or accidents.</li>
+				</ul>
+			</td>
+		</tr>
+	</table>
+</div> <!-- introduction -->
+
+
+<div id="availability">
+	<h3>Availability</h3>
+	<div class="todo">
+		TODO!
+	</div> <!-- todo -->		
+	<p>ONE PARAGRAPH OVERVIEW</p>
+	<p>Details:</p>
+	<dl>
+		<dt>What are the supportability and operability requirements?</dt>
+		
+		<dd class="sample1">
+		
+			<p>Supportability is our ability to provide cost effective
+			technical support.  Our goal is to limit our support costs to only
+			5% of annual licensing fees.  The product's automatic upgrade
+			feature will help us easily deploy defect fixes to end-users.  The
+			user guide and product website will include a troubleshooting guide
+			and checklist of information to have at hand before contacting
+			technical support.</p>
+			
+			<p>Operability is our ability to host and operate the software as
+			an ASP (Application Service Provider).  The product features should
+			help us achieve our goal of 99.9% uptime (at most 43 minutes
+			downtime each month).  Key features supporting that are the ability
+			to do hot data backups, and application monitoring.</p>
+			
+			<p>Details:</p>
+			
+			<ul>
+				<li>DETAIL</li>
+				<li>DETAIL</li>
+				<li>DETAIL</li>
+			</ul>
+		</dd>
+	</dl>
+</div> <!-- availability -->
+
+<div id="biocompatibility">
+	<h3>Biocompatibility</h3>
+	<div class="todo">
+		TODO!
+	</div> <!-- todo -->		
+	<p>ONE PARAGRAPH OVERVIEW</p>
+	<p>Details:</p>
+</div> <!-- biocompatibility -->
+
+<div id="privacy">
+	<h3>Privacy</h3>
+	<div class="todo">
+		TODO!
+	</div> <!-- todo -->		
+	<p>ONE PARAGRAPH OVERVIEW</p>
+	<p>Details:</p>
+</div> <!-- privacy -->
+
+<div id="reliability">
+	<h3>Reliability</h3>
+	<div class="todo">
+		TODO!
+	</div> <!-- todo -->		
+	<p>ONE PARAGRAPH OVERVIEW</p>
+	What are the reliability and up-time requirements?
+	<p>Details:</p>
+</div> <!-- reliability -->
+
+<div id="robustness">
+	<h3>Robustness</h3>
+	<div class="todo">
+		TODO!
+	</div> <!-- todo -->		
+	<p>ONE PARAGRAPH OVERVIEW</p>
+	<p>Details:</p>
+</div> <!-- robustness -->
+
+<div id="safety">
+	<h3>Safety</h3>
+	<div class="todo">
+		TODO!
+	</div> <!-- todo -->		
+	<p>ONE PARAGRAPH OVERVIEW</p>
+	<p>Details:</p>
+</div> <!-- safety -->
+
+<div id="security">
+<div id="integrity">
+	<h3>Security / Integrity</h3>
+	<div class="todo">
+		TODO!
+	</div> <!-- todo -->		
+	<p>ONE PARAGRAPH OVERVIEW</p>
+	<dl>
+		<dt>What are the security requirements?</dt>
+		
+		<dd class="sample1">
+			<p>Access will be controlled with usernames and passwords.</p>
+			
+			<p>Only administrator users will have access to administrative functions, average users will not.</p>
+			
+			<p>Details:</p>
+			
+			<ul>
+				<li>Passwords must be 4-14 characters long</li>
+				<li>We will not use encrypted communications (SSL) for this website</li>
+				<li>DETAIL</li>
+			</ul>
+		</dd>
+	</dl>
+	<p>Details:</p>
+</div> <!-- integrity -->
+</div> <!-- security -->
+
+<div id="survivabilty">
+	<h3>Survivabilty</h3>
+	<div class="todo">
+		TODO!
+	</div> <!-- todo -->		
+	<p>ONE PARAGRAPH OVERVIEW</p>
+	<p>Details:</p>
+</div> <!-- survivabilty -->
+	
+</div> <!-- /readyset -->
+
+</div> <!-- /app -->
+
+		<blockquote class="footnote_nohide">
+			<p>
+				This page is maintained by
+				<a href="#">Christopher J. Adams</a>.
+				It was last updated 27 June 2010.
+			</p>
+			<p>
+				Copyright (c) 2010 Christopher J. Adams<br>
+				<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_blank">Creative Commons Attribution 3.0 Unported License</a>
+			</p>
+		</blockquote>
+		
+</body>
+</html>

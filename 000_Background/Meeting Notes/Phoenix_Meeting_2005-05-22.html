@@ -1,0 +1,325 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>2005-05-22 Meeting Notes</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H3><CENTER><FONT COLOR="#009900">Phoenix Ambulatory Blood Pressure
+Monitor Project<BR>
+<U>5/22/2005 Meeting Notes</U></FONT></CENTER></H3>
+
+<H3><BR>
+Attendees</H3>
+
+<UL>
+  <LI>Larry Beaty
+  <LI>Ralph Cardinal
+  <LI>Germaine Cornelissen
+  <LI>Wayne Hochrein
+  <LI>Dennis Lienke
+  <LI>El Nolley
+  <LI>Mary Jo Rawson
+  <LI>Tom Renner
+  <LI>Dave Skramsted
+  <LI>Bob Schlentz
+  <LI>Gerry Werth
+</UL>
+
+<PRE></PRE>
+
+<H3>Discussion</H3>
+
+<P><B>Ralph Cardinal</B>, Director of Hardware Engineering at
+Guidant, presented to us on testing in the design phase. He gave
+us permission to post his presentation and you can view it by
+clicking <A HREF="../../0001_Bibliography/Testing%20in%20the%20Design%20Phase.ppt">here</A>.
+It is also posted on our <A HREF="../../Phoenix_Bibliography.htm#anchor464235">Bibliography
+page</A>. He tailored his presentation to address our questions:</P>
+
+<UL>
+  <LI>What does software need to create for the testers, especially
+  if testing is done before the software exists?
+  <LI>What does design phase testing mean?
+  <LI>How should software developers approach testing? Do they
+  need to think in a specific process? Do they need to create a
+  test, eg. test driven development?
+  <LI>What does it mean to the integrity of the test process if
+  testers are part of the design process? How do they remain separate
+  and 'part of the loyal opposition'?
+</UL>
+
+<P>Ralph asked if there is any evidence that BP cycle measurement
+improves healthcare. Germaine summarized the data and outcome
+studies.</P>
+
+<P>He introduced design analysis testing (DAT). It addresses design
+intent, whitebox testing, not blackbox, and the testers must have
+intimate knowledge of the design detail.</P>
+
+<P>Q: How do you decide what the intended use is, do you have
+to account that products may be used in unintended ways? <BR>
+A: DAT is one level above the requirements, it is looser, with
+a broad view, not narrow view.</P>
+
+<P>Design Verification Testing (DVT). Demonstrates that the specified
+requirements have been met. These groups of tests are sometimes
+called QA, blackbox testing, and the testers have no knowledge
+of the design.</P>
+
+<P>Design validation demonstrates that the system conforms to
+user needs and intended uses. Here, you bring in customers and
+have them perform testing, use models and prototypes, learn how
+they are going to use it and their expectation. Often it is called
+systems testing, GMP (Good Manufacturing Practice), testing on
+real people, and can even be test by sales reps if formalized.
+It can be called design validation if it is done by the people
+who designed it, but not on the same spot.</P>
+
+<P>These are the three types of testing. At a high level all forms
+of this testing are similar because FDA requires it, but at a
+lower level it differs by degree of automation. In Europe, one
+must assure it conforms to 13485.</P>
+
+<P>As the design changes, the plans and protocols change. Then
+you test, and write the report. All tests are expected to pass
+100% otherwise a justification must be written. The best way is
+to continually test.</P>
+
+<P>A protocol is a scenario description to test, the how to test.
+The plan says what to test and the protocol is how to test.</P>
+
+<P>Development testing is a looser version of that. DAT testing
+is the development testing.</P>
+
+<P>Q: Given our <A HREF="../Phoenix_Roadmap.htm">Roadmap</A>,
+when must we begin testing?<BR>
+A: In your productization phase, when you make the product manufacturable.
+However, DAT would be beneficial during your prototyping to catch
+errors and to prototype your testing capability. <BR>
+</P>
+
+<P>IEEE has a standard for Verification and Validation for Software
+testing. It is standard engineering for best practices.</P>
+
+<BLOCKQUOTE>
+  <P>IEEE Std 1012-1986, Software Verification and Validation Plans,
+  Institute for Electrical and<BR>
+  Electronics Engineers, 1986.</P>
+  <P>IEEE Standards Collection, Software Engineering, Institute
+  of Electrical and Electronics Engineers,<BR>
+  Inc., 1994. ISBN 1-55937-442-X.</P>
+  <P>See the references in <A HREF="http://www.fda.gov/cdrh/comp/guidance/938.pdf">General
+  Principles of Software Validation</A>, also posted on our <A
+  HREF="../../012_Regulatory_Approval/Phoenix_Regulatory_Approval_Requirements.html#anchor141997">Regulatory
+  Requirements</A> page.</P></BLOCKQUOTE>
+
+<P>Sometimes, companies develop and 'throw it over the wall'.
+They have different groups for design and crash testing. The rationale
+for testing is: If the defects are found earlier, it costs less
+to fix them.</P>
+
+<P>He reviewed test approaches.</P>
+
+<UL>
+  <LI>Gated Model: Design part, then testers test that part.
+  <LI>Spiral Model: when features are done, the test is done and
+  it can be run. Defects are spiraled back into the design.
+  <LI>V-Model: Develop design and tests in parallel using common
+  requirements. It requires great communication and excellent requirements.
+</UL>
+
+<P>You must have requirements in order to test.</P>
+
+<P>What looks bad to FDA is if you try something, it doesn't work,
+and you try to hide it. If you try it, it doesn't work, you report
+it, then try something else, and iterate until you find something
+that works, but report continually.</P>
+
+<P>What to test: Hardware, Software, System,</P>
+
+<P>Test at the interfaces, have good requirements around the interfaces.</P>
+
+<P>Regulatory Expectations: Verification and Validation, and Documentation.
+For Class II, they still expect V&amp;V, design history file,
+record decisions and why, justification, safe and reliable. Increasingly,
+Human Interface and Human Factors is being done, especially for
+software, and is highlighted by the AMI (American Association
+for Medical Instrumentation). <BR>
+<BR>
+Q: Does FDA come to our site?<BR>
+A: No, just reports.</P>
+
+<P>Q: What about ISO?<BR>
+A: A notified body, like TUV comes. Guidant uses the British standards.</P>
+
+<P>Good Practices - continued ...<BR>
+<BR>
+For Peer Reviews, an independent team from outside the organization
+is not required. If the team that validates is managed by the
+development team, this will be questioned by FDA.</P>
+
+<P>Inspection is going through the code with another coder.</P>
+
+<P>FDA wants a planned, methodical, and documented test process
+and execution. You can fail and explain, but you may wish not
+to send anything that says &quot;failed&quot;, but explain that
+it was outside reasonable bounds, then you changed something,
+and it passed. Or the color requirement says it should be yellow,
+not red, it wasn't so you went with it anyway because it didn't
+affect safety or efficacy. If you change something, use Ripple
+Analysis, and test what it affects, e.g. another 20 screens. Finish
+the protocol as much as you can before you make changes. Don't
+justify it as &quot;engineering judgment&quot;.</P>
+
+<P>What does software need to create for testers? They need requirements.
+Only include those who are needed on reviewing requirements, eg.
+concept would include marketing, but software requirements would
+not, nor would it include electrical or mechanical, and vice-versa.</P>
+
+<P>Analysis testing includes DAT/or scripted testing, united,
+integration, possibly automated. Include the plan, methodology,
+protocols, use cases, report.</P>
+
+<P>It is commonly believed that IV&amp;V is better, but this is
+not necessary.</P>
+
+<P>What does it mean to the integrity of the test process if testers
+are part of the design process? Integrity isn't the issue, coverage
+is. Testers need to be testing the areas they have not participated
+in.</P>
+
+<P>How do they remain separate and 'part of the loyal opposition'?
+You can use a separate team. Or with smaller teams, one team can
+test software module they haven't worked on and vice versa, the
+other team can test their module.<BR>
+Inspection in the design phase yields many benefits.</P>
+
+<P>Q: How do you find the unanticipated, especially biological,
+effects. For example, a change in a pacemaker case that created
+a 'hole' in the case led to growths in a hole in the embedded
+product. <BR>
+A: This should be covered in the hazard analysis. Brainstorm about
+what could happen. Don't allow last minute changes without hazard
+analyses. Have someone identified as the safety person who anticipates
+what could affect hazards.</P>
+
+<P>Labeling includes anything written, on the screen, anything
+that comes out as documentation to the public. <BR>
+Requirements are not labeling, and design history file isn't either.
+Labeling includes the user manual and patient manual.</P>
+
+<P>Q: What is most difficult, FDA or ISO? <BR>
+A: For Class II, it is very similar. FDA is a little more difficult
+because it focuses on safety and efficacy. ISO focuses only on
+safety. For any Class III (drugs and implantables), they want
+efficacy, but typically not for class II. FDA wants to know if
+it really works.</P>
+
+<P>Guidant has used agile methods, team programming, PSP, it worked
+quite well. They use a dedicated team and they make the choice,
+so it that hasn't been consistent. Typically, a team is formed,
+executes, and is broken up afterwards.</P>
+
+<P>Q: When we do the hazard analysis, with dire effects, what
+do we do with it?<BR>
+A: Mitigate it.</P>
+
+<P><BR>
+Q: What tools do you use? For example, do you use ADA?<BR>
+A: ADA doesn't work well with embedded products.</P>
+
+<P>For software: C is good, choose a methdology, agile if fine.
+Or divvy out the requirements and go for it. Use what you are
+familiar with. Use the same methodology for the entire project.</P>
+
+<P>For hardware: Programmable parts, same as how you've been doing
+it for years.</P>
+
+<P>There is nothing unique about medical other than regulatory
+requirements and good practices. Therap, Thiac4 (sp?), it had
+a software fault and delivered too much gamma radiation. After
+that it showed up again and again, and was never corrected in
+the field. It started FDA's focus on software.</P>
+
+<P>For system: MS Word works fine, XML for tags works for traceability,
+you can tag a requirement. Stay away from big requirements analysis
+systems for this project.</P>
+
+<P>Open source defect tracking systems, CVS has worked well.</P>
+
+<P>Ralph concluded his presentation and said he would be happy
+to return to address additional questions. We thanked him for
+his excellent presentation.</P>
+
+<P><B>Projects Status Review.</B></P>
+
+<P>* Germaine: reviewed some data formats with Dennis. Dennis
+and Chris are trying to . Interval, length of record, (24 hrs,
+48 hrs, new ones are 7 days, and longer), some have holes and
+gaps, age groups, centenarians, contained projects to find association
+with melatonin.</P>
+
+<P>* Wayne: breadboarding a circuit, Asked for another Sensor
+team: evenings, not Monday. Weekend works well in the evening.
+Possibly 6/4-5.</P>
+
+<P>* Tom: organizing his project for testing. He'll send El a
+project plan to post for his project page and El will send him
+a logon to his page.</P>
+
+<P>* Gerry: working to get back into pediatrics, will have new
+scenarios for clinical practice, working with Dr. Milt Seifert
+on patient-care software, healthy business model for healthcare.
+Why healthcare is such a bizarre process to model, very applicable
+for mass customization, and why this is such a good fit.</P>
+
+<P>* Dennis: http://wlakb.editme.com, click on Public Pages, then
+scroll down and click on Phoenix Project. <A HREF="http://wlakb.editme.com/PhoenixProject">Here</A>.
+It is another wiki, used by Breakthough Thinking, another study
+group he is participating in. he Set up a Phoenix table for blood
+pressure. Began a discussion of data forms.</P>
+
+<P>* Larry: Looking for a software project to do this summer.</P>
+
+<P>* Dave: Getting lab access at the UofM, got parts on order
+to reproduce what Wade has done with the Piezo Film Sensor.</P>
+
+<P>Our next general Phoenix meeting occurs on June 12. El will
+schedule a sensor team meeting for Dave, Wayne, Tom and El during
+the 6/4-5 weekend.</P>
+
+<H3>&nbsp;</H3>
+
+<H3>&nbsp;</H3>
+
+<H3>About This Page</H3>
+
+<P><FONT FACE="Times New Roman">This page is maintained by <A
+HREF="mailto:e.nolley@ieee.org?subject=Phoenix_meeting_2004-06-27">Ellis
+S Nolley</A>. It was last updated on 25 May 2005.</FONT></P>
+
+<P><FONT FACE="Times New Roman">The author(s) provide this information
+as a public service, and agree to place any novel and useful inventions
+disclosed herein into the public domain. They are not aware that
+this material infringes on the patent, copyright, trademark or
+trade secret rights of others. However, there is a possibility
+that such infringement may exist without their knowledge. The
+user assumes all responsibility for determining if this information
+infringes on the intellectual property rights of others before
+applying it to products or services.</FONT></P>
+
+<P><FONT FACE="Times New Roman">Copyright (C) 2005 Ellis S. Nolley.
+Copying and distribution of this page is permitted in any medium,
+provided this notice is preserved.</FONT></P>
+
+<BLOCKQUOTE>
+  <P><CENTER><A HREF="Phoenix_Meeting_Archive.htm"><FONT FACE="Times New Roman">Back
+  to the Meeting Archive Page</FONT></A></CENTER></P></BLOCKQUOTE>
+
+<P><CENTER><A HREF="../../index.htm"><FONT FACE="Times New Roman">Back
+to the Phoenix Home Page</FONT></A><BR>
+</CENTER>
+
+</BODY>
+</HTML>

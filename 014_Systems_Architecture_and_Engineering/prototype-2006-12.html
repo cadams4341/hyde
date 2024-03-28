@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../015_Methodology_and_Systems_Management/css/readyset.css" />
+		<link rel="stylesheet" type="text/css" href="../015_Methodology_and_Systems_Management/css/inst.css" />
+		<link rel="stylesheet" type="text/css" href="../015_Methodology_and_Systems_Management/css/print.css" media="print" />
+		<title>Subproject Overview</title>
+	</head>
+
+	<body>
+		<div class="app">
+		<div class="readyset">
+		<h2>Architecture Prototype</h2>
+
+		
+		<div id="objectives">
+		<h3>Objectives</h3>
+		<p>
+			The Phoenix Architecture Prototype is intended to select, try, and prove
+			architectural concepts, patterns, and components to be used in the data analysis software.
+			The prototype is not intended as a production system.
+		</p>
+		<ol>
+		<li>
+			The prototype will establish an architecture that supports multiple environments:
+			<ul>
+				<li>Desktop application</li>
+				<li>Rich internet application</li>
+				<li>Served application</li>
+			</ul>
+		</li>
+		<li>
+			The prototype will include frameworks for:
+			<ul>
+				<li>Numerical analysis</li>
+				<li>2D graphics</li>
+				<li>Persistence</li>
+				<li>Error handling</li>
+				<li>Report generation</li>
+				<li>Data interchange &#151; import of collected data and export of analyses</li>
+			</ul>
+		</li>
+		<li>
+			The framework for numerical analysis will prove support for multiple data analysis methods.  The prototype will build out a handful of algorithms, some instructive but not particularly useful, and one intended for eventual use.  Each algorithm will include a quality-of-fit metric.  Each algorithm will be applied to systolic blood pressure, diastolic blood pressure, and heart rate.
+			<ul>
+				<li>Mean line fitting</li>
+				<li>Linear least squares approximation</li>
+				<li>Parabolic least squares approximation</li>
+				<li>One-part parametric cosinor analysis</li>
+			</ul>
+		</li>
+		<li>
+			The prototype will include stubs for several other analysis methods:
+			<ul>
+				<li>Two-part parametric cosinor analysis</li>
+				<li>Non parametric cosinor analysis</li>
+				<li>Arterial compliance</li>
+				<li>7-day summary</li>
+				<li>Cross-spectral analysis</li>
+				<li>Phase identification</li>
+				<li>Phase synchronization</li>
+				<li>Time-varying study of coherences</li>
+			</ul>
+		</li>
+		<li>
+			The prototype will model sphygmochrons as reports.
+		</li>
+		<li>
+			The effort will include a search for and application of architectural and design patterns.
+		</li>
+		<li>
+			The prototype will use third-party components.  All components will be free and open-source.  However, assessment of licenses is outside the scope of the prototype.
+		</li>
+		<li>
+			The prototype will incorporate the following technologies:
+			<ul>
+				<li>XML</li>
+				<li><a href="http://java.sun.com">Java SE 5</a> <a href="#footnote-1"><sup>1</sup></a></li>
+			</ul>
+		</li>
+		<li>
+			The prototype will address the following components:
+			<ul>
+				<li><a href="http://www.netbeans.org" target="_blank">NetBeans Platform</a> &#151; desktop applications framework</li>
+				<li><a href="http://dsd.lbl.gov/~hoschek/colt/" target="_blank">Colt</a> &#151; a set of libraries for high performance scientific and technical computing</li>
+				<li><a href="http://math.nist.gov/javanumerics/jama/" target="_blank">JAMA</a> &#151; a linear algebra package</li>
+				<li><a href="http://www.jfree.org/jfreechart/" target="_blank">JFreeChart</a> &#151; a graphing library</li>
+			</ul>
+		</li>
+		<li>
+			The development environment will consist of:
+			<ul>
+				<li><a href="http://www.netbeans.org" target="_blank">NetBeans IDE 5.5</a></li>
+				<li>CVS <a href="#footnote-2"><sup>2</sup></a></li>
+			</ul>
+		</li>
+		</ol>
+		<p>
+			The prototype will not address:
+			<ul>
+				<li>Performance</li>
+				<li>User interface design</li>
+				<li>Report design</li>
+			</ul>
+		</p>
+		
+		<br><br><hr color="darkgray" size="1" width="25%" align="left">
+		<div id="footnotes">
+		<small>
+		<p id="footnote-1">
+			<sup>1</sup>
+			Java SE 5 is the current production version of Java.
+			Based on a cursory assessment of Java SE 6, the objectives of the prototype should be attainable with Java SE 5.
+			Because some features of Java SE 6 are desirable and assuming the prototype validates the selection of Java,
+			the system will be migrated to Java SE 6 at the earliest convenience.
+		</p>
+		<p id="footnote-2">
+			<sup>2</sup>
+			<a href="http://subversion.tigris.org/">Subversion</a> is the preferred revision control tool.
+			It works with NetBeans IDE but requires special setup, including that of a Subversion server.
+			It is assumed that the prototype can more easily meet it's other objectives with CVS.
+			If this assumption proves incorrect, CVS will be replaced with Subversion.
+		</p>
+		</small>
+		</div> <!-- footnotes -->
+		
+		</div> <!-- /objectives -->
+		
+		</div> <!-- readyset -->
+		</div> <!-- app -->
+
+		<blockquote class="footnote"> <!-- hidden -->
+			<p>
+				This page is maintained by
+				<a href="#">Christopher J. Adams</a>.
+				It was last updated on 11 December 2006.
+			</p>
+			<p>
+				Copyright (c) 2006 Christopher J. Adams<br>
+				Copying and distribution of this page is permitted in any medium,
+				provided this notice is preserved.
+			</p>
+		</blockquote>
+	</body>
+</html>

@@ -1,0 +1,535 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+  <meta content="text/html;charset=ISO-8859-1" http-equiv="Content-Type">
+  <title>SampleProjectReportForAFictionalProject</title></head>
+
+<body style="background-color: rgb(255, 255, 255);">
+
+<h1 style="text-align: center;"><span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;;">Xinoeph
+Ambulatory Blood Pressure Monitor Prototype</span></h1>
+
+<h1 style="text-align: center;"><span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;;">(A
+Fictional Project about building a Fictional Product)</span></h1>
+
+<div class="Section1">
+<blockquote class="" style="margin-top: 5pt; margin-bottom: 5pt;">
+  <h3>Introduction</h3>
+
+This report describes a fictional project, and is intended to serve as
+an example project report for Data Acquisition Device Prototype
+projects.<br>
+
+  <br>
+
+In this report I describe a fictional device, the "Xineoph Ambulatory
+Blood Pressure Monitor Prototype", and a fictional project to design
+and build it.
+  <h3>Project Overview</h3>
+
+  <span style="font-style: italic;"></span><span style="font-style: italic;"></span><br>
+
+The Xineoph Ambulatory Blood Pressure Monitor Prototype is a new kind
+of ambulatory blood pressure monitor that is an unobtrusive ABPM that
+records ambulatory blood pressure and heart rate readings for up to 7
+days, then uploads those readings to a patient&#8217;s or
+doctor&#8217;s computer for analysis.&nbsp; The device is
+useful for
+adults (age 13 and older) in preventive monitoring as well as
+post-diagnosis monitoring.<br>
+
+  <br>
+
+With appropriate analysis software (the Sphygmochron), the Xineoph monitor supports a significant
+new capacity to predict oncoming hypertension, stroke, heart disease,
+kidney disease, eye damage.&nbsp; It gives doctors and their
+patients
+the ability to monitor the effectiveness of hypertension treatments and
+discover autonomic neuropathy affecting heart rate and blood pressure
+in diabetics without the currently very expensive test used for that
+purpose.<br>
+
+  <br>
+
+This increase in capacity to monitor and prevent disease is a direct
+result of the convenience and low cost (approximately $10) of the
+Xineoph monitor.<br>
+
+  <br>
+
+This project built and tested a prototype device. &nbsp;The device
+contains battery power, sensors, a microcontroller, non-volatile
+memory,&nbsp;an interface for uploading the collected data, and
+minimal
+UI elements for controlling and testing the device.<br>
+
+  <br>
+
+The device is useful to the Phoenix Project to learn how to build
+open-source medical devices. &nbsp;The Phoenix Project Coordination
+Team serves as the "customer" for this project, and is the major
+stakeholder. &nbsp; &nbsp;The Phoenix Project provides funding
+for this
+project, specifically arranging for funds to purchase hardware
+components and software tools.<br>
+
+  <br>
+
+  <br>
+
+  <o:p>&nbsp;</o:p>
+  <h3>Requirements Analysis</h3>
+
+R1.&nbsp;Device allows ambulation<br>
+
+R2. Device is electrically self-contained<br>
+
+R3. Device collects data from 2 sensors<br>
+
+R4. Device collects 40 samples/second from a piezo-electric film sensor<br>
+
+R5. Device collects user button pushes<br>
+
+R6. Device converts analog signals to digital<br>
+
+R7. Device turns user-perceivable light on and off<br>
+
+R8. Device identifies peaks and troughs from piezo-electric film sensor<br>
+
+R9. Device calculates HR, SBP, DBP from at least 5 cardiac cycles,
+every 30 minutes<br>
+
+R10. Device timestamps each collected measurement<br>
+
+R11. Device preserves and uploads at least 3 days worth of data<br>
+
+R12. Device preserves and uploads all acquired values<br>
+
+R13. Device preserves and uploads all calculated values<br>
+
+R14.
+  <h3>Product Description:</h3>
+
+  <o:p>&nbsp;</o:p> <br>
+
+The device
+consists of a <o:p></o:p> <br>
+
+  <div style="margin-left: 40px;"><span style="">·</span><span style="">&nbsp;&nbsp;&nbsp; </span>dual
+piezoelectric pressure sensor and
+amplifier circuit, <o:p></o:p><br>
+
+  <span style="">·</span><span style="">&nbsp;&nbsp;&nbsp;
+  </span>microcontroller, firmware in ROM, power-on
+timer,&nbsp;dynamic memory, flash memory<o:p></o:p> <br>
+
+  <span style="">·</span><span style="">&nbsp;&nbsp;&nbsp;
+  </span>radio frequency transmitter (Blacktooth), <o:p></o:p><br>
+
+  <span style="">·</span><span style="">&nbsp;&nbsp;&nbsp;
+  </span>battery, and <o:p></o:p><br>
+
+  <span style="">·</span><span style="">&nbsp;&nbsp;&nbsp;
+  </span>moisture-proof bandage. <o:p></o:p><br>
+
+  </div>
+
+The device is
+disposable &#8211; it is not expected to be reused.<o:p></o:p>
+  <p class="MsoNormal" style="">The
+piezoelectric pressure sensors are mounted on a Monostyrofoam backing
+strip 3
+inches apart.<span style="">&nbsp; </span>The
+Monostyrofoam strip is
+½ inch wide and 1/16 inch thick.<span style="">&nbsp;
+  </span>The
+exposed surface of the piezoelectric film is covered with a standard
+Flubber
+coating.<span style="">&nbsp; </span>On the
+other side of the
+Monostyrofoam strip, at one inch from each end, are the microcontroller
+with
+built-in memory and Blacktooth radio transceiver modules.<span style="">&nbsp; </span>This sensor assembly is
+adhered to a 4-by-1
+inch bandage by the bandage&#8217;s adhesive, with the
+Flubber-coated side of the
+sensors exposed.<span style="">&nbsp; </span>When
+applied to the
+inner upper arm, the sensor array is aligned with and placed over the
+brachial
+artery, Flubber-coated side against the skin, and held in place by the
+bandage.<span style="">&nbsp; </span>See Fig
+11-1 for schematic
+arrangement of the sensor assembly components.</p>
+
+The design and packaging of the device, a single unit that is held on
+the upper arm with a bandage, meets requirement R1 (ambulatorability)
+well.
+  <h4><span style="font-family: Arial;">Piezoelectric
+sensor and amplifier<o:p></o:p></span></h4>
+
+  <p class="MsoNormal" style="">The
+piezoelectric sensors are Measurement Specialties Inc. FLDT 028, coated
+on one
+side with a standard 1-molecule-thick Flubber coating.<span style="">&nbsp;
+  </span>The Flubber coating transmits pulse
+vibrations from the brachial artery to the sensor with no loss of
+signal, of
+course (because it is Flubber, after all).<span style="">&nbsp;
+  </span>The piezo electric film generates an electric pulse of
+up to 0.0000001
+volt.<span style="">&nbsp; </span>This signal
+is amplified by the
+amplifier circuit that is adhered to the reverse side of the
+piezoelectric film
+and converted to a digital 0 volt or 3 volt signal.<span style="">&nbsp;
+  </span>The amplifier circuit draws 0.22 microamps
+from the battery.<o:p></o:p></p>
+
+  <p class="MsoNormal" style=""><o:p>&nbsp;The&nbsp;</o:p>
+FLDT 028<o:p> sensors were selected in a previous project by
+Akhila and it was a requirement (R3, R4) to use them in this prototype
+device. &nbsp;Those requirements are met satisfactorily. &nbsp;</o:p></p>
+
+  <h4><span style="font-family: Arial;">Microcontroller</span></h4>
+
+  <p class="MsoNormal" style="">The
+microcontroller is a standard 8052Q microcontroller with 8K RAM, 8K
+Flash ROM,
+and 4K EEPROM built-in for memories.<span style="">&nbsp;
+  </span>The
+timer circuit (connected to the microcontroller&#8217;s first
+interrupt pin) causes
+the microcontroller, display, and sensor amplifier circuit to be
+powered up for
+up to one minute every 30 minutes.<span style="">&nbsp;
+  </span>The
+microcontroller firmware captures the timing of a pulse moving from the
+first
+sensor to the second sensor, and calculates the blood pressure from the
+time it
+takes for the pulse to move the 3 inches, using the method described in
+Chen
+et. al, US Patent No. 6,599,251, a soon-to-be-universal-standard
+technique in non-invasive blood
+pressure monitors to derive blood pressure from pulse delays.<span style="">&nbsp; </span>The microcontroller
+firmware monitors the
+first sensor until 5 pulses arrive; this is used to calculate the heart
+rate.<span style="">&nbsp; </span>The
+timestamp, blood pressure, and heart rate
+are burned into the Flash memory, and the microprocessor firmware
+powers itself
+down (until the timer powers it up again in 30 minutes, at which point
+the
+sequence repeats itself). &nbsp;The
+microcontroller and built-in memory uses 0.55 microamps of power when
+powered
+up.</p>
+
+  <p class="MsoNormal" style=""><o:p>The
+microcontroller was
+selected from the Microchip catalog based on power allocation (XX
+milliamps), ability to read 3 sensors, and store the firmware in
+built-in-ROM. &nbsp;It meets all these requirements adequately.
+&nbsp;The 8502Q microcontroller has been around so long that it is
+now
+patent-free, and is available from multiple manufacturers, decreasing
+the risk that it will become unavailable.</o:p></p>
+
+  <p class="MsoNormal" style=""><o:p>The
+firmware to capture a reading and store it in flash memory is described
+by the following pseudo-code:</o:p></p>
+
+  <p class="MsoNormal" style=""><o:p><small style="font-family: Courier New,Courier,monospace;">If State
+is not &#8220;None&#8221;<br>
+
+&nbsp;&nbsp; // <span style="font-style: italic;">Upload
+or reading is in progress, don&#8217;t interrupt it</span><br>
+
+&nbsp;&nbsp; Return from interrupt<br>
+
+Set State to &#8220;Recorder&#8221;<br>
+
+If the Memory Address Register is 0<br>
+
+&nbsp;&nbsp; // <span style="font-style: italic;">Hardware
+error has occurred, e.g., lost power</span><br>
+
+&nbsp;&nbsp; Execute Halt Mode<br>
+
+If the Memory Address Register is at Max Address<br>
+
+&nbsp;&nbsp; // <span style="font-style: italic;">Memory
+is full, no room for more readings</span><br>
+
+&nbsp;&nbsp; Execute Halt Mode<br>
+
+Load reading from systolic sensor, store in next memory location<br>
+
+Load reading from diastolic sensor, store in next memory location<br>
+
+Load reading from heart rate sensor, store in next memory location<br>
+
+Load reading from clock (for timestamp), store in next memory location<br>
+
+Advance Memory Address Register<br>
+
+Set State to &#8220;None&#8221;<br>
+
+Execute Halt Mode<br>
+
+  </small></o:p></p>
+
+  <h4>Upload Button</h4>
+
+  <p class="MsoNormal" style="">A small "upload"
+button
+is connected to the microprocessor&#8217;s second interrupt pin.<span style="">&nbsp; </span>When that button is
+pushed, the
+microprocessor is powered up, and it executes a second firmware program
+which
+initializes the Blacktooth radio transceiver, transmits all stored
+blood
+pressure and heart rate data, and erases the Flash memory in
+preparation for
+capturing more readings.<span style="">&nbsp;&nbsp;</span><span style="font-family: Arial;"></span></p>
+
+  <p class="MsoNormal" style="">The uploader
+firmware is described by the following pseudo-code:</p>
+
+  <p class="MsoNormal" style=""><small style="font-family: Courier New,Courier,monospace;">If State
+is not &#8220;None&#8221;<br>
+
+&nbsp;&nbsp; // <span style="font-style: italic;">Upload
+or reading is in progress, don&#8217;t interrupt it</span><br>
+
+&nbsp;&nbsp; Return from interrupt<br>
+
+Set State to &#8220;Uploader&#8221;<br>
+
+If the Memory Address Register is 0<br>
+
+&nbsp;&nbsp; Set Memory Address Register to Minimum Address<br>
+
+&nbsp;&nbsp; Fill Memory with &#8220;Hardware
+Error&#8221; indicator reading (-1,-1,-1,-1)<br>
+
+&nbsp;&nbsp; Advance Memory Address Register<br>
+
+If the Memory Address Register is at Minimum Address<br>
+
+&nbsp;&nbsp; // <span style="font-style: italic;">There
+are no readings to upload</span><br>
+
+&nbsp;&nbsp; Execute Halt Mode<br>
+
+Calculate standard 16-bit checksum on data in Memory<br>
+
+Store checksum in next memory location<br>
+
+Advance Memory Address Register<br>
+
+Invoke Bluetooth on Chip module, passing Memory address as argument<br>
+
+// <span style="font-style: italic;">Prepare to record
+more readings</span><br>
+
+Reset Memory Address Register to Minimum Address<br>
+
+Set State to &#8220;None&#8221;<br>
+
+Execute Halt Mode<br>
+
+  </small><span style="font-family: Arial;"><o:p></o:p></span></p>
+
+
+  <h4>Event Button</h4>
+
+The Event button is a simple push button connected to the
+microcontroller's second interrupt pin. &nbsp;When pushed once, the
+microcontroller flashes the light toggles between collecting data every
+30 minutes and not collecting data every 30 minutes. &nbsp;When
+pushed twice, the microcontroller stores the timestamp and an "event
+happened" indicator into the flash memory.<br>
+
+  <br>
+
+This button meets requirements R5 and R7 adequately, but the project
+noted that it was easy for two button pushes to be interpreted as two
+single button pushes instead of a double push, and recommends a
+different design for the final device.
+  <h4><span style="font-family: Arial;">Radio
+transceiver (Blacktooth)<o:p></o:p></span></h4>
+
+  <p class="MsoNormal" style=""><span style="font-family: Arial;"><o:p></o:p></span>The
+Blacktooth
+transceiver is Company XXX, model YYY (might get some idea of what to
+use from
+here: <a href="http://www.pdacortex.com/fda_approves_bluetooth_med_system.htm"><span class="WPHyperlink">http://www.pdacortex.com/fda_approves_bluetooth_med_system.htm</span></a>
+).<span style="">&nbsp; </span>It draws 0.22
+microamps from the
+battery when powered up and transmitting/receiving. <o:p></o:p></p>
+
+  <p class="MsoNormal" style=""><o:p>&nbsp;</o:p><br>
+
+  </p>
+
+  <h4><st1:place w:st="on"><span style="font-family: Arial;">Battery</span></st1:place><span style="font-family: Arial;"><o:p></o:p></span></h4>
+
+  <p class="MsoNormal" style="">The battery is
+a ½ inch diameter lithium medical-grade battery, 3 volts,
+type DL2032 from
+DurableCell, used in many home-quality non-invasive medical devices.<span style="">&nbsp; </span>It is capable of supplying
+1.00 microamp of
+power for up to one minute every 30 minutes, more than enough power for
+the
+0.99 microamp load placed on it by the amplifier, microprocessor, and
+radio
+transceiver.<o:p></o:p></p>
+
+  <p class="MsoNormal" style=""><o:p>&nbsp;</o:p></p>
+
+  <h4><span style="font-family: Arial;">Moisture-proof
+bandage<o:p></o:p></span></h4>
+
+  <p class="MsoNormal" style=""><span style="font-family: Arial;"><o:p></o:p></span>The
+bandage is
+a standard water-proof 4x1 bandage from Yohnson and Yohnson, with the
+absorbent
+pad removed and replaced with the sensor array.<span style="">&nbsp;
+  </span>This bandage is rated to stick to human skin for up to 7
+days.<span style="font-family: Arial;"><o:p></o:p></span></p>
+
+  <p class="MsoNormal" style=""><span style="font-family: Arial;"><o:p></o:p></span></p>
+
+  <h4><span style="font-family: Arial;">Patient-contacting
+materials<o:p></o:p></span></h4>
+
+  <p class="MsoNormal" style="">The materials
+that contact the patient&#8217;s skin while applying, wearing, and
+removing the blood
+pressure monitor are the Flubber coating on the piezoelectric sensors,
+the
+plastic bandage, and the adhesive on the bandage.<span style="font-family: Arial;"><o:p></o:p></span></p>
+
+  <o:p>&nbsp;</o:p><o:p></o:p>
+  <h3>User Instructions</h3>
+
+  <o:p></o:p>
+  <p class="MsoNormal"><b style=""><u>Intended
+Use:</u></b>
+The Xineoph Ambulatory Blood Pressure Monitor is used for monitoring a
+persons
+blood pressure and pulse rate in thirty minute intervals over a period
+of a
+week. The Xineoph (BPM) is disposable after the seven day period. <b style="">DO NOT REUSE</b>.</p>
+
+  <p class="MsoNormal"><b style=""><u>Directions
+For
+Use:</u></b> Place the Xineoph Ambulatory Blood Pressure
+Monitor sensor array
+on the arm with the piezoelectric film strips three inches apart over
+the
+brachial artery. Then place bandage over the sensor array to hold in
+place.
+When close to computer that is being used to monitor patient, push
+button on
+sensor array to transmit the blood pressure readings to the computer
+via
+Blacktooth RF transmitter. When the seven days are up dispose of sensor
+array. <b style="">DISPOSE OF <st1:place w:st="on">BATTERY</st1:place>
+PROPERLY.</b></p>
+
+  <p class="MsoNormal"><b style=""><u>Indications
+For
+Use:</u></b> The Xineoph Ambulatory Blood Pressure Monitor
+is designed for the
+sole purpose of monitoring blood pressure and heart rate. It is not
+reusable
+and is designed to take blood pressure at thirty minute intervals for a
+period
+of up to a week.</p>
+
+  <p class="MsoNormal" style=""><b style=""><u>Contraindications:</u></b>
+Do not use if
+patient is allergic bandage adhesive.</p>
+
+  <p class="MsoNormal" style=""><b style=""><u>Warnings:</u></b>
+Patients allergic to
+the bandage adhesive could develop rash on skin where contact occurred.</p>
+
+  <p class="MsoNormal" style=""><b style=""><u>Precautions:</u></b>
+For most effective
+results place the piezoelectric film strips three inches apart over the
+brachial artery.</p>
+
+  <p class="MsoNormal" style=""><b style=""><u>Special
+Patient Population:</u></b>
+Patients 13 years or older.</p>
+
+  <p class="MsoNormal" style=""><b style=""><u>Adverse
+Reactions:</u></b> If irritation
+of skin occurs, stop use immediately. If lasts more than 24 hours
+contact
+physician.</p>
+
+  <p class="MsoNormal" style=""><o:p>&nbsp;</o:p></p>
+
+  <h3>Project Testing Report</h3>
+
+Jill installed the prototype device on Jack on Monday. &nbsp;Jack
+pushed the button, and the light flashed "on" indicating it had started
+taking data. &nbsp;On Tuesday at about 11:45, worried that his
+blood pressure might be unnecessarily high, Jack pushed the button
+twice to log the event that the cafeteria lady made him eat broccoli
+again. &nbsp;On Friday, Jack pushed the button again, and the
+light&nbsp;flashed "on" to indicate that it had stopped taking
+data. &nbsp;He took the device off, confirmed no issues occurred
+with operation or skin irritation and returned it to Jill.
+&nbsp;Jill uploaded the data and verified that the device took the
+correct number of readings by looking at the timestamps. &nbsp;Jill
+declared success. &nbsp;Jack thought that one data point doesn't
+make a trend.<br>
+
+  <h3>Conclusion</h3>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <h3><a name="mozTocId667544"></a><font face="Times New Roman">About
+This Page</font></h3>
+
+  <p>This page is maintained by <a href="mailto:labeaty@ieee.org">Larry
+A. Beaty</a>. &nbsp;It was last updated on 13 August 2008.</p>
+
+  <p>The author(s) provide this information as a public service,
+and agree to place any novel and useful inventions disclosed herein
+into the public domain. They are not aware that this material
+infringes on the patent, copyright, trademark or trade secret
+rights of others. However, there is a possibility that such
+infringement
+may exist without their knowledge. The user assumes all responsibility
+for determining if this information infringes on the intellectual
+property rights of others before applying it to products or services.</p>
+
+  <p>(C) 2008 Larry A. Beaty. Copying and distribution of this
+page
+is permitted in any medium, provided this notice is preserved.</p>
+
+  <p></p>
+
+  <center><a href="../index.htm">Back to the Phoenix
+Home Page</a></center>
+
+  <p></p>
+
+  <p>&nbsp;</p>
+
+</blockquote>
+
+</div>
+
+</body></html>

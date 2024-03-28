@@ -1,0 +1,196 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>2006-08-27 Meeting Notes</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H3><CENTER><FONT COLOR="#009900">Phoenix Ambulatory Blood Pressure
+Monitor Project<BR>
+<U>8/27/2006 Meeting Notes</U></FONT></CENTER></H3>
+
+<H3><BR>
+Attendees</H3>
+
+<UL>
+  <LI>Chris Adams
+  <LI>Larry Beaty
+  <LI>Mike Callaghan
+  <LI>Alex Krasnopeev
+  <LI>Franz Halberg
+  <LI>El Nolley
+  <LI>Bob Schlentz
+  <LI>Dave Skramsted<BR>
+</UL>
+
+<H3>&nbsp;</H3>
+
+<H3>Discussion</H3>
+
+<P><B>Status Review:</B></P>
+
+<P>* Mike Callaghan: working with his adviser, Eph Sparrow on
+the technical validity of the idea in the Chen patent.</P>
+
+<P>* Alex: He is working on this problem:<BR>
+signal out of the amplifier =<BR>
+[p(t)+m(t)]*h(t) +e(t)<BR>
+= y(t) - output</P>
+
+<P>p(t)=pressure of the pulse <BR>
+m(t)= other mechanical force, artifact.<BR>
+h(t)= input response of the amplifier<BR>
+e(t)=statistical error</P>
+
+<P>Analysis:<BR>
+c= is the propagation of the media<BR>
+t=L/c<BR>
+L=0.025 m<BR>
+c= 7 m/s<BR>
+t=0.025/7=0.003 s</P>
+
+<P>The experiment measures three pulses and produces a computed
+value.</P>
+
+<P>L&lt; 2CT(sub d). <BR>
+T(sub d)= 1/f(sub d)<BR>
+T(sub d) = time between consecutive samples,<BR>
+f(sub d) = sample frequency, sample rate.</P>
+
+<P>We need to solve for h(t). Potential techniques include de-convolution
+and blind convolution.</P>
+
+<P>Bob: I suggest pulsing a balloon and create a peak detector,
+using a capacitor and operational amplifier. Recall that the systolic
+blood pressure is the point at which a doctor first hears the
+blood pulse as he/she reduces the cuff pressure. It is the point
+at which the cuff pressure equals the peak blood pressure if the
+doctor's hears it. Consequently, it depends on the doctor's hearing
+and is less than or equal to the peak blood pressure. The diastolic
+blood pressure is the cuff pressure at which the sound of the
+blood pulse disappears, or the cuff pressure is always less than
+the blood pressure. However, the doctor is still hearing a sound,
+but it is not sharp separation, and this depends on the doctor's
+hearing and training. A doctor will base this on experience of
+hundreds of patients. A doctor who sees 15-30 patients a day will
+be more accurate than one who sees very few. If you have a continuous
+blood pressure of 170 mmHg systolic it will cause the blood vessels
+of your kidney to break down and bleed. Also, the cause the vessels
+to weaken and other effects will occur. The most undiagnosed disease
+caused by weakened blood vessels is pneumonia, with the symptom
+of coughing up blood. Often disease names are assigned by symptoms
+and where the symptoms occur.</P>
+
+<P>The problems that occur with too high systolic blood pressure
+is blood valves not closing at the proper point and this will
+cause an elevated blood pressure. Another problem is that if part
+of the tissue of the hypothalamus is dead because of a stroke,
+there will be poor control over blood pressure. To show how higher
+blood pressure can occur in the absence of adequate central nervous
+system control, occasionally a corpse will contract a muscle and
+move, because the nerve system causes muscles to relax; when it
+is no longer functioning, a muscle may contract; and when a mechanical
+constraint is removed, an appendage may move.</P>
+
+<P>So, the systolic pressure is the contracting pressure of the
+heart, the diastolic pressure is the relaxing pressure of the
+heart.</P>
+
+<P>El: Perhaps we can measure m(t) at the systolic and diastolic
+points, look for what is similar, then subtract it out and see
+if systole and diastole points are more distinct, then continue
+the process until it becomes maximally distinct. Then, analyze
+what was eliminated and create a conceptual model for it. Assume
+it is m(t), that something about the mechanical artifact is constant,
+and we identify it and remove it. Dave noted that this is the
+process of adaptive filtering, could be done by LabView and Alex
+confirmed that perspective.</P>
+
+<P>Dave: Also, I am setting up a Wiki sensor team collaboration
+space, using Schtuff, at <A HREF="http://www.schtuff.com/">www.schtuff.com</A>
+is free and provides up to 200 MB storage. Key features were storage
+space, simplicity, free, upload files such as pdf's, html compatibility,
+photographs, documents, and very flexible. The only other wiki
+that compared with this was <A HREF="http://www.Wikispaces.com/">www.Wikispaces.com</A>
+because it had 2GB of storage. But Wikispaces wasn't as flexible
+or as simple to use. Simplicity was very important for us to enable
+others to participate in the discussions. The following link illustrates
+how easily a wiki can be created: <A HREF="http://en.wikibooks.org/wiki/Wiki_Science:How_to_start_a_Wiki">http://en.wikibooks.org/wiki/Wiki_Science:How_to_start_a_Wiki
+</A>.</P>
+
+<P>Franz: We have found that finding the systolic pressure is
+more easily done. Finding the diastolic pressure is far more difficult.
+Historically, physicians initially measured the diastolic pressure,
+(only much later did they measure systolic) and it was felt that
+diastolic was more related to health. It is also more related
+to other physical measures such as solar wind, which changes on
+a weekly basis, e.g. 6.67 days, which is also related to the rotation
+of the sun, and the overall solar wind seems to have a 20 year
+cycle, and induces ionization in the body. Three similar physical
+factors are related to blood pressure: solar wind (solar magnetic
+field), earth rotation (earth's magnetic field) and cosmic events
+(cosmic rays). Many feel that solar wind cycles are correlated
+to incidence of war. Conceptually, systolic pressure is a measure
+of cardiac output, while diastolic pressure is a measure of peripheral
+resistance. Many companies have gone broke trying to measure diastolic
+blood pressure. There are conflicts between consistency and accuracy
+(precision) because the diastole signal is so much weaker.</P>
+
+<P>Chris: 10 hrs to complete paper, and this week to go to China.</P>
+
+<P>Larry: Visual Basic unit testing tool working in the spreadsheet,
+they weren't designed to work in spreadsheets. He is preparing
+a demo, either next meeting or the following.</P>
+
+<P>Dave: The report on the team was submitted last Monday. We
+have LabView implemented. We don't need the filter board, we can
+simulate, emulate it in LabView. We don't need to design conditioning
+equipment, e.g. a low band filter, we can do it in LabView.</P>
+
+<P>It would be nice to have some sort of signal that would correspond
+to blood pressure. We would like to have a blood pressure measurement
+tool such as a fake arm to perform tests upon; and a blood pressure
+measurement system including a blood pressure monitor. Perhaps
+the Halberg Chronobiology Center can provide us with a blood pressure
+monitor that provides a signal output to our LabView analysis
+system<BR>
+<BR>
+</P>
+
+<P><B>Next Phoenix Project Coordinating Team Meeting: Sunday,
+September 10th at 2:30 p.m. in Mayo 748</B></P>
+
+<H3>&nbsp;</H3>
+
+<H3>&nbsp;</H3>
+
+<H3>About This Page</H3>
+
+<P><FONT FACE="Times New Roman">This page is maintained by <A
+HREF="mailto:e.nolley@ieee.org?subject=Phoenix_meeting_2004-06-27">Ellis
+S Nolley</A>. It was last updated on 25 October 2006.</FONT></P>
+
+<P><FONT FACE="Times New Roman">The author(s) provide this information
+as a public service, and agree to place any novel and useful inventions
+disclosed herein into the public domain. They are not aware that
+this material infringes on the patent, copyright, trademark or
+trade secret rights of others. However, there is a possibility
+that such infringement may exist without their knowledge. The
+user assumes all responsibility for determining if this information
+infringes on the intellectual property rights of others before
+applying it to products or services.</FONT></P>
+
+<P><FONT FACE="Times New Roman">Copyright (C) 2006 Ellis S. Nolley.
+Copying and distribution of this page is permitted in any medium,
+provided this notice is preserved.</FONT></P>
+
+<BLOCKQUOTE>
+  <P><CENTER><A HREF="Phoenix_Meeting_Archive.htm"><FONT FACE="Times New Roman">Back
+  to the Meeting Archive Page</FONT></A></CENTER></P></BLOCKQUOTE>
+
+<P><CENTER><A HREF="../../index.htm"><FONT FACE="Times New Roman">Back
+to the Phoenix Home Page</FONT></A><BR>
+</CENTER>
+
+</BODY>
+</HTML>

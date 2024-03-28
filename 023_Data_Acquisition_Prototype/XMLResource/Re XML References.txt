@@ -1,0 +1,81 @@
+Larry,
+
+> Tom,
+>
+> Sorry I'm behind (bad sister-in-law stuff happening at the moment).  I
+> argued with myself over various details about the XML example you wrote,
+> but they were trivial details and I went back and forth because I don't
+> actually know the answers (yet).  I think it's a good start.
+
+Sorry to hear about problems on the sister-in-law front.  I sent along
+something before just to get the ball rolling, not that I thought what I
+had was anywhere close to what we wanted.  Glad to hear you had a roughly
+similar point of view.
+>
+> Although Chris didn't mention it in his powerpoint, I think you should add
+> another number (just to spur discussion and start controversy, if nothing
+> else): the "quality" of the BP measurement.  This is something that the
+> current BP cuffs put out, but is not used very much.  A single quality
+> number for the triplet is fine.
+
+I put in a quality number: 1-10, with 10 being very high quality.
+
+>
+> Another thing to add is an "error" indicator, indicating that no reading
+> could be taken at all.  This could be built into the values for SBP, DBP,
+> and HR, because it's theoretically possible to get a measurement for one
+> (e.g., HR) without getting measurements for the others.
+
+I presently have the XML set up to contain a value only if one was obtained.
+
+>
+> Obviously you can add the computed values at any time.  You can be pretty
+> loose with whatever you write up there, because we don't plan to keep it
+> in the final device.
+
+I have to admit that I am well short of crystal clear on how to dummy up a
+set of raw values that would legitimately correspond to computed values. 
+I propose we leave that to later.
+
+>
+> Thanks for the references, too!  I haven't absorbed a whole lot yet
+> (limited reading time), but the 2nd one is already helpful on the DTD vs.
+> schema issues.
+>
+> I plan to put all this stuff on the prototype hardware project Phoenix web
+> page, and any other progress you make.
+>
+> Great help, thanks,
+> -Larry
+>
+
+Attached is a new, perhaps improved, XML file with an associated xsd schema.
+
+Tom
+>> Larry,
+>>
+>> A rather comprehensive repository of XML references is the "Cover
+>> Pages":
+>>
+>> http://xml.coverpages.org/AboutXMLCoverPages.html
+>>
+>> An interesting discussion of the problem with DTDs can be found at:
+>>
+>> http://www.cafeconleche.org/books/bible3/chapters/ch20.html
+>>
+>> This material discusses how xsd schemas solved those problems, as well
+>> as
+>> touching briefly on other schema approaches such as RELAX-NG and
+>> Schematron.
+>>
+>> Tom
+>>
+>>
+>
+>
+>
+
+
+Attachment Converted: "C:\Documents and Settings\labeaty\My Documents\Mailbox\IncomingAttachments\Prototype-004.xml"
+
+Attachment Converted: "C:\Documents and Settings\labeaty\My Documents\Mailbox\IncomingAttachments\Prototype-004.xsd"

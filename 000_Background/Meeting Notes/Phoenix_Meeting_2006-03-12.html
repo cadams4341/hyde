@@ -1,0 +1,219 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>2006-03-12 Meeting Notes</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H3><CENTER><FONT COLOR="#009900">Phoenix Ambulatory Blood Pressure
+Monitor Project<BR>
+<U>3/12/2006 Meeting Notes</U></FONT></CENTER></H3>
+
+<H3><BR>
+Attendees</H3>
+
+<UL>
+  <LI>Chris Adams
+  <LI>Larry Beaty
+  <LI>Germaine Cornelissen
+  <LI>Dave Hendrickson
+  <LI>Dennis Lienke
+  <LI>El Nolley
+  <LI>Bob Schlentz
+  <LI>Gerry Wirth
+</UL>
+
+<H3>&nbsp;</H3>
+
+<H3>Discussion</H3>
+
+<P><B>Status Review:</B></P>
+
+<P>* Larry: He's had discussions with Freescale and Microchip,
+looking for automated software testing for their chips, specifically
+to emulate their products. The software isn't free, especially
+the API. He wants to verify that their software does what we want.
+Then, we'll find a way to get it.</P>
+
+<P>Then, he worked with Nvu. Its editing ability is adequate,
+but its website access capability has limitations, especially
+limited to passive FTP, requiring our website host to specially
+accommodate that.</P>
+
+<P>We want to be able to do what agile software testers do, test
+each line of code, providing fine grained testing, and automate
+the resulting tests, often hundreds of thousands of tests.</P>
+
+<P>* Gerry: He is monitoring the discussion on the working groups
+of the AMIA, the American Medical Informatics Association, monitoring
+failures. So, today's minitopic is professional cultures and how
+people don't communicate effectively.</P>
+
+<P>* Chris: He is working on processing engineering framework.
+Hopefully, will have something to present on preprocess frameworks
+to building in enough so we know how systems engineering and process
+engineering fit in what roles are needed for each project, so
+we know what we need to ask for. He is continuing research into
+HL7 and Medical Information Bus, the likely standards that we
+will use.</P>
+
+<P>* Dennis: Because of our request, there is some movement at
+Sourceforge to add a top level medical category. Currently, they
+have a category called medical science, while our project is medical
+engineering.</P>
+
+<P>* Germaine: There is a group in the northern Italy, Mancia,
+that publishes journal articles on blood pressure variability.</P>
+
+<P><B>Bob Schlentz - Data Analysis</B></P>
+
+<P>Today, ambulatory blood pressure monitors cost so much they
+aren't used for preventative healthcare, just for clinical healthcare.</P>
+
+<P>The Double Amplitude, 2A, is the meaningful BP variability,
+difference between the min and max of blood pressure.</P>
+
+<P>We discussed how the data on slide 20 could be understood from
+engineering principles. We noted that the max occurred in the
+afternoon while the highest incidents of heart attacks occurs
+in early morning. However, from the second derivative, the highest
+acceleration of blood pressure occurs in early morning. We wondered
+what was the physical process that connected this acceleration
+to heart attacks, possibly through a force vector, at a time when
+total blood pressure was still small. Gerry said heart attacks
+are usually caused by a dislodged clot or vessel plaque that results
+in a blocked heart vessel causing loss of blood that damages a
+heart muscle. We remained curious about the physical process.
+Germaine thought it might be caused by several waking functions
+that cascade into a high force on the vessel wall.</P>
+
+<P>We discussed whether the relevant data was the peaks or the
+intermediate points as well. The model comes from a nonlinear
+function. However, the period is assumed to be constant, which
+results in a linear function of M, beta and gamma in the normal
+equations, which can be fitted using least squares.</P>
+
+<P>Then, we discussed the assumptions that of the normal equations
+and we realized we would like to see the detailed derivation of
+those equations so that we could connect the data to the equations.</P>
+
+<P><B>Gerry Wirth - Minitopic</B></P>
+
+<P><U>Professional Cultures</U><BR>
+Outline<BR>
+* Professional Cultures<BR>
+* Professional Domains and Cultures<BR>
+* The clinician &quot;Lone Marshall&quot; Culture<BR>
+* &quot;Failure&quot; of Clinical Information Systems.</P>
+
+<P>* Professional Cultures<BR>
+- Shared basic assumptions form a culture. <BR>
+- Individuals: Multiple Overlapping Cultures.<BR>
+- Professional Cultures: examples<BR>
+-- Healthcare: physicians, nurses, specialists, ..<BR>
+--- even these are different, e.g. &quot;doctors orders&quot;
+to nurses in US and others, vs &quot;doctors requests&quot; in
+Britain.<BR>
+-- Software: analysts, programmers, architectures, <BR>
+- Adaptation precludes Adaptability - Clash of Professional Cultures
+is Inherent<BR>
+-- Value or Discard past experience. (Karl Weik, 1979, Social
+Psychology of Organizing)<BR>
+--- Organizations create environments that constrain them. <BR>
+- Failed Cultural Assumptions may go Unrecognized. <BR>
+(How you define the problem constrains they approaches and solutions
+that are available to you?)</P>
+
+<P>* Professional Domains and Culture<BR>
+- Members of a professional culture<BR>
+-- Share basic assumptions about their domain.<BR>
+- Domain Systems: Complicated vs. Complex<BR>
+-- Complicated System: Stable Domain.<BR>
+-- Complex Adaptive Systems: Changing Domain<BR>
+-- Grown, not built<BR>
+-- Highly decentralized<BR>
+-- Tolerate and Learn from errors<BR>
+-- Maintain dynamic equilibrium<BR>
+-- Exhibit emergent properties</P>
+
+<P>* The Clinician &quot;Lone Marshal&quot; Culture<BR>
+- An example of a clinician culture:<BR>
+-- &quot;Medicine is inherently chaotic&quot;<BR>
+-- Therefore: &quot;All chaos in medicine in inherent&quot;<BR>
+-- The Lone Marshall: &quot;I'm going to tame this ward single-handedly
+with a stethoscope on each hip.!&quot;<BR>
+- Essential Chaos vs. Iatrogenic Chaos <BR>
+- Essential Chaos: Each Patient brings Uncertainty<BR>
+-- Not easily predicted for an individual<BR>
+- Iatrogentic Chaos: Erratic Behavior of Clinical Organization<BR>
+-- Results from Organizational structures and systems<BR>
+-- Can be reduced by joint effort of clinicians (and others).<BR>
+- However, a group of &quot;Line Marshals&quot; will not form
+a &quot;Posse&quot;, because joint effort is not in their culture.</P>
+
+<P>* Failure of Clinical Information Systems.<BR>
+- Recent AMIA discussions<BR>
+-- AMIA, American Medical Informatics Association. <BR>
+- Success and failure are not dichotomous and static categories,
+but socially negotiated judgment.<BR>
+- Even a supposedly &quot;successful&quot; implementation may
+only succeed by reinforcing a &quot;dysfunctional&quot; operation
+environment.</P>
+
+<P>Question: As engineers, should we build what they want or what
+they need? <BR>
+Answer: Yes!! Use the solution as a way of educating them about
+what is possible, because systems and needs evolve. Ask how they
+do what they do and why they do it.</P>
+
+<P>Question: Are you asking use to commit to changing the system?
+<BR>
+Answer: Yes, you need to build into the process a mechanism to
+continually evolve it. Like a vocabulary, you need to design the
+system so that it is open ended. For example, there are serious
+flaws in assuming a vocabulary can be closed ended.</P>
+
+<P>Question: Are there any analysis methods suitable to complex
+systems?<BR>
+Answer: Are you thinking of patterns to discern complex systems
+from complicated systems? There is a kind of synergy between software
+and clinical diagnosis. Both deal with uncertainty, such as does
+it fit what they are asking for, or are they asking for something
+that isn't needed? You are continually trying to classify, such
+as with illnesses, did they not come back because they got better?
+Both domains could learn from each other. For example, patterns
+in software analysis could be applied to clinical diagnosis. <BR>
+</P>
+
+<H3>&nbsp;</H3>
+
+<H3>About This Page</H3>
+
+<P><FONT FACE="Times New Roman">This page is maintained by <A
+HREF="mailto:e.nolley@ieee.org?subject=Phoenix_meeting_2004-06-27">Ellis
+S Nolley</A>. It was last updated on 25 October 2006.</FONT></P>
+
+<P><FONT FACE="Times New Roman">The author(s) provide this information
+as a public service, and agree to place any novel and useful inventions
+disclosed herein into the public domain. They are not aware that
+this material infringes on the patent, copyright, trademark or
+trade secret rights of others. However, there is a possibility
+that such infringement may exist without their knowledge. The
+user assumes all responsibility for determining if this information
+infringes on the intellectual property rights of others before
+applying it to products or services.</FONT></P>
+
+<P><FONT FACE="Times New Roman">Copyright (C) 2006 Ellis S. Nolley.
+Copying and distribution of this page is permitted in any medium,
+provided this notice is preserved.</FONT></P>
+
+<BLOCKQUOTE>
+  <P><CENTER><A HREF="Phoenix_Meeting_Archive.htm"><FONT FACE="Times New Roman">Back
+  to the Meeting Archive Page</FONT></A></CENTER></P></BLOCKQUOTE>
+
+<P><CENTER><A HREF="../../index.htm"><FONT FACE="Times New Roman">Back
+to the Phoenix Home Page</FONT></A><BR>
+</CENTER>
+
+</BODY>
+</HTML>

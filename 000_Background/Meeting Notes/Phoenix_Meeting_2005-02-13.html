@@ -1,0 +1,209 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>2005-02-13 Meeting Notes</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H3><CENTER><FONT COLOR="#009900">Phoenix Ambulatory Blood Pressure
+Monitor Project<BR>
+<U>2/13/2005 Meeting Notes</U></FONT></CENTER></H3>
+
+<H3><BR>
+Attendees</H3>
+
+<UL>
+  <LI>Chris Adams
+  <LI>Germaine Cornelissen
+  <LI>Andrei Khodak
+  <LI>El Nolley
+  <LI>Dennis Lienke
+  <LI>Wade Peterson
+  <LI>Bob Schlentz
+  <LI>Larry Werth<BR>
+</UL>
+
+<H3><BR>
+Discussion</H3>
+
+<P>* Andrei Khodak, of Advanced Bionics, Inc, joined us. He has
+a research and development background in blood pressure, fluid
+interaction, and computation fluid dynamics.</P>
+
+<P>* Max Cortner, Director of Testing at Guidant, will present
+to us at our next meeting on medical device testing. Chris wants
+to hear what testing we need to do as an open source community
+because we come from companies with cultures who have a tradition
+of testing. However, in open source organizations we can't afford
+that cost structure, but we still need to do testing. So, what
+should we do, how do we adapt and what can we avoid that is just
+culture.</P>
+
+<P>Dennis: Looing at repository tools, doesn't like CVS, looking
+at TLA, Arch,subversion, in CVS he doesn't easily enable to reorganizing
+the code, doesn't allow you to create new directories, delete
+and rename old directories.</P>
+
+<P>Gerry: Monitoring groups, need for medical vocabulary, interachinge
+information with medical personal, looking at open source projects.
+There have bween other attempts, UNMLS universial medial language
+system, meta thesaurus, may become open. For auditing records,
+just keep all of the old records, e.g. in medical records, you
+have to keep all of the records, never forgets all of the old
+records. FDA is using that culture, all of the old versions of
+the specifications.</P>
+
+<P>Wade: suggested www.21cfrpart11.com, solution providers, electronic
+ocument management systems. We should look at these, they specialize
+in handling and storing these documents. Is there an open source
+product that will take our information and provide a 21CFR Part
+11 compliant verision that is auditable. Also, look at their discussion
+group, it is a Yahoo Group. &quot;21CFRPart11 mailing list&quot;.
+We need to capture data and the design history file. Gerry will
+look at this and let us know.</P>
+
+<P>El: will add the link to the full 21CFR Part 11 to the medical
+regulations webpage. <A HREF="http://www.access.gpo.gov/nara/cfr/waisidx_04/21cfr11_04.html">www.access.gpo.gov/nara/cfr/waisidx_04/21cfr11_04.html
+</A><BR>
+Start with scope.</P>
+
+<P>Wade: Received a package from Conductive Technologies, Mike
+Flickinger, sent a blank with a square field that you can cut
+out the electrode, atttach three tails, then use a conductive
+epoxy. Wondered if you just use a glue, or their own proprietary
+adhesive. We are reluctant to go with a proporietary solution
+because we are trying to create an open marketplace for people
+to compete for best price and service. We are trying to create
+a marketplace for ABPM.</P>
+
+<P>Bob: Asked where Franz' additions to the mission.</P>
+
+<P>El: We changed the definitions of 'unobtrusive' and 'easy to
+use' which are linked on every use of it on the webpage. We don't
+want to change the mission statement, because that may require
+a restart of the Phoenix Project, but we structured it so that
+it is flexible enough to accommodate change through 'clarification'
+of the words used in its definition.</P>
+
+<P>Bob: There is encouraging news of the last issue of EE Times
+of open source products for the 3rd world, eg. a bicycle powered
+computer.</P>
+
+<P>Germaine: It is possible that Miguel Rebilla, a mathematician
+and webmaster of the Halberg Chronobiology Center, may be interested
+in participating in the Phoenix Project. He has worked on Cosignor
+function for Chronobiology, using Matlab.</P>
+
+<P>Regarding the platform for developing software, between</P>
+
+<P>Input example, VBA program, output example, statistics routine,
+enhancements that allow for handling infinite amout of data.</P>
+
+<P>Chris Adams: Just accepted a position with United Health Group
+as a senior business analyst based in part on presentation of
+his work with Phoenix, where he will focus on systems requirements
+analysis. Questions include: do we want to do test driven development.
+He took us through his presentation. Today we will focus on User
+Roles and requirements. We envision the system comprising four
+parts, 1) the local wearable subsystem, 2) the remote data analysis
+workstation subsystem, 3) the physiologist's analysis system -
+the baseline manasgement workstation which uses a profile of the
+patient (e.g a 35 yr old male) and allows them to create new profiles
+and modify existing profils, and 4) a diary which includes information
+about each measurement to interpret each measurement. The diary
+is essential and will be unique to Phoenix, because no other ABPM
+incorporates a diary into it. It is a major issue in making sense
+of the blood measurements.</P>
+
+<P>Germaine: The diary is most useful in determining what the
+patient's activity at the time of measurement. Currently, the
+data is the sum of all the data, with the diary, you can interrogate
+the data and categorize it based on activity, sleep, wake, exercise,
+and other activity, changing the time base and activity base.</P>
+
+<P>Chris: We can separate out the work of the Daa Analysis Workstation:
+heavy data modeling, XML, some commuiniocation modules in both
+the data analysis (remote) and the blood collection (local) system.
+It will have a display, because the patient will need this information,
+their will be a keyboard to provide commands, a processor, and
+an applications layer to enable processing.</P>
+
+<P>The Actor/Users: The scenarios we previously identified are
+more limited than we thought. A monitor wearer - we need another
+label which describes the user not what they do. Other class of
+user are administrators, who get the data out of the device and
+provide it to others, including physicians, technicians, pharmacuests
+or a self-care person. There are multiple kinds of clinicians:
+Primary Care physician,specialist, nurse. The last major role
+is the physiologist.</P>
+
+<P>The stakeholders include: health insurance companies, inspector/auditors/regulatory
+agencies, and clinicians.</P>
+
+<P>Actors includes: Patients (wearers), speicalist, clinicians,
+physician, nurse.</P>
+
+<P>Summary Use Cases inlcude: 1) Rehabillitiation for clinical
+trial and clinical practice, and 2) Prehabilitation for self-care
+or education. We suggested others including 3) public health where
+a government or non-for-profit agency to gather information on
+the health of a population, 4) research - evidence-based medicine,
+5) Insurance programs while implement illness preveniont discounts
+and wellnes programs.</P>
+
+<P>Next step: we need story writing for each of these to capture
+the requirements. Example: A patient checks into a clinic, nurse
+collects a patient history, doctor looks at it and says to the
+patient that they are a candidate for a program, they patient
+agrees, they sign agreement forms, they give the patient the device,
+train them in their use, and create a schedule of use and visit
+to the clinic, the program is conducted and completed, the data
+is collected and analyzed, data submitted to the originating organiztaion
+and used in the following way. Gerry will write stories on primary
+care, nurses perspective, wearer/patient. Bob will write a narrative
+on the application in the hospital. Germaine will write a narrative
+form the chronomics analysis perspective - included as part of
+her document on blood pressure analysis including input - analysis
+method - output, or just give us references to such articles.
+El will write stories about public health and insurance. Dennis
+will write a story about Self-care.</P>
+
+<P><BR>
+Education: Germaine described how they used slumber parties to
+discuss it and learn that there were blood pressure variations.</P>
+
+<P>Our next meeting will occur on February 27th.<BR>
+</P>
+
+<H3>&nbsp;</H3>
+
+<H3>About This Page</H3>
+
+<P><FONT FACE="Times New Roman">This page is maintained by <A
+HREF="mailto:e.nolley@ieee.org?subject=Phoenix_meeting_2004-06-27">Ellis
+S Nolley</A>. It was last updated on 27 February 2005.</FONT></P>
+
+<P><FONT FACE="Times New Roman">The author(s) provide this information
+as a public service, and agree to place any novel and useful inventions
+disclosed herein into the public domain. They are not aware that
+this material infringes on the patent, copyright, trademark or
+trade secret rights of others. However, there is a possibility
+that such infringement may exist without their knowledge. The
+user assumes all responsibility for determining if this information
+infringes on the intellectual property rights of others before
+applying it to products or services.</FONT></P>
+
+<P><FONT FACE="Times New Roman">Copyright (C) 2004 Ellis S. Nolley.
+Copying and distribution of this page is permitted in any medium,
+provided this notice is preserved.</FONT></P>
+
+<BLOCKQUOTE>
+  <P><CENTER><A HREF="Phoenix_Meeting_Archive.htm"><FONT FACE="Times New Roman">Back
+  to the Meeting Archive Page</FONT></A></CENTER></P></BLOCKQUOTE>
+
+<P><CENTER><A HREF="../../index.htm"><FONT FACE="Times New Roman">Back
+to the Phoenix Home Page</FONT></A><BR>
+</CENTER>
+
+</BODY>
+</HTML>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../015_Methodology_and_Systems_Management/css/readyset.css" />
+		<link rel="stylesheet" type="text/css" href="../015_Methodology_and_Systems_Management/css/inst.css" />
+		<link rel="stylesheet" type="text/css" href="../015_Methodology_and_Systems_Management/css/print.css" media="print" />
+		<title>System Requirements Specification</title>
+	</head>
+<body>
+<div class="app">
+<div class="readyset">
+<h2>
+	<p class="print_only"><font color="green">Phoenix Ambulatory Blood Pressure Monitor</font></p>
+	<hr color="darkgray" size="1" width="25%" align="left" class="print_only">
+	<p>System Requirements Specification</p>
+</h2>
+
+<div id="releaseinfo">
+	<h3>Release Information</h3>
+	<table class="axial" border="1" cellpadding="3" cellspacing="2">
+		<tbody>
+			<tr>
+				<th>Project:</th>
+				<td><a href="http://www.phoenix.tc-ieee.org/014_Systems_Architecture_and_Engineering/index.html">Phoenix Systems Architecture and Engineering</a></td>
+			</tr>
+			<tr>
+				<th>Internal Release Number:</th>
+				<td>0.0.1</td>
+			</tr>
+			<tr>
+				<th>Attached worksheets:</th>
+				<td>
+					<!-- <div>SysRS &gt; <a href="file:///Users/phoenix/templates/ReadySET-0-9-3/templates/use-case-suite.html">Use case suite</a></div> -->
+					<div>SysRS &gt; <a href="feature-set.html">Feature set</a></div>
+				</td>
+			</tr>
+			<tr>
+				<th>Related Documents:</th>
+				<td>
+					<!-- <div>
+						<a href="file:///Users/phoenix/templates/ReadySET-0-9-3/templates/proposal.html">Project proposal</a>
+						&gt; <a href="file:///Users/phoenix/templates/ReadySET-0-9-3/templates/user-needs.html">User needs</a>
+					</div> -->
+					<!-- <div>LINKS TO RELEVANT STANDARDS</div> -->
+					<!-- <div>LINKS TO OTHER DOCUMENTS</div> -->
+					<div><a href="shared/glossary.html">Glossary</a></div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div> <!-- /releaseinfo -->
+
+<div id="introduction">
+	<h3>Introduction</h3>
+
+	<p>
+		The Phoenix Ambulatory Blood Pressure Monitoring System is inexpensive, unobtrusive, and easy to use, and collects a week of blood pressure measurements.
+		The monitor is intended for long term use on a massive scale to facilitate self-care, and the development of chronomedical diagnostics and of related disease prevention and treatment techniques.
+	</p>
+	
+	<p>
+		This draft of the Phoenix System Requirements Specification primarily compiles requirements and design direction statements previously recorded in various presentations and papers.
+		This draft is intended to facilitate the expansion of the project, in terms both of the number of participants and of the number of components on which the project can work concurrently.
+	</p>
+</div> <!-- /introduction -->
+
+<div id="value-requirements">
+	<h3><a href="value-requirements.html">Value Requirements</a></h3>
+	<p>To see the value statements, <a href="value-requirements.html">click here</a>.</p>
+
+<div id="functional-requirements">
+<div id="operational-requirements">
+	<h3><a href="functional-requirements.html">Functional / Operational Requirements</a></h3>
+	<div class="outline">
+	<ol>
+		<li><a href="functional-requirements.html#events-and-functions">Events and Functions</a></li>
+		<li><a href="functional-requirements.html#use-cases">Use Cases</a></li>
+		<li><a href="functional-requirements.html#algorithms">Algorithms</a></li>
+		<li><a href="functional-requirements.html#information-model">Information Model</a></li>
+	</ol>
+	</div> <!-- outline -->
+</div> <!-- operational-requirements -->
+</div> <!-- functional-requirements -->
+
+<div id="nonfunctional-requirements">
+<div id="quality-requirements">
+	<h3><a href="nfr.html">Nonfunctional / Quality Requirements</a></h3>
+
+	<div class="outline">
+	<ol>
+		<li><a href="nfr.html#development-oriented-concerns">Development-Oriented Concerns</a></li>
+		<ol id="development-oriented-concerns">
+			<li><a href="nfr.html#change-concerns">Change Concerns</a></li>
+			<ol id="change-concerns">
+				<li><a href="nfr.html#flexibility">Flexibility</a></li>
+				<ol id="flexibility">
+					<li><a href="nfr.html#expandability">Expandability</a></li>
+					<li><a href="nfr.html#portability">Portability</a></li>
+					<li><a href="nfr.html#scalability">Scalability</a></li>
+				</ol> <!-- flexibility -->
+				<li><a href="nfr.html#maintainability">Maintainability</a></li>
+				<li><a href="nfr.html#reusability">Re-usability</a></li>
+			</ol> <!-- change-concerns -->
+		
+			<li><a href="nfr.html#management-concerns">Management Concerns</a></li>
+			<ol id="management-concerns">
+				<li><a href="nfr.html#designability">Designability</a></li>
+				<li><a href="nfr.html#installability">Installability</a></li>
+				<li><a href="nfr.html#manageability">Manageability</a></li>
+				<li><a href="nfr.html#verifiability">Verifiability</a></li>
+			</ol> <!-- management-concerns -->
+		</ol> <!-- development-oriented-concerns -->
+	
+		<li><a href="nfr.html#usage-oriented-functional-concerns">Usage-Oriented Functional Concerns</a></li>
+		<ol id="usage-oriented-functional-concerns">
+			<li><a href="nfr.html#accessibility">Accessibility</a></li>
+			<li><a href="nfr.html#auditability">Auditability</a></li>
+			<li><a href="nfr.html#configurability">Configurability</a></li>
+			<li><a href="nfr.html#correctness">Correctness</a></li>
+			<li><a href="dependability.html">Dependability</a></li>
+			<ol id="dependability">
+				<li><a href="dependability.html#availability">Availability</a></li>
+				<li><a href="dependability.html#biocompatibility">Biocompatibility</a></li>
+				<li><a href="dependability.html#privacy">Privacy</a></li>
+				<li><a href="dependability.html#reliability">Reliability</a></li>
+				<li><a href="dependability.html#robustness">Robustness</a></li>
+				<li><a href="dependability.html#safety">Safety</a></li>
+				<li><a href="dependability.html#security">Security / Integrity</a></li>
+				<li><a href="dependability.html#survivabilty">Survivabilty</a></li>
+			</ol> <!-- dependability -->
+			<li><a href="performance.html">Performance</a></li>
+			<ol id="performance">
+				<li><a href="performance.html#response-time">Response Time</a></li>
+				<li><a href="performance.html#latency">Latency</a></li>
+				<li><a href="performance.html#throughput">Throughput</a></li>
+				<li><a href="performance.html#dynamic-capacity">Dynamic Capacity</a></li>
+				<li><a href="performance.html#static-capacity">Static Capacity</a></li>
+				<li><a href="performance.html#modes">Modes</a></li>
+			</ol> <!-- performance -->
+			<li><a href="nfr.html#usability">Usability</a></li>
+		</ol> <!-- usage-oriented-functional-concerns -->
+	</ol>
+	</div> <!-- outline -->
+</div> <!-- quality-requirements -->
+</div> <!-- nonfunctional-requirements -->
+
+<div id="rules">
+	<h3><a href="rules.html">Rules</a></h3>
+	<p>To see the rule table, <a href="rules.html">click here</a>.</p>
+</div> <!-- rules -->
+
+</div> <!-- /readyset -->
+
+</div> <!-- /app -->
+
+		<blockquote class="footnote_nohide">
+			<p>
+				This page is maintained by
+				<a href="#">Christopher J. Adams</a>.
+				It was last updated 22 May 2011.
+			</p>
+			<p>
+				Copyright (c) 2011 Christopher J. Adams<br>
+				<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_blank">Creative Commons Attribution 3.0 Unported License</a>
+			</p>
+		</blockquote>
+		
+</body>
+</html>

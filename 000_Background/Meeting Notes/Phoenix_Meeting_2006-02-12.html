@@ -1,0 +1,141 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>2006-02-12 Meeting Notes</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H3><CENTER><FONT COLOR="#009900">Phoenix Ambulatory Blood Pressure
+Monitor Project<BR>
+<U>2/12/2006 Meeting Notes</U></FONT></CENTER></H3>
+
+<H3><BR>
+Attendees</H3>
+
+<UL>
+  <LI>Chris Adams
+  <LI>Larry Beaty
+  <LI>Germaine Cornelissen
+  <LI>Dennis Lienke
+  <LI>El Nolley
+  <LI>Bob Schlentz
+  <LI>Dave Skramsted
+  <LI>Gerry Werth<BR>
+</UL>
+
+<H3>&nbsp;</H3>
+
+<H3>Discussion</H3>
+
+<P>Chris Adams: We discussed setting Germaine up with AIM instant
+messenger for communicating. Then, we reviewed HL7 (healthcare
+level 7 for ISO's OSI 7 layer communications protocols) for healthcare
+interoperability into a standard information bus to reduce the
+clutter. We need to address communications protocols between Phoenix
+and other systems, and between the local subsystem and the remote
+subsystem or reference database. Do we need the reference database
+as part of Phoenix? Some said yes, others said no? We discussed
+the nature of the reference database, and that it may have fractal
+properties. Gerry will discuss this next meeting as a mini-topic
+as a required attribute of clinical information systems. Then
+we asked, does Phoenix need to have patient identities or is a
+temporary number sufficient, e.g. does Phoenix need to know about
+the unique person? At the time we provide the local subsystem
+device to the patient, it need not have patient information, merely
+device ID and session times. Chris thinks we don't need individually
+identifiable patient IDs. In practice, this information is used
+to create profiles, and establish reference norms for patients
+by gender, age, disease history, geography and other research
+useful parameters. Patient identity should remain with the clinician.
+Then, where does the reference database come from? There are data
+flows that flow from Phoenix and back to Phoenix. Now, how does
+Phoenix function if used by non-clinicians (non-physicians), perhaps
+by individuals or public health?</P>
+
+<P>Larry Beatty: We looked at agile methodology, looked at bugs
+in the prototype application, and discovered that one of the bugs
+is actually a feature. We tried to set up test data and found
+that it doesn't seem to deal with data with gaps, eg. daytime,
+nighttime, between. Is it important to fix. Germaine said the
+system should parce them and analyze the global sphygmochron and
+provide warnings if there are gaps that overlap night and day,
+and not provide the daytime and nighttime analysis. Another question
+is, after we finish cycling, how do we document the webpage with
+this product created? We decided to set up Germaine with nVu so
+she can manage the webpage herself. Bob said we should add to
+the Phoenix release, &quot;Application of these ideas and information
+for diagnostic purposes is the sole responsibility of the person
+doing it.&quot;</P>
+
+<P>Dave Skramsted: He has been forming the sensor team, three
+engineers met, brainstormed current and other technologies, and
+is setting up the next meeting. He is looking for volunteers,
+and looked at the patents of the Tensys system to see how it is
+working,</P>
+
+<P>Bob: He has been thinking about the device, selecting a particular
+active component and getting an emulator for it, e.g. TI8051.
+He found an article about it in Electronic Design, TI was doing
+the same thing. He'll provide the URL. He is worried about Franz's
+and Germaine's speculation that long term blood pressure changes
+may be due to fluctuations in solar magnetic fields, e.g. lack
+sunspots.</P>
+
+<P>Gerry Werth's Mini-topic:<BR>
+&quot;Outpatient Clinical Process - Hiding in Plain Sight&quot;</P>
+
+<P>The Patient presented with chest pain. Procedure had the following
+steps. <BR>
+CC: chief complaint, Chest Pain<BR>
+HPI: <BR>
+PMH: <BR>
+DDX: (Differential Diagnosis)<BR>
+PE: Physical Exam<BR>
+Objective: <BR>
+Assessment: Called it an early pneumonia.<BR>
+Plan:</P>
+
+<P>Finally, he discovered it was a bowl loop It helped to talk
+to the previous doctor, but there wasn't a lot of information.
+This case exemplified the description by:Nemeth &amp; Cook, Journal
+of Biomedical Informatics 38 [2005], 262-263.</P>
+
+<P>&quot;healthcare work ... complex, poorly bounded, conflicted,
+highly variable, uncertain, and high-tempo work domain.&quot;</P>
+
+<P>&quot;Occasional visitors cannot fathom this demanding work,
+much less create IT systems to support.&quot;<BR>
+</P>
+
+<H3>&nbsp;</H3>
+
+<H3>About This Page</H3>
+
+<P><FONT FACE="Times New Roman">This page is maintained by <A
+HREF="mailto:e.nolley@ieee.org?subject=Phoenix_meeting_2004-06-27">Ellis
+S Nolley</A>. It was last updated on 25 October 2006.</FONT></P>
+
+<P><FONT FACE="Times New Roman">The author(s) provide this information
+as a public service, and agree to place any novel and useful inventions
+disclosed herein into the public domain. They are not aware that
+this material infringes on the patent, copyright, trademark or
+trade secret rights of others. However, there is a possibility
+that such infringement may exist without their knowledge. The
+user assumes all responsibility for determining if this information
+infringes on the intellectual property rights of others before
+applying it to products or services.</FONT></P>
+
+<P><FONT FACE="Times New Roman">Copyright (C) 2006 Ellis S. Nolley.
+Copying and distribution of this page is permitted in any medium,
+provided this notice is preserved.</FONT></P>
+
+<BLOCKQUOTE>
+  <P><CENTER><A HREF="Phoenix_Meeting_Archive.htm"><FONT FACE="Times New Roman">Back
+  to the Meeting Archive Page</FONT></A></CENTER></P></BLOCKQUOTE>
+
+<P><CENTER><A HREF="../../index.htm"><FONT FACE="Times New Roman">Back
+to the Phoenix Home Page</FONT></A><BR>
+</CENTER>
+
+</BODY>
+</HTML>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PatientData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Prototype-004.xsd">
+    <Device>
+       <DeviceType>PHX-prototype-1c</DeviceType>
+       <DeviceID>PHX-0834-872</DeviceID>
+    </Device>
+    <CalculatedDataSet>
+       <DateTimeStamp> 2008-08-06T09:34:01 </DateTimeStamp>
+       <SystolicBloodPressure> 134 </SystolicBloodPressure>
+       <DiastolicBloodPressure> 83 </DiastolicBloodPressure>
+       <HeartRate> 81 </HeartRate>
+       <DataQuality> 10 </DataQuality>
+    </CalculatedDataSet>
+    <CalculatedDataSet>
+       <DateTimeStamp> 2008-08-06T10:07:03 </DateTimeStamp>
+       <SystolicBloodPressure> 130 </SystolicBloodPressure>
+       <DiastolicBloodPressure> 81 </DiastolicBloodPressure>
+       <HeartRate> 78 </HeartRate>
+       <DataQuality> 10 </DataQuality>
+    </CalculatedDataSet>
+    <CalculatedDataSet>
+       <DateTimeStamp> 2008-08-06T10:41:07 </DateTimeStamp>
+       <SystolicBloodPressure> 138 </SystolicBloodPressure>
+       <DiastolicBloodPressure> 88 </DiastolicBloodPressure>
+       <HeartRate> 84 </HeartRate>
+       <DataQuality> 9 </DataQuality>
+    </CalculatedDataSet>
+    <CalculatedDataSet>
+       <DateTimeStamp> 2008-08-06T11:12:40 </DateTimeStamp>
+       <SystolicBloodPressure> 138 </SystolicBloodPressure>
+       <HeartRate> 84 </HeartRate>
+       <DataQuality> 5 </DataQuality>
+    </CalculatedDataSet>
+    <CalculatedDataSet>
+       <DateTimeStamp> 2008-08-06T11:41:54 </DateTimeStamp>
+       <HeartRate> 89 </HeartRate>
+       <DataQuality> 2 </DataQuality>
+    </CalculatedDataSet>
+</PatientData>

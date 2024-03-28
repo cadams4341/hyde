@@ -1,0 +1,157 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>2005-06-26 Meeting Notes</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H3><CENTER><FONT COLOR="#009900">Phoenix Ambulatory Blood Pressure
+Monitor Project<BR>
+<U>6/26/2005 Meeting Notes</U></FONT></CENTER></H3>
+
+<H3><BR>
+Attendees</H3>
+
+<UL>
+  <LI>Chris Adams 
+  <LI>Larry Beaty
+  <LI>William Cheng
+  <LI>Germaine Cornelissen
+  <LI>John Goul
+  <LI>Wayne Hochrein
+  <LI>Dennis Lienke
+  <LI>Venkat Mynampati
+  <LI>El Nolley
+  <LI>Tom Renner
+  <LI>Bob Schlentz
+  <LI>Dave Skramsted 
+  <LI>Kyle Thureen
+  <LI>Gerry Werth<BR>
+<BR>
+</UL>
+
+<H3>Discussion</H3>
+
+<P>To introduce the Phoenix Project to our new members, El summarized
+the overall project goal, Dave summarized the hardware projects
+and Chris summarized the systems engineering requirements and
+software projects.  <BR>
+Chris discussed the subsystems, especially the diary.<BR>
+- Germaine added that user baseline information that is collected
+needs to include: gender, age,  medication, <BR>
+SOAP: subjective (diary), objective (initial information about
+the patient), Assessment, Plan.  <BR>
+History: history of present illness, daily progress notes include
+the phenomenon and other.  Then, the analysis program needs to
+be able to deal with multiple profiles, each of which is a contiguous
+measurement sequence that begins at one time and ends at another
+time.   The reference values from one profile can be used or updated
+to other profiles for the same person.  Or reference data may
+be updated for the entire system.  </P>
+
+<P>Chris noted that patient medical history is outside the project
+scope, but we need basic patient identification information. 
+<BR>
+Gerry noted that much of health informatics lately has been organized
+around Health Level 7, HL7.  We would like to learn more about
+HL7 so that we can determine which of the interface specifications
+are relevant to us, to which we need to comply, and how it will
+help us determine how to organize our information.   </P>
+
+<P>Chris will identify what of HL7 we need to know and report
+back to us. </P>
+
+<P>Chris noted that new reference data may be available and the
+clinician determines when to update.  </P>
+
+<P>John asked if we could interface a generic analysis program
+so that we don't have to develop it.  Germaine said that A&amp;D
+produces their own which must be installed and de-installed after
+every use.  So we concluded that we must develop the analysis
+program.  Much of the analysis the Halberg Chronobiology Center
+performs is done within their own DOS-based program that was originally
+written in Fortran and is available to us.  Post-analysis is done
+on Excel.  We'll need to perform the same analysis within the
+data analysis portion of Phoenix.    <BR>
+Chris asked what Phoenix must do and what it does not need to
+do. </P>
+
+<P>Then, we discussed what is the minimal information Phonenix
+could produce that would be useful.  Establish that as Phase 1,
+then add another phase that extends it. It needs to identify the
+patient, and identify the values (Patient ID, HR, BP, x3, x4,
+diary value, time).  Furthermore, it must be comparable to the
+Sphygmometer measurements for BP, therefore it should have been
+calibrated before and after. </P>
+
+<P>Chris identified six applications needed in the local (wearable)
+subsystem:<BR>
+1. Clock<BR>
+2. Diary<BR>
+3. Device status<BR>
+4. Biometrics (display)<BR>
+5. Data acquisition<BR>
+6. Data transfer</P>
+
+<P>The sampling interval may vary during the measurement.  <BR>
+In more detail:<BR>
+1. Clock: for diary recording, time, not date but not display,
+ time stamp format is: yr, mo,day,hr,min. <BR>
+Bob said we don't want to confuse: accuracy, resolution and interval.
+ The interval is one minute. Currently, the A&amp;D ABPM takes
+around two minutes from the time it begins to take a measurement
+and the time it displays the result.  The intervals are in increments
+of minute.  <BR>
+Bob notes that non-sphygmometer devices typically provide measurments
+every heart beat, approximately every second.  Therefore, we think
+that the sample rate would occur everry 10-20 msecs, or precision
+= 1.  <BR>
+Gerry noted that sampling Beat-to-beat may occur at 300 beats
+per minute during tachycardia or arrhythmia.  Or 300 beats per
+minute x 25 samples per cycle = 7500 samples per minute. Timestamps
+will include data, timestamps in UCT, localized display, time,
+date and timezone are set a initialization, 10 v per meter (FDA
+guidelines for EMC).  We discussed where there are requirements
+to endure an MRI measurement and Chris noted that there are MRI
+requirements for pacemakers.  Bob said that meant that the pacemaker
+would not be pulled out of the chest by a 1.5 Tesla field. Chris
+noted that we should consider these requirements and document
+how we made the decision.  </P>
+
+<P>We will meet next at 7/10, but not the 7/24 Sunday.  Similarly
+we will meet 8/14, but not 8/28.  </P>
+
+<P>&nbsp;</P>
+
+<H3>&nbsp;</H3>
+
+<H3>About This Page</H3>
+
+<P><FONT FACE="Times New Roman">This page is maintained by <A
+HREF="mailto:e.nolley@ieee.org?subject=Phoenix_meeting_2004-06-27">Ellis
+S Nolley</A>. It was last updated on 10 December 2005.</FONT></P>
+
+<P><FONT FACE="Times New Roman">The author(s) provide this information
+as a public service, and agree to place any novel and useful inventions
+disclosed herein into the public domain. They are not aware that
+this material infringes on the patent, copyright, trademark or
+trade secret rights of others. However, there is a possibility
+that such infringement may exist without their knowledge. The
+user assumes all responsibility for determining if this information
+infringes on the intellectual property rights of others before
+applying it to products or services.</FONT></P>
+
+<P><FONT FACE="Times New Roman">Copyright (C) 2005 Ellis S. Nolley.
+Copying and distribution of this page is permitted in any medium,
+provided this notice is preserved.</FONT></P>
+
+<BLOCKQUOTE>
+  <P><CENTER><A HREF="Phoenix_Meeting_Archive.htm"><FONT FACE="Times New Roman">Back
+  to the Meeting Archive Page</FONT></A></CENTER></P></BLOCKQUOTE>
+
+<P><CENTER><A HREF="../../index.htm"><FONT FACE="Times New Roman">Back
+to the Phoenix Home Page</FONT></A><BR>
+</CENTER>
+
+</BODY>
+</HTML>

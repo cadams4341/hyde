@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../015_Methodology_and_Systems_Management/css/readyset.css" />
+		<link rel="stylesheet" type="text/css" href="../015_Methodology_and_Systems_Management/css/inst.css" />
+		<link rel="stylesheet" type="text/css" href="../015_Methodology_and_Systems_Management/css/print.css" media="print" />
+		<title>System Requirements Specification</title>
+	</head>
+<body>
+<div class="app">
+<div class="readyset">
+<h2>
+	<p class="print_only"><font color="green">Phoenix Ambulatory Blood Pressure Monitor</font></p>
+	<hr color="darkgray" size="1" width="25%" align="left" class="print_only">
+	<p><a href="sysrs.html">SysRS</a> &gt; Functional (Operational) Requirements Specification</p>
+</h2>
+
+<p align="center"><img src="../../015_Methodology_and_Systems_Management/css/construction.gif" alt="Under Construction" /></p>
+
+<div id="releaseinfo">
+	<h3>Release Information</h3>
+	<table class="axial" border="1" cellpadding="3" cellspacing="2">
+		<tbody>
+			<tr>
+				<th>Project:</th>
+				<td><a href="http://www.phoenix.tc-ieee.org/014_Systems_Architecture_and_Engineering/index.html">Phoenix Systems Architecture and Engineering</a></td>
+			</tr>
+			<tr>
+				<th>Internal Release Number:</th>
+				<td>0.0.1</td>
+			</tr>
+			<tr>
+				<th>Attached worksheets:</th>
+				<td>
+					<!-- <div>SysRS &gt; <a href="file:///Users/phoenix/templates/ReadySET-0-9-3/templates/use-case-suite.html">Use case suite [tbd]</a></div> -->
+					<div>SysRS &gt; <a href="feature-set.html">Feature set</a></div>
+				</td>
+			</tr>
+			<tr>
+				<th>Related Documents:</th>
+				<td>
+					<!-- 
+					<div>
+						<a href="file:///Users/phoenix/templates/ReadySET-0-9-3/templates/proposal.html">Project proposal</a>
+						&gt; <a href="file:///Users/phoenix/templates/ReadySET-0-9-3/templates/user-needs.html">User needs</a>
+					</div>
+					<div>LINKS TO RELEVANT STANDARDS</div>
+					<div>LINKS TO OTHER DOCUMENTS</div>
+					-->
+					<div><a href="shared/glossary.html">Glossary</a></div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div> <!-- /releaseinfo -->
+
+<div id="introduction">
+	<h3>Introduction</h3>
+	<p>Subtopics:</p>
+	<div class="outline">
+		<ol>
+			<li><a href="#events-and-functions">Events and Functions</a></li>
+			<li><a href="#use-cases">Use Cases</a></li>
+			<li><a href="#algorithms">Algorithms</a></li>
+			<li><a href="#information-model">Information Model</a></li>
+		</ol>
+	</div> <!-- outline -->
+
+</div> <!-- introduction -->
+
+<div id="events-and-functions">
+	<h3>Events and Functions</h3>
+	<p>
+		Events handled by the product alone.
+		These requirements entail data acquisition that can be triggered outside of any human task.
+		(For user tasks, see <a href="#use-cases">Use Cases</a>.)
+	</p>
+	<p>
+		These requirements are described either in terms of triggers or in terms of what the product performs in response to those triggers.
+	</p>
+	<table>
+		<caption>Concerns</caption>
+		<col class="id_column"></col>
+		<tr><th>ID</th><th>Attribute</th><th>Concern</th></tr>
+		<tr>
+			<td>EF-01</td>
+			<td><a href="#data-acquisition">Data Acquisition</a></td>
+			<td>
+				<p>
+					What values does the system measure?
+				</p>
+				<p>				
+					Data acquisition encompasses not only the acquisition of signals but also any calculations for converting those signals into meaningful values.
+					Algorithms for acquired data calculations are tightly coupled to the data acquisition methods themselves and to the associated sensors
+					For example, each of the following methods apply to blood pressure (though not necessarily to Phoenix) and would entail its own logic for transforming signals to values: 
+					<ul>
+						<li>Auscultatory method</li>
+						<li>Oscillometric method</li>
+						<li>Volume clamp, or vascular unloading, method</li>
+						<li>Tonometric method</li>
+						<li>
+							Pressure pulse transit-time method with:
+							<ul>
+								<li>Opto-electric sensors</li>
+								<li>Piezo-electric sensors</li>
+							</ul>
+						</li>
+					</ul>
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td>EF-02</td>
+			<td><a href="#data-point-calculation">Data Point Calculation</a></td>
+			<td>
+				What values does the system calculate from the measurements at each data point in a time series?
+			</td>
+		</tr>
+		<tr>
+			<td>EF-03</td>
+			<td><a href="#time-series-analysis">Time Series Analysis</a></td>
+			<td>
+				What values does the system calculate over a time series?
+			</td>
+		</tr>
+		<tr>
+			<td>EF-04</td>
+			<td><a href="#other-data-calculation">Other Data Calculation</a></td>
+			<td>
+				What values does the system calculate from the measurements?
+			</td>
+		</tr>
+	</table>
+		
+	<div id="data-acquisition">
+		<h4>Data Acquisition</h4>
+		<table>
+			<col class="id_column"></col>
+			<tr>
+				<td>EF-01.01</td>
+				<td>The system records the time and date of any measurement.</td>
+			</tr>
+			<tr>
+				<td>EF-01.02</td>
+				<td>The system measures a person's systolic blood pressure.</td>
+			</tr>
+			<tr>
+				<td>EF-01.03</td>
+				<td>The system measures a person's diastolic blood pressure.</td>
+			</tr>
+			<tr>
+				<td>EF-01.04</td>
+				<td>The system measures a person's heart rate.</td>
+			</tr>
+		</table>
+	</div> <!-- data-acquisition -->
+	
+	<div id="data-point-calculation">
+		<h4>Data Point Calculation</h4>
+		<table>
+			<col class="id_column"></col>
+			<tr>
+				<td>EF-02.01</td>
+				<td>
+					The system calculates Mean Arterial Pressure (MAP)
+					<br>for each data point at which systolic blood pressure and diastolic blood pressure are acquired in a time series.
+				</td>
+			</tr>
+			<tr>
+				<td>EF-02.02</td>
+				<td>
+					The system calculates Pulse Pressure (PP)
+					<br>for each data point at which systolic blood pressure and diastolic blood pressure are acquired in a time series.
+				</td>
+			</tr>
+			<tr>
+				<td>EF-02.03</td>
+				<td>
+					The system calculates Double Product (DP)
+					<br>for each data point at which systolic blood pressure and heart rate are acquired in a time series.
+				</td>
+			</tr>
+			</tr>
+		</table>
+	</div> <!-- data-point-calculation -->
+
+	<div id="time-series-analysis">
+		<h4>Time Series Analysis</h4>
+		<table>
+			<col class="id_column"></col>
+			<tr>
+				<td>EF-03.01</td>
+				<td>For a time series of any type of acquired data:</td>
+			</tr>
+			<tr>
+				<td>EF-03.01.01</td>
+				<td>
+					<p>The system calculates MESOR with cosinor analysis.</p>
+					<p>See requirement ALG-01, "Cosinor/parametric analysis".</p>
+				</td>
+			</tr>
+			<tr>
+				<td>EF-03.01.02</td>
+				<td>
+					<p>The system calculates Amplitude with cosinor analysis.</p>
+					<p>See requirement ALG-01, "Cosinor/parametric analysis".</p>
+				</td>
+			</tr>
+			<tr>
+				<td>EF-03.01.03</td>
+				<td>
+					<p>The system calculates Acrophase with cosinor analysis.</p>
+					<p>See requirement ALG-01, "Cosinor/parametric analysis".</p>
+				</td>
+			</tr>
+		</table>
+	</div> <!-- time-series-analysis -->
+
+	<div id="other-data-calculation">
+		<h4>Other Data Calculation</h4>
+		<table>
+			<col class="id_column"></col>
+			<tr>
+				<td>EF-04.01</td>
+				<td>
+					The system marks, on a cosinor analysis, the overswing of blood pressure,
+					where overswing is indicated by the circadian amplitude being greater than the upper limit of 90% of a reference set.
+				</td>
+			</tr>
+			<tr>
+				<td>EF-04.02</td>
+				<td>
+					The system marks, on a cosinor analysis, the underswing of blood pressure,
+					where underswing is indicated by the circadian amplitude being less than the lower limit of 90% of a reference set.
+				</td>
+			</tr>
+			<tr>
+				<td>EF-04.03</td>
+				<td>The system marks dipping [feature to be specified]</td>
+			</tr>
+			<tr>
+				<td>EF-04.04</td>
+				<td>The system calculates percentage time (PTE) [feature to be specified]</td>
+			</tr>
+			<tr>
+				<td>EF-04.05</td>
+				<td>The system calculates hyperbaric index [feature to be specified]</td>
+			</tr>
+			<tr>
+				<td>EF-04.06</td>
+				<td>The system calculates tachycardic index [feature to be specified]</td>
+			</tr>
+		</table>
+		
+		<table>
+			<col class="id_column"></col>
+			<tr>
+				<td>EF-xx.01</td>
+				<td>The system calculates ...</td>
+			</tr>
+		</table>
+	</div> <!-- other-data-calculation -->
+</div> <!-- events-and-functions -->
+
+<div id="use-cases">
+	<h3>Use Cases</h3>
+	<div class="todo">
+		TODO!
+	</div> <!-- todo -->
+	<p>ONE PARAGRAPH OVERVIEW</p>
+	<p>Details:</p>
+	<ul>
+		<li>Actors are described in the <a href="file:///Users/phoenix/templates/ReadySET-0-9-3/templates/user-needs.html">user needs</a> document.</li>
+		<li>The <a href="file:///Users/phoenix/templates/ReadySET-0-9-3/templates/use-case-suite.html">use case suite</a> lists all use cases in an organized way.</li>
+	</ul>
+</div> <!-- use-cases -->
+
+<div id="algorithms">
+	<h3>Algorithms</h3>
+	<div class="section-help">
+		<p>
+			This section describes how the system performs it calculations but not what calculations it performs.
+		</p>
+	</div>
+	<table>
+		<caption>Requirement Groups</caption>
+		<col class="id_column"></col>
+		<tr><th>ID</th><th>Group</th></tr>
+		<tr>
+			<td>ALG-01</td>
+			<td><a href="#cosinor-analysis">Cosinor/Parametric Analysis</a></td>
+		</tr>
+		<tr>
+			<td>ALG-02</td>
+			<td><a href="#nonparametric-analysis">Nonparametric Analysis</a></td>
+		</tr>
+		<tr>
+			<td>ALG-03</td>
+			<td><a href="#systolic-blood-pressure-analysis">Systolic Blood Pressure Analysis</a></td>
+		</tr>
+		<tr>
+			<td>ALG-04</td>
+			<td><a href="#diastolic-blood-pressure-analysis">Diastolic Blood Pressure Analysis</a></td>
+		</tr>
+		<tr>
+			<td>ALG-05</td>
+			<td><a href="#heart-rate-analysis">Heart Rate Analysis</a></td>
+		</tr>
+		<tr>
+			<td>ALG-06</td>
+			<td><a href="#blood-flow-analysis">Blood Flow Analysis</a><br><font color="red">(Required, or a consequence of how the other parameters are measured?)</font></td>
+		</tr>
+	</table>
+
+	<div id="cosinor-analysis">
+	<div id="parametric-analysis">
+		<h4>Cosinor/Parametric Analysis</h4>
+		<table>
+			<col class="id_column"></col>
+			<tr>
+				<td>ALG-01.01</td>
+				<td>
+					<p>
+						The system estimates of MESOR, amplitude, and acrophase from a multiple-component cosinor
+						(that is, from a least squares fit of cosine curves)
+						having a user-specified period (&tau;) for each component, as specified in the following formula.
+					</p>
+					<img src="images/formula n-comp cosinor.gif" alt="multiple-component cosinor formula" width="585" height="318"></img>
+					<p>
+						The analysis is parameterized by a hypothetical values of &tau;.  The following are some well-known rhythms and their periods.
+						<dd>
+							<table>
+								<thead>
+									<tr>
+										<th>Rhythm Type</th>
+										<th>Period (&tau;)</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>semicircadian</td>
+										<td>12 hours</td>
+									</tr>
+									<tr>
+										<td><b>circadian</b></td>
+										<td><b>24 hours</b></td>
+									</tr>
+									<tr>
+										<td>circaseptan</td>
+										<td>7 (&plusmn;3) days</td>
+									</tr>
+									<tr>
+										<td>circadiseptan</td>
+										<td>14 (&plusmn;3) days</td>
+									</tr>
+									<tr>
+										<td>circavigintan</td>
+										<td>20 (&plusmn;3) days</td>
+									</tr>
+									<tr>
+										<td>circatrigintan</td>
+										<td>30 (&plusmn;5) days</td>
+									</tr>
+									<tr>
+										<td>circasemiannual</td>
+										<td>half year</td>
+									<tr>
+										<td>circannual</td>
+										<td>1 year (&plusmn;2 months)</td>
+									</tr>
+								</tbody>
+							</table>
+						</dd>
+					</p>
+					<p>
+						A multi-component model accounts for the non-sinusoidal waveform of blood pressure.
+						For example, daily variation in blood pressure is often better modeled with two components, one over a 24-hour period and the other over a 12-hour period. 
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>ALG-01.02</td>
+				<td>
+					<p>
+						The system estimates of MESOR, amplitude, and acrophase from a single-component cosinor
+						(that is, from a least squares fit of cosine curves)
+						having a user-specified period (&tau;), as specified in the following formula.
+					</p>
+					<img src="images/formula 1-comp cosinor.gif" alt="single-component cosinor formula" width="664" height="675"></img>
+					<p>
+						The analysis is parameterized by a hypothetical value of &tau;.
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>ALG-01.03</td>
+				<td>
+					<p>
+						The system estimates of MESOR, amplitude, and acrophase from a two-component cosinor, where the two components are:
+						<ol>
+							<li>Cosine curve with &tau; = 12 hours</li>
+							<li>Cosine curve with &tau; = 24 hours</li>
+						</ol>
+					</p>
+					<img src="images/formula 2-comp cosinor.gif" alt="two-component cosinor formula" width="664" height="675"></img>
+					<br><br>Explanation: the two-component model accounts for the non-sinusoidal waveform of blood pressure.
+				</td>
+			</tr>
+		</table>
+	</div> <!-- parametric-analysis -->
+	</div> <!-- cosinor-analysis -->
+
+	<div id="nonparametric-analysis">
+		<h4>Nonparametric Analysis</h4>
+		<div class="todo">
+			<p>TODO!</p>
+		</div>
+		<table>
+			<col class="id_column"></col>
+			<tr>
+				<td>ALG-02.01</td>
+				<td>
+					<p>Mean Arterial Pressure (mmHg) = ( SBP + ( 2 &times; DBP ) ) &divide; 3</p>
+					<p>
+						Where:
+						<dd>SBP = Systolic Blood Pressure (mmHg)</dd>
+						<dd>DBP = Diastolic Blood Pressure (mmHg)</dd>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>ALG-02.02</td>
+				<td>
+					<p>Pulse Pressure (mmHg) = SBP &minus; DBP</p>
+					<p>
+						Where:
+						<dd>SBP = Systolic Blood Pressure (mmHg)</dd>
+						<dd>DBP = Diastolic Blood Pressure (mmHg)</dd>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>ALG-02.03</td>
+				<td>
+					<p>Double Product = ( SBP &times; HR ) &divide; 100</p>
+					<p>
+						Where:
+						<dd>SBP = Systolic Blood Pressure (mmHg)</dd>
+						<dd>HR = Heart Rate (bpm)</dd>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>ALG-02.04</td>
+				<td>Time-Specified Reference Limits (Chronodesms)</td>
+			</tr>
+			<tr>
+				<td>ALG-02.05</td>
+				<td>Percentage Time Elevation (PTE)</td>
+			</tr>
+			<tr>
+				<td>ALG-02.06</td>
+				<td>Excess over time-specified reference limit (e.g., outside of 90% prediction interval, over 95%-prediction limit)</td>
+			</tr>
+			<tr>
+				<td>ALG-02.07</td>
+				<td>Deficit under time-specified reference limit (e.g., outside of 90% prediction interval, under 5%-prediction limit)</td>
+			</tr>
+		</table>
+	</div> <!-- nonparametric-analysis -->
+
+	<div id="systolic-blood-pressure-analysis">
+		<h4>Systolic Blood Pressure Analysis</h4>
+		<table>
+			<col class="id_column"></col>
+			<tr>
+				<td>ALG-03.01.04</td>
+				<td>Marking overswing [feature to be specified]</td>
+			</tr>
+			<tr>
+				<td>ALG-03.01.05</td>
+				<td>Marking underswing [feature to be specified]</td>
+			</tr>
+			<tr>
+				<td>ALG-03.02</td>
+				<td>Marking of dipping [feature to be specified]</td>
+			</tr>
+			<tr>
+				<td>ALG-03.03</td>
+				<td>Hyperbaric index [feature to be specified]</td>
+			</tr>
+		</table>
+	</div> <!-- systolic-blood-pressure-analysis -->
+		
+	<div id="diastolic-blood-pressure-analysis">
+		<h4>Diastolic Blood Pressure Analysis</h4>
+		<table>
+			<col class="id_column"></col>
+			<tr>
+				<td>ALG-04.01.04</td>
+				<td>Marking overswing [feature to be specified]</td>
+			</tr>
+			<tr>
+				<td>ALG-04.01.05</td>
+				<td>Marking underswing [feature to be specified]</td>
+			</tr>
+			<tr>
+				<td>ALG-04.02</td>
+				<td>Marking of dipping [feature to be specified]</td>
+			</tr>
+			<tr>
+				<td>ALG-04.03</td>
+				<td>Hyperbaric index</td>
+			</tr>
+		</table>
+	</div> <!-- diastolic-blood-pressure-analysis -->
+
+	<div id="heart-rate-analysis">
+		<h4>Heart Rate Analysis</h4>
+		<div class="todo">
+			<p>Need precise definition of <i>heart rate</i></p>
+		</div>
+		<table>
+			<col class="id_column"></col>
+			<tr>
+				<td>ALG-05.01.04</td>
+				<td>Marking overswing [feature to be specified]</td>
+			</tr>
+			<tr>
+				<td>ALG-05.01.05</td>
+				<td>Marking underswing [feature to be specified]</td>
+			</tr>
+			<tr>
+				<td>ALG-05.02</td>
+				<td>Marking of dipping [feature to be specified]</td>
+			</tr>
+			<tr>
+				<td>ALG-05.03</td>
+				<td>Tachycardic index</td>
+			</tr>
+		</table>
+	</div> <!-- heart-rate-analysis -->
+
+</div> <!-- algorithms -->
+
+<div id="information-model">
+	<h3>Information Model</h3>
+	<div class="todo">
+		TODO!
+	</div> <!-- todo -->		
+	<p>ONE PARAGRAPH OVERVIEW</p>
+	<p>Details:</p>
+</div> <!-- information-model -->
+
+
+</div> <!-- /readyset -->
+
+</div> <!-- /app -->
+
+		<blockquote class="footnote_nohide">
+			<p>
+				This page is maintained by
+				<a href="#">Christopher J. Adams</a>.
+				It was last updated 26 June 2011.
+			</p>
+			<p>
+				Copyright (c) 2011 Christopher J. Adams<br>
+				<a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" target="_blank">Creative Commons Attribution 3.0 Unported License</a>
+			</p>
+		</blockquote>
+		
+</body>
+</html>

@@ -1,0 +1,118 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>2006-06-11 Meeting Notes</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H3><CENTER><FONT COLOR="#009900">Phoenix Ambulatory Blood Pressure
+Monitor Project<BR>
+<U>6/11/2006 Meeting Notes</U></FONT></CENTER></H3>
+
+<H3><BR>
+Attendees</H3>
+
+<UL>
+  <LI>Germaine Cornelissen
+  <LI>Alex Krasnopeev
+  <LI>Dennis Lienke
+  <LI>Mary Jo Rawson
+  <LI>Bob Schlentz
+  <LI>El Nolley<BR>
+<BR>
+</UL>
+
+<H3>&nbsp;</H3>
+
+<H3>Discussion</H3>
+
+<P><B>Status Review:</B></P>
+
+<P>* Alex joined us as a recent graduate of the UofM with a specialty
+in signal processing and firmware. </P>
+
+<P>* Germaine: Started checking the new versions of the Sphygmochron.
+ The new features, some of the numbers are not right and still
+get error message.  Chris sent a question on public health usage
+scenarios.  Franz and Germaine produced an abstract for Chris
+to review.  After Chris adds his comments, it will be posted.
+ So, she has open activities with Larry and Chris. </P>
+
+<P>* Mary Jo: Running into constraints with the lab. Got a new
+oscilloscope, fried her board, the voltage generator doesn't produce
+a low enough signal to test, went online to determine how, Agilent
+Model DSO 3062A, S/N CN4503894, Software version is 3.01.28, and
+a firmware update USB A to B.  </P>
+
+<P>* Bob Schlentz: Omron makes home blood pressure monitors. 
+Earlier this year, one of the journals had an author who took
+apart one of the Omron home monitors and discovered: 1) Cost at
+Walgreens was about $40, 2) it didn't do many of the functions
+we are addressing, 3) the one-at-at time costs were: $20 for motor,
+valves, tubing and cuff), the electronics was around $20.  The
+cuff tubing plugs directly into the board, the chamber changes
+capacitance with the pressure.  The chamber provides a capacitance
+for a ring oscillator to a sine wave, and the processor counts
+the pulses per second, and that gets around the need for an analog
+to digital converter.  This leads to: it doesn't do what is needed
+for this project. If we use something other than a blood pressure
+cuff we would need another input.  I thought we would need an
+8 bit A-D converter.  Actually, we need a 1000 bits because we
+need calibration from FDA and a resolution of 1 mm of mercury
+pressure.  If we use something else, we need the same equipment
+resolution, range of 0 to 300 mm of mercury.  Going further, with
+a typical transducer we can count on a 5% of full-scale variation
+for the complete range off the device.  Now, when we look at the
+DC output of the piezo system as opposed to the AC, we would have
+a steady pressure with one value for the piezo resistor and another
+value when it was very low.  When we look at the values from a
+changing value, we get the results that were published on the
+web (under piezo film sensor). So, we need more resolution.  For
+a sensor that we put it on the body, we now have a new FDA requirement.
+For the duration of time, it should have no irritation with the
+skin.  Notice that the cuffs are usually used with a cover, which
+must be compatible with the skin. </P>
+
+<P>Issues:</P>
+
+<P>* Bob: Noticed: 1) HIPAA law suites over insurance firms getting
+too much information from clinicians.  2) RoHS - without lead
+in solder, you get inter-metallic growths that produce junctions
+between the two copper surfaces breaking the connection, and this
+can occur in 120 days, even just sitting on a shelf.  Even silver
+solder has tin, lead and silver. </P>
+
+<H3>&nbsp;</H3>
+
+<H3>&nbsp;</H3>
+
+<H3>About This Page</H3>
+
+<P><FONT FACE="Times New Roman">This page is maintained by <A
+HREF="mailto:e.nolley@ieee.org?subject=Phoenix_meeting_2004-06-27">Ellis
+S Nolley</A>. It was last updated on 11 June 2006.</FONT></P>
+
+<P><FONT FACE="Times New Roman">The author(s) provide this information
+as a public service, and agree to place any novel and useful inventions
+disclosed herein into the public domain. They are not aware that
+this material infringes on the patent, copyright, trademark or
+trade secret rights of others. However, there is a possibility
+that such infringement may exist without their knowledge. The
+user assumes all responsibility for determining if this information
+infringes on the intellectual property rights of others before
+applying it to products or services.</FONT></P>
+
+<P><FONT FACE="Times New Roman">Copyright (C) 2006 Ellis S. Nolley.
+Copying and distribution of this page is permitted in any medium,
+provided this notice is preserved.</FONT></P>
+
+<BLOCKQUOTE>
+  <P><CENTER><A HREF="Phoenix_Meeting_Archive.htm"><FONT FACE="Times New Roman">Back
+  to the Meeting Archive Page</FONT></A></CENTER></P></BLOCKQUOTE>
+
+<P><CENTER><A HREF="../../index.htm"><FONT FACE="Times New Roman">Back
+to the Phoenix Home Page</FONT></A><BR>
+</CENTER>
+
+</BODY>
+</HTML>

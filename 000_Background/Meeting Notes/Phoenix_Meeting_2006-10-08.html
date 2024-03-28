@@ -1,0 +1,168 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>2006-10-08 Meeting Notes</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H3><CENTER><FONT COLOR="#009900">Phoenix Ambulatory Blood Pressure
+Monitor Project<BR>
+<U>10/08/2006 Meeting Notes</U></FONT></CENTER></H3>
+
+<H3><BR>
+Attendees</H3>
+
+<UL>
+  <LI>Chris Adams
+  <LI>Larry Beaty
+  <LI>Germaine Cornelissen
+  <LI>Franz Halberg
+  <LI>El Nolley
+  <LI>Bob Schlentz
+  <LI>Tom Stuart
+</UL>
+
+<H3>&nbsp;</H3>
+
+<H3>Discussion</H3>
+
+<P>* Chris: His Privacy paper was published, but doesn't know
+in which document it is published. His papers, are posted on our
+Bibliography page: <A HREF="../../Phoenix_Bibliography.htm#anchor166234">About
+HIPAA</A> and <A HREF="../../Phoenix_Bibliography.htm#anchor166596">Privacy
+Requirements</A>. He is working on his version of Germaine's Data
+Analysis presentation and hopes to begin presenting on Nov 12,
+, then will prototype a Java version of the Sphymochron application,
+architected to take in to consideration design patterns (easily
+understood and mintainable programs), probably NetBeans.<BR>
+* Larry: Developed Test Driven Design methodology, recruited Tom
+Stuart to help with the Test driven development. <BR>
+* Mary Jo: LabView problems, Took a workshop on LabView, we don't
+know enough about LabView and would like help from those who have
+such experience. She is trying to get 10 minutes of data and correlated
+it to 10 minutes of cuff data from the A&amp;D monitor.</P>
+
+<P>Tom Stuart has worked with Larry Beatty and retired a year
+ago. He worked in the computer industry in software and has a
+PhD from Berkeley in Mathematical Optimization,</P>
+
+<P>Franz: With their extensive data, The Halberg Chronobiology
+Center asked this question, do changes in the solar winds correlate
+with blood pressure? He showed their latest data that identifies
+correlations between blood pressure and the solar winds, in this
+Powerpoint <A HREF="Meeting%20Collateral/20061008halb_Findings_rbs_yw_100806.ppt">presentation</A>.<BR>
+</P>
+
+<P>&nbsp;</P>
+
+<H3>Test Driven Software Development - Larry Beatty</H3>
+
+<P>&nbsp;</P>
+
+<P>This is the first of two sessions, presenting Test Driven Development
+methods. This session is a presentation and demonstration of Test
+Driven Development applied to Visual Basic in a spreadsheet, the
+first one to our knowledge.</P>
+
+<P>Test Driven Software Development is can be generalized to embedded
+software and perhaps to digital signal processing, but Larry didn't
+know enough about hardware to determine whether it can be generalized
+to both software and hardware development, and thus total product
+development.</P>
+
+<P>This demo will illustrate the technique, and show it in visual
+basic. The challenge was to determine if it will work within a
+spreadsheet.</P>
+
+<P>His first tool is &quot;frmTestRunner&quot;, which runs the
+test. We watched it loading the tests, called Containers, within
+each container is a list of tests. You can run a single test,
+groups of tests or all of the tests. Larry ran all of the tests,
+the progress bar shows passing tests in green and turns red when
+it encounters an error, 24 tests were run, three tests failed.
+The report shows the name of the test, and the reason it failed.
+You can click on the test and drill down to find causes. Typically,
+you identify a test and write the code. Though it may take longer,
+it is less expensive to develop this way. It can be extremely
+useful in satisfying FDA auditors. <BR>
+There are tools like this for Java, C++ and C Sharp. <BR>
+This technique will force programmers to justify each line of
+code. Also, the list of tests replaces the requirements document.
+It becomes a wonderful based for regression testing. A source
+control methodology could assure that each time code is checked-in,
+the test is checked-in. However, there is no way to formally test
+that the test is complete. <BR>
+Chris: Is it true that this is unit testing, not assembly testing,
+not system testing, and not acceptance testing. It works because
+design is done top-down and coding is done bottom-up. <BR>
+Larry: Yes. In commercial coding, coding is done bottom-up because
+unit managers want to see early verification that their parts
+work However, military products can be coded top-down, implementing
+stubs for the next unit down and replacing them later.</P>
+
+<P>In testing, we refactor and reflect. We automatically test.</P>
+
+<P>We write a test to prove that it fails and write a test that
+proves that it succeeds at the points you expect it to. <BR>
+When you write a tool to test a medical device, FDA requires that
+you provide evidence that it works properly and Test Driven Development
+will do that.</P>
+
+<P>Key points:<BR>
+* 70% of cost is maintenance after the release consisting of bugs
+&amp; user knowledge. Bug maintenance is nearly eliminated. <BR>
+* It reinforces a culture constant examination of what can go
+wrong and tesing for it. <BR>
+* It is incremental, starting with simple tests and developing
+into reusable tests and identification of test patterns. Refactoring
+the tests becomes iterative with periodic &quot;reflecting&quot;
+to identify more tests and changes in the tests and the design.<BR>
+* Programmers become very sensitive to how they make mistakes
+and altering their development environment and behavior to minimize
+it. <BR>
+* Testing is done by every programmer as part of coding.</P>
+
+<P>Larry will develop a summary of the demo with screen shots
+for posting with these meeting notes.</P>
+
+<P>The presentation will continue at the next meeting on October
+22nd.<BR>
+</P>
+
+<P><B>Next Phoenix Project Coordinating Team Meeting: Sunday,
+October 22th at 2:30 p.m. in Mayo 748</B></P>
+
+<H3>&nbsp;</H3>
+
+<H3>&nbsp;</H3>
+
+<H3>About This Page</H3>
+
+<P><FONT FACE="Times New Roman">This page is maintained by <A
+HREF="mailto:e.nolley@ieee.org?subject=Phoenix_meeting_2004-06-27">Ellis
+S Nolley</A>. It was last updated on 25 October 2006.</FONT></P>
+
+<P><FONT FACE="Times New Roman">The author(s) provide this information
+as a public service, and agree to place any novel and useful inventions
+disclosed herein into the public domain. They are not aware that
+this material infringes on the patent, copyright, trademark or
+trade secret rights of others. However, there is a possibility
+that such infringement may exist without their knowledge. The
+user assumes all responsibility for determining if this information
+infringes on the intellectual property rights of others before
+applying it to products or services.</FONT></P>
+
+<P><FONT FACE="Times New Roman">Copyright (C) 2006 Ellis S. Nolley.
+Copying and distribution of this page is permitted in any medium,
+provided this notice is preserved.</FONT></P>
+
+<BLOCKQUOTE>
+  <P><CENTER><A HREF="Phoenix_Meeting_Archive.htm"><FONT FACE="Times New Roman">Back
+  to the Meeting Archive Page</FONT></A></CENTER></P></BLOCKQUOTE>
+
+<P><CENTER><A HREF="../../index.htm"><FONT FACE="Times New Roman">Back
+to the Phoenix Home Page</FONT></A><BR>
+</CENTER>
+
+</BODY>
+</HTML>

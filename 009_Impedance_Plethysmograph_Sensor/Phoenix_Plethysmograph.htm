@@ -1,0 +1,117 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>Impedance Plethysmograph Sensor</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<BLOCKQUOTE>
+  <H2><CENTER><FONT COLOR="#009900">Phoenix Ambulatory Blood Pressure
+  Monitor Project<BR>
+  <U>Sub-project: Impedance Plethysmograph Sensor</U></FONT></CENTER></H2>
+  <P><CENTER>By Wade D. Peterson</CENTER></P>
+  <H3>Project Description</H3>
+  <P>A device called an <I>Impedance Plethysmograph</I> measures
+  the impedance of body tissue in response to blood flow. This
+  sub-project attempts to use an impedance plethysmograph sensor
+  to determine when a blood pulse moves past one or more a fixed
+  points. The idea is to measure the blood pressure using one of
+  several pulse velocity methods. Ideally, the sensor would be
+  located on the upper arm at the same relative height as the heart.</P>
+  <P>An excellent description of the impedance plethysmograph can
+  be found on-line in <A HREF="http://butler.cc.tut.fi/~malmivuo/bem/bembook/25/25.htm"><I>Bioelectromagnetism</I>
+  by Malmivuo and Plonsey</A>. Another excellent reference is entire
+  March 1989 issue of <I><U>IEEE Engineering in Medicine and Biology
+  Magazine</U></I>.</P>
+  <P>The correlation between pulse delay and blood pressure is
+  well known in the art of non-invasive blood pressure monitors.
+  Some of the best descriptions of this phenomenon can be found
+  in several US Patents, including those listed in the <A HREF="http://www.phoenix.tc-ieee.org/Phoenix_Patents.htm">Phoenix
+  patent references</A> under the heading of <I>Non-invasive Blood
+  Pressure Monitors Using Pulse Velocity Methods.</I> These can
+  be found via the hotlinks located at the top of the same page.
+  Several techniques are described in those patents including relative
+  pulse delay, EKG to pressure pulse delay and pulse width.</P>
+  <P>Two patents that are of particular interest in the field of
+  non-invasive, impedance plethysmograph blood pressure sensors
+  are Asada et al. PATIENT MONITORING FINGER RING SENSOR (US patent
+  No. 5,964,701) and Yang et al. CUFFLESS CONTINUOUS BLOOD PRESSURE
+  MONITOR (US patent No. 6,413,223). Both pertain to the use of
+  impedance plethysmograph sensors that are attached to the ring
+  finger. It is believed by the author that it would be simple
+  to design around the claims of both patents. This makes them
+  ideal candidates for use by the Phoenix project.</P>
+  <P>Both Asada et al. and Yang et. al use the impedance plethysmograph
+  method to measure blood flow (and velocity). However, both techniques
+  rely on the pulse velocity method which is best described by
+  Chen et. al, CONTINUOUS NON-INVASIVE BLOOD PRESSURE MONITORING
+  METHOD AND APPARATUS (US Patent No. 6,599,251). Besides being
+  an excellent summary of prior art in the field of non-invasive
+  blood pressure measurement, Chen describes how blood pressure
+  measurements are obtained using the pulse delay technique, as
+  well as his data correlating pulse delay and pressure. However,
+  Chen uses optoelectric sensors rather than the impedance plethysmograph
+  shown on this page. It is believed by the author that good, non-invasive
+  blood pressure sensors using an impedance plethysmograph can
+  be designed around Chen's claims.</P>
+  <H3>Initial Experimentation</H3>
+  <P>Some early experiments were conducted on an impedance plethysmograph
+  suitable for an ambulatory blood pressure monitor (ABPM). The
+  initial experimental set-up is shown in Figure 1. There, four
+  circuilar band electrodes were arranged along the upper left
+  fore-arm of a test subject. The electrodes were made from strips
+  of 1/2&quot; adhesive copper (EMI) tape, 3M number 1181 (available
+  on-line from <A HREF="http://www.digi-key.com/">Digi-key</A>).
+  A signal generator was connected to the outer two bands, and
+  an amplifier circuit to the inner two. Smooth-jaw alligator clips
+  connected the electronics to the electrodes. A schematic diagram
+  of the experimental set-up in 'pdf' form is available <A HREF="Resources/ImpPlethesTest_19NOV2004.pdf">here</A>.</P>
+  <P><CENTER><U><IMG SRC="Resources/InitialExperiment.jpg" WIDTH="450"
+  HEIGHT="299" ALIGN="BOTTOM" BORDER="0" NATURALSIZEFLAG="3"></U></CENTER></P>
+  <P><CENTER><U>Figure 1. Initial experimental set-up.</U></CENTER></P>
+  <P>The copper foil tape electrodes worked surprisingly well,
+  especially given the fact that they are extremely low cost. They
+  stuck to the skin very well, did not produce any rash or redness,
+  and appears to have good electrical conductivity between the
+  alligator clips and the skin.</P>
+  <P>The signal generator was adjusted for sinewave operation over
+  a frequency range of zero to 1.0 MHz, with optimum coupling between
+  the excitation and pick-up circuit at around 100 KHz. Voltages
+  between zero and 3.0 Vrms were used.</P>
+  <P>The test did not produce satisfatory results in that a pulse
+  wave could not be detected at the amplifier output. The problem
+  appears to be with its low pass filter, which (as it turns out)
+  is inappropriate for this application. An <A HREF="../004_Piezo_Film_Blood_Flow_Sensor/Phoenix_PiezoPulse.htm">amplifier
+  designed for use with piezo foil</A> was used, which has a low
+  pass cutoff frequency below 20 Hz. A new amplifier will be designed
+  with a bandpass filter around 100 KHz. This will have the benefit
+  of rejecting all noise outside of the passband, especially 50/60
+  Hz line noise. Furhtermore, the new circuit should include a
+  detector circuit with 20 Hz low pass filter for discrimination
+  of the blood flow signal.</P>
+  <P>A copy of this page along with relavant attachments was deposited
+  at the US Patent and Trademark office (using form PTO/SB/95)
+  on or about 21 Nov 2004.<BR>
+  </P>
+  <H3>About This Page</H3>
+  <P><FONT FACE="Times New Roman">This page is maintained by </FONT><A
+  HREF="#">Wade
+  D. Peterson</A><FONT FACE="Times New Roman">. It was last updated
+  on 21 November 2004.<BR>
+<BR>
+  The author(s) provide this information as a public service, and
+  agree to place any novel and useful inventions disclosed herein
+  into the public domain. They are not aware that this material
+  infringes on the patent, copyright, trademark or trade secret
+  rights of others. However, there is a possibility that such infringement
+  may exist without their knowledge. The user assumes all responsibility
+  for determining if this information infringes on the intellectual
+  property rights of others before applying it to products or services.<BR>
+<BR>
+  (C) 2004 Wade D. Peterson. Copying and distribution of this page
+  is permitted in any medium, provided this notice is preserved.</FONT></P>
+  <P><CENTER><A HREF="../index.htm"><FONT FACE="Times New Roman">Back
+  to the Phoenix Home Page</FONT></A></CENTER></BLOCKQUOTE>
+
+</BODY>
+</HTML>

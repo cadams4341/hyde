@@ -1,0 +1,146 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>2004-11-07 Meeting Notes</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H3><CENTER><FONT COLOR="#009900">Phoenix Ambulatory Blood Pressure
+Monitor Project<BR>
+<U>11/7/2004 Meeting Notes</U></FONT></CENTER></H3>
+
+<H3><BR>
+Attendees</H3>
+
+<UL>
+  <LI>Chris Adams
+  <LI>Germaine Cornelissen
+  <LI>John Gould
+  <LI>El Nolley
+  <LI>Wade Peterson
+  <LI>Bob Schlentz
+</UL>
+
+<P>&nbsp;</P>
+
+<H3>Discussion</H3>
+
+<P>Our next meeting will occur on November 21.  </P>
+
+<P>Under software requirements, Chris noted that for interative/prototype
+development, we need three items: software needs, architecture,
+and an implementation.  He also suggested that the software architecture
+should include a reference data maintenance subsystem.  </P>
+
+<P><U>Bob/Cuff Calibration</U>: We continued with Bob's questions:
+* battery, * user, * other measurements, * sphygmomanometer manufacturers,
+* power, and * packaging.   </P>
+
+<P>Bob noted that needs of different customers will differ in
+different geographic regions.  For example, you buy a battery
+in US, but in South America and Africa often you cannot buy a
+battery.  Therefore, in the US and Europe our battery-based ABPM
+test may be appropriate (or wherever else batteries are easily
+accessible), but in other areas, we should define a more appropriate
+power source.  Similarly, it is useful to have a circuit board
+power requirement that is not 3 times 1.5 volts (3 cells) but
+is zero times 1.5 volts, e.g. no batteries.  Weight is critical.
+ In implantable medical devices, they fight for fractions of a
+gram and advertise it when it is achieved.  However, this product
+will not be implanted.  We don't want it to be heavier than a
+wrist watch.  As heavy as a band aid  would be ideal.  The processing
+power should be dedicated to calculating just the data and we
+shouldn't do anything we don't need to do.  Regarding communications,
+we've looked at USB, Serial, and Ethernet.  Everything seems to
+take 30 mA, except for flash memory, which takes almost nothing.
+We need raw data for every heart beat, 4 channels for 2 sensors
+and accelerometer, and temperature and time stamp.  We could use
+an 8050 processor to get raw data wave form for every heart beat,
+save it and then determine how to process it into heart beat,
+blood pressure, blood flow, 3-D acceleration and a time stamp.
+ </P>
+
+<P>Bob provided us with a copy of  ANSI/AAMI SP10-1992 and we
+reviewed it.  He noted that page 20, Figure B.1 of standard shows
+phases 1-5, phase 5 is silent and less than 1% of Phase 1.  Page
+37 shows greater error during exercise. </P>
+
+<P>Bob will provide us with the patent numbers for electrodes
+that don't touch the skin.  During the next meeting we'll discuss:
+* Sphygmomanometers, * Other measurement, and * packaging (e.g.
+The ElectroPlaster Company in the UK that has body mounted electronics
+to measure muscle signals, electromyograms).</P>
+
+<P><U>Germaine/Data Analysis Methods</U>: Germaine said she knows
+of no ABPMs that are compatible with exercise. Colin had one system
+that it isn't an ABPM, but was part of a stationery exercise bicycle
+that is part of a physiometry station. She hopes to provide a
+PowerPoint document of analysis methods for our next meeting.
+ She met with Chris.  She is preparing a presentation for a conference
+in Taiwan on cartiology at which they will present at two sessions
+on Chronobiology. Representatitives from different pharmaceutical
+companies will be present. </P>
+
+<P><U>Wade/ Impedance Plethysmograph</U>:  Wade is reviewing how
+to use Invention Registration Disclosure and the Manual Patent
+Examining Procedure (MEPE).  Currently, he is working on another
+invention and is using &quot;Patent It Yourself&quot; by Pressman,
+edition 10.  He is going through all of the steps to put an invention
+into the public domain, and will provide guidance on how to update
+our Phoenix invention process.</P>
+
+<P>Wade showed us a webpage summarizing his review of 21CFR Part11
+from www.21cfrpart.com and noted that it specified requirements
+for transferring information from uncontrolled documents into
+a legal controlled document.  We will post it and reference it
+from our Bibliography page. </P>
+
+<P>Summary of our project goals by next meeting on 11/7:</P>
+
+<UL>
+  <LI>Germaine expects to have a document of her analysis methods
+  posted/post-able on the website and a webpage/PDF of her Chronotheranostics
+  article.
+  <LI>John expects to have information to discuss about his motion
+  sensor project.
+  <LI>Bob will: provide patent file number for contact-less electrodes.
+</UL>
+
+<P>During our next meeting we will discuss: Bob's remaining questions:
+* battery, * user, * other measurements, * sphygmomanometer manufacturers,
+* power, * packaging. Our working activity will be software requirements.</P>
+
+<H3>&nbsp;</H3>
+
+<H3>&nbsp;</H3>
+
+<H3>About This Page</H3>
+
+<P><FONT FACE="Times New Roman">This page is maintained by <A
+HREF="mailto:e.nolley@ieee.org?subject=Phoenix_meeting_2004-06-27">Ellis
+S Nolley</A>. It was last updated on 17 November 2004.</FONT></P>
+
+<P><FONT FACE="Times New Roman">The author(s) provide this information
+as a public service, and agree to place any novel and useful inventions
+disclosed herein into the public domain. They are not aware that
+this material infringes on the patent, copyright, trademark or
+trade secret rights of others. However, there is a possibility
+that such infringement may exist without their knowledge. The
+user assumes all responsibility for determining if this information
+infringes on the intellectual property rights of others before
+applying it to products or services.</FONT></P>
+
+<P><FONT FACE="Times New Roman">Copyright (C) 2004 Ellis S. Nolley.
+Copying and distribution of this page is permitted in any medium,
+provided this notice is preserved.</FONT></P>
+
+<BLOCKQUOTE>
+  <P><CENTER><A HREF="Phoenix_Meeting_Archive.htm"><FONT FACE="Times New Roman">Back
+  to the Meeting Archive Page</FONT></A></CENTER></P></BLOCKQUOTE>
+
+<P><CENTER><A HREF="../../index.htm"><FONT FACE="Times New Roman">Back
+to the Phoenix Home Page</FONT></A><BR>
+</CENTER>
+
+</BODY>
+</HTML>

@@ -1,0 +1,251 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>2005-02-27 Meeting Notes</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H3><CENTER><FONT COLOR="#009900">Phoenix Ambulatory Blood Pressure
+Monitor Project<BR>
+<U>2/27/2005 Meeting Notes</U></FONT></CENTER></H3>
+
+<H3><BR>
+Attendees</H3>
+
+<UL>
+  <LI>Chris Adams
+  <LI>Larry Beatty
+  <LI>Germaine Cornelissen
+  <LI>Max Cortner
+  <LI>Dan Glumack
+  <LI>Andrei Khodak
+  <LI>Dennis Lienke
+  <LI>El Nolley
+  <LI>Wade Peterson
+  <LI>Bob Schlentz
+  <LI>Gerry Werth
+</UL>
+
+<H3><BR>
+Discussion</H3>
+
+<P>Max Cortner, Director of Production Testing for Guidant, joined
+us and gave us a presentation on medical device testing, which
+is posted on our <A HREF="../../Phoenix_Bibliography.htm#anchor2131">Bibliography
+page</A> and directly at <A HREF="../../0001_Bibliography/Testing%20Medical%20Devices.ppt">Testing
+Medical Devices.ppt.</A></P>
+
+<P>We described our interests before Max began his presentation.</P>
+
+<UL>
+  <LI>Bob: How do we test that our device causes no adverse reactions?
+  <LI>Chris: What is the scope of the test activity, how much of
+  what they do do they do because they are required by the partners
+  vs how much do they need to do?
+  <LI>Germaine: How does a measure from a device change over time?
+  <LI>Dan: Is there a way to do acceleration testing?
+  <LI>Mary Jo: How do we calibrate?
+  <LI>Dennis: Interested in software.
+  <LI>Mike: Regulatory rules for testing.
+  <LI>John: Without a device spec, or ISO 9000, is tthere a possibility.
+  <LI>Larry: How does an organization like us get through testing.
+  <LI>Wade: Regarding the federal regulations, how does the design
+  history file work?
+</UL>
+
+<P>Max: I did frame this discusion around the federal rules. They
+can be gotten from the web, but it isn't easy. 21CFR Part 28,
+and 21CFR Part820 refers to the quality system, and ISO 13485
+is similar. You'll be dealing with rules put out by the CDRH,
+the Center for Devices and Radiology Health. FDA certifies safety
+and CDRH certifies efficacy.</P>
+
+<P>What have you done to show that your device can't hurt anyone,
+and that you understand the risk and have done something about
+it? The second is more difficult. The Quality System includes
+design control for Class II devices: planning, input, output,
+review; design verification, design validation, design transfer
+to manufacturing, design change procedure, design history file
+- documents to show the design complies.</P>
+
+<P>The design history file shows the history and it documents
+that all of these things happened. In some cases, it is a metal
+file case. It is not a static thing but shows what went on in
+the design meetings. For the plan for the design, it should include
+the plan which includes people, resources, processes, etc. The
+FDA will demand to look at it, but it keeps it as private.</P>
+
+<P>El: We have a plan and a quality system, and minutes of every
+meeting are posted on the website, and the website has been archived
+every week. We need to put it in the form that constitutes a design
+history file and implement a signature method for all changes.
+(showed it to Max).</P>
+
+<P>Max: That looks good. You'll need to put it in a form so that
+it can be easily audited and assure that every modification is
+signed. A simple password is sufficient, or digital signature.</P>
+
+<P>Then, he reviewed typical design verification. Clinical use
+is validation, but design is verification. Verification shows
+that the design does what you claimed it does. Validation shows
+the design conforms to user needs and intended use. FDA wants
+plans and prospective data, e.g. what you expect. Never change
+the data. Just redo the test. Show them the failing results as
+well or they get suspicious. When the data changes, show them
+the change in the system.</P>
+
+<P>Chris: Is validation inherently a system level test?<BR>
+Max: Yes. That is a great way to describe it. Six sigma is not
+part of FDA approval. <BR>
+Bob: What if you have a device that uses Microsoft Windows? What
+do you do to validate Windows?<BR>
+Max: There is a process for using Off-the-Shelf software. However,
+you do need to show what you expect from it. You are expected
+to do some testing to show that it works. For example, you can
+show that your data is always of this format, and it always produces
+data with this format. Because you are providing diagnostic data,
+it is not as risky as therapeutic data.</P>
+
+<P>A typical design validation includes external interface specs
+and simulated use.</P>
+
+<P>He discussed Risk Analysis and Hazard Analysis. FMEA is part
+of risk analysis. What are the risks and how will you mitigate
+them? Hazards are ranked by number based on their probability
+of occurring and their impact to health. 4 is higher risk and
+1 is low risk. FMECA includes both risk and hazard analysis. FDA
+will want to know if there are any 3 or 4 hazards and what have
+we done to mitigate them. You'll submit it as a Class 2 device
+and they'll reply as to whether is it, and in all likelihood they'll
+say it is a Class 2 device.</P>
+
+<P>They'll want to see that you have tested with non-experts users.
+An example would be someone who is not on the design team. You
+should also include someone who doesn't like the software. For
+example, checkout engineers can be classified as engineers who
+didn't write the code.</P>
+
+<P>Asking a design engineer will typically provide a 60-70 % coverage
+test by showing that it works. A test engineer will try to break
+it and will provide a very high coverage test.</P>
+
+<P>Also, the requirements have a preamble that says companies
+can tailor the test to their means, so that the cost of testing
+can be scaled to the cost of the item.</P>
+
+<P>FDA will want safety and efficacy.</P>
+
+<P>Proving Safety means providing a statistically significant
+number of people for a statistically significant amount of time.
+You'll want to say that it is as good as a blood pressure cuff.</P>
+
+<P>Be very careful how you advertise your device to the general
+public for sale. Selling means taking money for your device. Do
+not advertise it for sale unless you have had a clinical trial.
+Are you really promoting the device? You want an IDE -- investigational
+device exemption -- which is an FDA exemption for trials. Propose
+an IDE case, they'll enable you to give it, for example, to the
+following clinics over the following time period following this
+plan.</P>
+
+<P>El: We may want to think of how Germaine would describe it
+to a colleague to encourage them to use it, identify the claims
+and develop a test to show that it meets them. <BR>
+Max: That's exactly what you should do. Identify the claims and
+build your testing around them.</P>
+
+<P>Engineering analysis includes identifying potential risks,
+hazards and mitigation, FMEA, and biocompatibility analysis of
+materials.</P>
+
+<P>Proving efficacy: This means identifying that it meets intended
+use, claims&quot; labeling, and that it is true.</P>
+
+<P>Design History File: All have documents around them have version
+control and history on all. They include requirements, its peer
+revew, design details, design verification, design validation,
+V&amp;V report, and its peer review. Design details are anything
+needed to reproduce the item.</P>
+
+<P>Under QSR, you must segregate the prototypes from the items
+for sale or use.</P>
+
+<P>Under auditing, you are permitted some number of hours to recover
+it. You can have it in a Mentor Graphics file, you can bring it
+up without having to go back to the original paper copy.</P>
+
+<P>Code inspection is listed as one of the approved methods of
+drawing the conclusion you did. Is the criteria clear using an
+inspection? You need to be careful with observational data. You
+need clear criteria so that you can show that you meet them. For
+code reviews, you need a coding standard.</P>
+
+<P>For this system, you'll want a simple test procedure, with
+observational criteria and data.</P>
+
+<P>Test plan: You'll need calibrated equipment - it's a big thing.
+Manually recorded data is fine, but you'll need to have it like
+a lab notebook, so you have the original written data, as long
+as it is indelible, dated and signed. They like to see a description
+in the plan, with a little schematic, and scenario descriptions.</P>
+
+<P>Wade: How do you handle engineering changes?<BR>
+Max: Use the ECO process, e.g. Schematic 1, Schematic 2, and the
+changes between them. You need to be able to show the content,
+makeup, e.g. Rev B, version 6 of software, version 3 of schematic,
+point to the elements, and know what it is. The other view is
+the stack of documents and the rev history of each, after the
+first base line. As we are doing prototypes to define our design
+and then producing a design spec, that becomes your baseline,
+and you don't have to worry about what came before. Regarding
+software test, define it by blocks and do block by block testing.</P>
+
+<P>Chris: Should we be doing system engineering?<BR>
+Max: My recommendation is yes, for auditing. <BR>
+Wade: We actually have been doing systems engineering, but just
+haven't been calling it that. <BR>
+Chris: In the medical device industry, who ever got done first
+became the system engineers. <BR>
+Max: 10 years ago, they were the 'fellows' of the organization.</P>
+
+<P>Max gave us a copy of the FDA's &quot;General Principles of
+Software Validation&quot;. We posted a link to it from our <A
+HREF="../../012_Regulatory_Approval/Phoenix_Regulatory_Approval_Requirements.html#anchor141997">Regulatory
+Approval/Requirements page</A>. He will return and give us another
+presentation that more focused on design testing, tentatively
+on April 10th.</P>
+
+<P>&nbsp;</P>
+
+<H3>&nbsp;</H3>
+
+<H3>About This Page</H3>
+
+<P><FONT FACE="Times New Roman">This page is maintained by <A
+HREF="mailto:e.nolley@ieee.org?subject=Phoenix_meeting_2004-06-27">Ellis
+S Nolley</A>. It was last updated on 12 March 2005.</FONT></P>
+
+<P><FONT FACE="Times New Roman">The author(s) provide this information
+as a public service, and agree to place any novel and useful inventions
+disclosed herein into the public domain. They are not aware that
+this material infringes on the patent, copyright, trademark or
+trade secret rights of others. However, there is a possibility
+that such infringement may exist without their knowledge. The
+user assumes all responsibility for determining if this information
+infringes on the intellectual property rights of others before
+applying it to products or services.</FONT></P>
+
+<P><FONT FACE="Times New Roman">Copyright (C) 2005 Ellis S. Nolley.
+Copying and distribution of this page is permitted in any medium,
+provided this notice is preserved.</FONT></P>
+
+<BLOCKQUOTE>
+  <P><CENTER><A HREF="Phoenix_Meeting_Archive.htm"><FONT FACE="Times New Roman">Back
+  to the Meeting Archive Page</FONT></A></CENTER></P></BLOCKQUOTE>
+
+<P><CENTER><A HREF="../../index.htm"><FONT FACE="Times New Roman">Back
+to the Phoenix Home Page</FONT></A><BR>
+</CENTER>
+
+</BODY>
+</HTML>

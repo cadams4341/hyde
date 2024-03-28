@@ -1,0 +1,172 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>2006-02-12 Meeting Notes</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H3><CENTER><FONT COLOR="#009900">Phoenix Ambulatory Blood Pressure
+Monitor Project<BR>
+<U>2/26/2006 Meeting Notes</U></FONT></CENTER></H3>
+
+<H3><BR>
+Attendees</H3>
+
+<UL>
+  <LI>Chris Adams
+  <LI>Larry Beaty
+  <LI>Germaine Cornelissen
+  <LI>Duwayne Hillman
+  <LI>Dennis Lienke
+  <LI>El Nolley
+  <LI>Vincent Pham
+  <LI>Bob Schlentz
+  <LI>Dave Skramsted
+  <LI>Gerry Werth
+</UL>
+
+<H3>&nbsp;</H3>
+
+<H3>Discussion</H3>
+
+<P><B>Status Review:</B></P>
+
+<P>* Chris: Working on HL7 and HIPAA.<BR>
+* Larry Beatty: Worked with NVu to set up Germaine for composing
+and managing the web page for the prototype application. <BR>
+* Dave Skramsted: The sensor team is forming, Mary Jo is working
+on the piezo film sensor, Dave and John Sawyer are working on
+an ultrasound sensor, looking at the Tensys system to see alternative
+approaches that do not violate their patients.<BR>
+* Bob Schlentz: Discussed website storage requirements for his
+project describing the physiological issues. <BR>
+* Gerry: Learning more about the clinical experience by living
+it as a pediatrician. Electronic record is marginally useful,
+there is such a large burden in gettting it in, Werner Slack noted
+that if organizations required something into a system, the system
+must provide a greater payback than the effort need to put it
+in. <BR>
+Dennis: Looked at Sourceforge, which is a hosting project to host
+projects. They currently host over 100,000 projects. Dennis registered
+to do a project and within 1 hr, they approved it and gave him
+webspace. He asked for a new top lev3el category of projects,
+called Medical with no result, yet. He saw a project on medical
+terminology.</P>
+
+<P>Another relevant aspect for sourceforge is that one must select
+a license, eg. GPL, Apache to Zlib, about 50 licenses. Dennis
+suggests that as long we are going to use GNU, we should use GPL.</P>
+
+<P>Sourceforge provides so much infrastructure - help, compile
+farms, news, ... They get ads, traffic. Anyone who is a developer
+should be registered there. It is used for two audiences - developers
+and administrators.</P>
+
+<P>Larry noted that Sourceforge is missing a few features needed
+to satisfy FDA and ISO regulatory approval, such as who submitted
+the bug, custody of source code, etc. We discussed asking Sourceforge
+to adopt those capabilities for the future, while we deploy our
+own development environment. Dennis asked when we needed to comply
+with FDA. Chris and Larry noted that compliance needed to occur
+whenever we create a baseline to test against. Typically, this
+occurred as late as possible because organizations couldn't afford
+to do it throughout their projects. We noted this would occur
+at the Productizationization and Advanced Testing phase on our
+Roadmap.</P>
+
+<P>* Germaine: She is working with the differences between Mozilla/Firefox
+and IE. Also, she noted an article.</P>
+
+<P>* Chris: System Requirements. A key question is how do we calibrate
+the ABPM. Bob said it would be like: 120 mmHg for systolic and
+70 mmHg for diastolic. Germaine pointed out that this would change
+over time. Bob said this would be done simultaneously for cuff
+and ABPM, and multiple measurements to establish statistical confidence.
+We also have to calibrate heart rate, and any other measure we
+calculate.</P>
+
+<P><B>Gerry Werth - MiniTopic</B><BR>
+Fractal Composition<BR>
+Fractal objects contains other objects of its own kind. E.g. an
+interface kind or organization. Can a person be fractal?</P>
+
+<P>Fractal Composition<BR>
+* Fractal Object: May contain other objects of its own kind.<BR>
+* Composition Spectrum:<BR>
+- Structural Hierarchy<BR>
+-- Physical<BR>
+-- Logical<BR>
+- Membership</P>
+
+<P>Product as a fractal<BR>
+Product can contain products.<BR>
+E.g. The automobile's parts are worth more disassembed than the
+assembled car is worth.</P>
+
+<P>Organization Structured Hierarchies<BR>
+* Organizations can contain Organizations<BR>
+- Company<BR>
+-- Division A<BR>
+--- Dept 1<BR>
+--- Dept 2<BR>
+-- Division B</P>
+
+<P>An Organization as a Fractal Collection</P>
+
+<P>Person as a factal<BR>
+- Pregnant woman<BR>
+- Multiple personality<BR>
+- Merging Multiple Instances<BR>
+- Same Person, but multiple instances in database.<BR>
+- Customer with multiple customer IDs.</P>
+
+<P>A fractal Person. <BR>
+- than make logical pointers, access by reference. <BR>
+- send a message to the object and return the highest level parent
+that contains all of the records.</P>
+
+<P>As an object oriented design, each entity is an object, and
+each can interogate upwards to get its data in &quot;object space&quot;,
+and be able to get what is needed, and not have to have the patient
+identifiers carried along. Then, you can anonymitize the data,
+yet get the information from above to do the long term data analysis.
+Then, you can model the individual as a person object and the
+create a HIPAA compliance manager that could be queried with &quot;audit
+me&quot;.</P>
+
+<P>Is Person a pattern, referenceable using a pattern library?
+<BR>
+</P>
+
+<H3>&nbsp;</H3>
+
+<H3>About This Page</H3>
+
+<P><FONT FACE="Times New Roman">This page is maintained by <A
+HREF="mailto:e.nolley@ieee.org?subject=Phoenix_meeting_2004-06-27">Ellis
+S Nolley</A>. It was last updated on 25 October 2006.</FONT></P>
+
+<P><FONT FACE="Times New Roman">The author(s) provide this information
+as a public service, and agree to place any novel and useful inventions
+disclosed herein into the public domain. They are not aware that
+this material infringes on the patent, copyright, trademark or
+trade secret rights of others. However, there is a possibility
+that such infringement may exist without their knowledge. The
+user assumes all responsibility for determining if this information
+infringes on the intellectual property rights of others before
+applying it to products or services.</FONT></P>
+
+<P><FONT FACE="Times New Roman">Copyright (C) 2006 Ellis S. Nolley.
+Copying and distribution of this page is permitted in any medium,
+provided this notice is preserved.</FONT></P>
+
+<BLOCKQUOTE>
+  <P><CENTER><A HREF="Phoenix_Meeting_Archive.htm"><FONT FACE="Times New Roman">Back
+  to the Meeting Archive Page</FONT></A></CENTER></P></BLOCKQUOTE>
+
+<P><CENTER><A HREF="../../index.htm"><FONT FACE="Times New Roman">Back
+to the Phoenix Home Page</FONT></A><BR>
+</CENTER>
+
+</BODY>
+</HTML>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <xsd:element name="PatientData" type="PatientDataType" />
+
+    <xsd:complexType name="PatientDataType">
+        <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="Device" 
+                         type="DeviceDataType" />
+		 <xsd:element minOccurs="1" maxOccurs="unbounded" 
+			 name="CalculatedDataSet" 
+                         type="CalculatedDataSetType" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="DeviceDataType">
+        <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="DeviceType" 
+                         type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="DeviceID" 
+                         type="xsd:string" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="CalculatedDataSetType">
+            <xsd:sequence>
+                <xsd:element minOccurs="1" maxOccurs="1" 
+			name="DateTimeStamp" 
+			type="xsd:dateTime"/>
+                <xsd:element minOccurs="0" maxOccurs="1" 
+			name="SystolicBloodPressure" 
+			type="xsd:integer"/>
+                <xsd:element minOccurs="0" maxOccurs="1" 
+			name="DiastolicBloodPressure" 
+			type="xsd:integer"/>
+                <xsd:element minOccurs="0" maxOccurs="1" 
+			name="HeartRate" 
+			type="xsd:integer"/>
+                <xsd:element maxOccurs="1" minOccurs="1" 
+                             name="DataQuality" type="DataQualityType"/>
+            </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:simpleType name="DataQualityType">
+        <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="1"  fixed="true" />
+            <xsd:maxInclusive value="10" fixed="true" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+</xsd:schema>

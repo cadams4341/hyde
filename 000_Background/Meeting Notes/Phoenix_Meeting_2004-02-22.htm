@@ -1,0 +1,129 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>2004-02-22 Meeting Notes</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<BLOCKQUOTE>
+  <H2><CENTER><FONT COLOR="#009900">Phoenix Ambulatory Blood Pressure
+  Monitor Project<BR>
+  <U>2/22/2004 Meeting Notes</U></FONT></CENTER></H2>
+  <P>&nbsp;</P>
+  <P><B>Attendees</B><BR>
+  Mary Jo Rawson,<BR>
+  Germaine Cornelissen-Guillaume<BR>
+  Wade Peterson<BR>
+  Bob Schlentz<BR>
+  El Nolley<BR>
+  Srilakshimi Bathina<BR>
+  Srikanta Kolluru</P>
+  <P>&nbsp;</P>
+  <P><B>Status presentations</B></P>
+  <P>Germaine Cornellsen - Methods</P>
+  <P>Vectors, how data will flow, what will be remembered, decisions
+  made, then the code can be written.<BR>
+  Trying to assess rhythms, predictable values, esp. circadian
+  rhythms - 24 hrs, others are &frac12; hr rhythms, Circadian is
+  no simple sine but has harmonics, other variations around the
+  months and years. For an immediate diagnosis and treatment, circadian
+  is most useful because of the daily schedule, taking medications
+  in morning, afternoon, evening, bedtime.</P>
+  <P>Different kinds of monitors, automonitors have collected data
+  every 15 min or 30 min, times of data were determined by light
+  or buzzer, but whenever there was a disruption, the process would
+  begin again, at the regular interval, but now not equidistant
+  from the previous data and not comparable. The newer monitors
+  are 15, 30, 45, 60 minutes, and when there is an interruption,
+  there is just missing values. Germaine's process is least squares
+  so it isn't as susceptible to such problems, but it requires
+  sufficient data in the intervals for minimal errors. Transform
+  the polar coordinates r, theta into Cartesian x, y with trig
+  functions with gamma &amp; beta. Least squares/ Gaussian assumes:
+  1) normal curve (mean, sdev), 2) independence, 3) correct function.
+  Now we use non-parametric approach which merely compares data
+  with reference values to compute residuals and report the distribution.
+  Currently, they use two harmonics: 24 hrs and 12 hrs.</P>
+  <P>Use the timing of excess to time the treatment. <BR>
+  Sphygma count, the measured blood pressure.<BR>
+  Treatment.</P>
+  <P>Measuring the change in amplitude due to medication, parameter
+  tests with CuSums,<BR>
+  Statistical Process control to determine if there is a change
+  outside of the decision interval (eg.in the qsum1 goes up and
+  qsum2 goes down), to indicate a change. Douglas Hawkins CuSum,
+  self-starting (seeks a target), professor of statistics. Applied
+  to the MESOR. Works with running means. Works with very short
+  spans of data.</P>
+  <P>Methods Summary: method - (hole):<BR>
+  1) Least squares of BP (function, distribution of data - systemic
+  lack of data eg. At night when sleeping or repeatly interrupted),
+<BR>
+  2) Non-parametric, residuals between measured and reference values
+  regardless of function. (more difficult to get measures of uncertainty),
+<BR>
+  3) Measuring the change in amplitude due to medication, parameter
+  tests with CuSums, (long periods of data, eg. 16 years, the cuSums
+  are designed for 500 measurements, beyond that - indications
+  outside the decision interval are more likely - false positives).</P>
+  <P>Windowing (storing data), Compacting (process into parameters
+  &amp; &quot;information) and Recycling (can write over the raw
+  data). - can solve 1st order high frequency problems into lower
+  frequency.</P>
+  <P>Wish List<BR>
+  1. Have capability to go as you go, operate without memory and
+  get the entire summary. Acquire &amp; analyze simultaneously<BR>
+  2. Using reference values is cumbersome, but to compute the ;
+  to get a real reference database, ; accumulating reference data,
+  computing reference data, following up on the people who provide
+  the reference data to determine if there was morbidity and re-analyze
+  the reference data. - eg. 90% prediction limits.</P>
+  <P>Mary Jo - what would you like from Diaries.<BR>
+  Germaine - exercise. Found that excessive amplitudes were related
+  to grief, anxiety, anger, &#133; The diaries are used for descriptive
+  information to determine if outlying data is significant to physical
+  condition. For example if excessive emotion is brief and non-recurrent,
+  no treatment may be appropriate, but if it recurs then treatment
+  may be appropriate.</P>
+  <P>Wade Peterson</P>
+  <P>What would people want to wear? What size of unit. Power consumption?
+  What can we afford in terms of current.</P>
+  <P>Specific examples:<BR>
+  AA or AAA, needed 3.6 volts to run it.<BR>
+  Blood velocity propagation: cuff sensor affects.</P>
+  <P>10 day service life<BR>
+  emitter &amp; receive : $1.16</P>
+  <P>His pickup circuit to &quot;this&quot; is almost the same
+  as the pickup circuit to Wade's emerging design. Eg. BP via motion
+  or velocity.</P>
+  <P>Piezoelectric film, to power the sensor, perhaps to measure
+  the blood pressure, heart rate and blood velocity.</P>
+  <P>Next meeting 3/7. Continue with Wade, Mary Jo &amp; Bob. <BR>
+<BR>
+  </P>
+  <P>&nbsp;</P>
+  <P>&nbsp;</P>
+  <H3>About This Page</H3>
+  <P><FONT FACE="Times New Roman">This page is maintained by <A
+  HREF="mailto:e.nolley@ieee.org?subject=Phoenix_meeting_2004-02-22">Ellis
+  S Nolley</A>. It was last updated on 28 October 2004.</FONT></P>
+  <P><FONT FACE="Times New Roman">The author(s) provide this information
+  as a public service, and agree to place any novel and useful
+  inventions disclosed herein into the public domain. They are
+  not aware that this material infringes on the patent, copyright,
+  trademark or trade secret rights of others. However, there is
+  a possibility that such infringement may exist without their
+  knowledge. The user assumes all responsibility for determining
+  if this information infringes on the intellectual property rights
+  of others before applying it to products or services.</FONT></P>
+  <P><FONT FACE="Times New Roman">Copyright (C) 2004 Ellis S. Nolley.
+  Copying and distribution of this page is permitted in any medium,
+  provided this notice is preserved.</FONT></P>
+  <P><CENTER><A HREF="Phoenix_Meeting_Archive.htm"><FONT FACE="Times New Roman">Back
+  to the Meeting Archive Page</FONT></A></CENTER></P>
+  <P><CENTER><A HREF="../../index.htm"><FONT FACE="Times New Roman">Back
+  to the Phoenix Home Page</FONT></A></CENTER>
+</BLOCKQUOTE>
+
+</BODY>
+</HTML>

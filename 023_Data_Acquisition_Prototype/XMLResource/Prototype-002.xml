@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patient-Data>
+    <Device>
+	    <DeviceType>PHX-prototype-1c</DeviceType>
+	    <DeviceID>PHX-0834-872</DeviceID>
+    </Device>
+    <CalculatedDataSet>
+            <Date>2008-08-06</Date>
+            <Time>0934</Time>
+	    <SystolicBloodPressure> 134 </SystolicBloodPressure>
+	    <DiastolicBloodPressure> 83 </DiastolicBloodPressure>
+	    <HeartRate> 81 </HeartRate>
+    </CalculatedDataSet>
+    <CalculatedDataSet>
+            <Date>2008-08-06</Date>
+            <Time>1005</Time>
+	    <SystolicBloodPressure> 140 </SystolicBloodPressure>
+	    <DiastolicBloodPressure> 82 </DiastolicBloodPressure>
+	    <HeartRate> 75 </HeartRate>
+    </CalculatedDataSet>
+    <CalculatedDataSet>
+            <Date>2008-08-06</Date>
+            <Time>1041</Time>
+	    <SystolicBloodPressure> 136 </SystolicBloodPressure>
+	    <DiastolicBloodPressure> 88 </DiastolicBloodPressure>
+	    <HeartRate> 78 </HeartRate>
+    </CalculatedDataSet>
+</Patient-Data>

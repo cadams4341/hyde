@@ -1,0 +1,149 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>2006-05-14 Meeting Notes</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H3><CENTER><FONT COLOR="#009900">Phoenix Ambulatory Blood Pressure
+Monitor Project<BR>
+<U>5/14/2006 Meeting Notes</U></FONT></CENTER></H3>
+
+<H3><BR>
+Attendees</H3>
+
+<UL>
+  <LI>Chris Adams
+  <LI>Larry Beaty
+  <LI>Germaine Cornelissen
+  <LI>Dennis Lienke
+  <LI>El Nolley<BR>
+</UL>
+
+<H3>&nbsp;</H3>
+
+<H3>Discussion</H3>
+
+<P><B>Status Review:</B></P>
+
+<P>* Chris: Three things have happened in the last two weeks.
+1) Wrapped up the privacy issue. 2) Created a process framework
+to present. 3) Discussions with Germaine and Franz on a publication
+opportunity. I would like to review my needs priorities and standards.</P>
+
+<P>* Larry: Did a few things with the Sphygmochron program, developed
+a workaround to remove end-of-file characters. Looked at Germaine's
+Fortran program of the fuller Sphygmochron program developed in
+1986, got it running on a PC. Chris said this can lead us to a
+more complete set of requirements. Germaine said there are differences
+because there were contradictory &quot;wishes&quot;. The first
+version went step by step, it looked a excesses and deficits,
+but we didn't have evidence for the impact of this. For the PC
+program, we just focused on the 24-hour process and provided the
+summary. Another looked at BP, heart rate and the double product,
+which is cardiac output. Some people felt it was too much and
+required too much education to understand. There was a wish to
+provide something simpler, but it really didn't provide &quot;the
+complete picture&quot;. But, it just a daytime mean and a nighttime
+mean, and it doesn't have enough information for adequate treatment.
+These lead to different summaries: and the extensions, Sphymochron,
+daynight ratio. Simpler sphygmochron and more complex sphymochron.
+The sphygmochron is a summary with a fixed form that uses Mesor,
+double amplitude, acrophase, compares to reference values, does
+a least squares and provides a Mesor, double amplitude, acrophase;
+it looks and then performs a numerical integration and shows the
+areas of excess and deficit. Larry said that we are providing
+informal requirements. Now it is time to provide formal specification
+of what we want to do. CVRx. Also, Watcom has made their Fortran
+compiler open source.</P>
+
+<P>* Dennis Lienke:</P>
+
+<P>* How to get a history of the project email. Majordomo. And
+put it on the website.</P>
+
+<P>* Chris' Priorities<BR>
+- Franz's abstract on a forthcoming paper and request for Chris
+to contribute on security. Subsequently, the authors commented
+that it might be premature. <BR>
+- We get serious about marketing and a main vehicle is publication,
+as a way to present it. For example: work that we do be presentable
+to others and we build a community - those with whom we normally
+communicate and others who encounter our project. One aspect of
+community building is creating communications infrastructure and
+another aspect is outreach. Then, we can include these activities
+in our project. So, if we develop publishing as a marketing activity.</P>
+
+<P><BR>
+<B>Chris Adams - Phoenix Privacy Requirements</B></P>
+
+<P>Click here for Power Point Presentation: * In '<A HREF="../../0001_Bibliography/20060514adam_Privacy-presentation.ppt">video
+projector</A>' format. * In '<A HREF="../../0001_Bibliography/20060514adam_%20Privacy%20print.ppt">printer
+friendly'</A> format.</P>
+
+<P>Historically for privacy, Europeans had to grant access, but
+in the US peoples' property is protected from access unless they
+give permission for others to access it. This is governed under
+HIPAA. The Electronic data interchange standards cover the rules
+for transactions, code sets, identifiers (provider, health plan,
+employer, personal- none because of national privacy rules - i.e.
+there is no national way to identify a patient). The privacy rule
+includes concepts of a safe harbor (so much information has been
+pulled out that I don't have to worry or the data set is so limited).</P>
+
+<P>For Phoenix, we want:<BR>
+* Unburden Phoenix off privacy issues.<BR>
+* Relegate burden of privacy to caregiver.<BR>
+* Minimize the constraints on the caregiver process.</P>
+
+<P>Suggested Phoenix Requirements:<BR>
+* Primary identification by session<BR>
+- session key available to external system.<BR>
+* Trace session to device ID.<BR>
+(device IDs are a safe harbor item, but there is ambiguity - e.g.
+this is not an implantable item)<BR>
+* Person (patient) identify managed externally.<BR>
+* All data within system is anonymous<BR>
+* Reports/displays include anonymous fields<BR>
+- Labels and values from external source<BR>
+- Intended for person identity but can be repurposed<BR>
+- May be ignored.</P>
+
+<P>Germaine noted that this how BioCos currently does this. Originally,
+they didn't use device serial numbers (device ID), but included
+it to assure that they got the device back.</P>
+
+<H3>&nbsp;</H3>
+
+<H3>&nbsp;</H3>
+
+<H3>About This Page</H3>
+
+<P><FONT FACE="Times New Roman">This page is maintained by <A
+HREF="mailto:e.nolley@ieee.org?subject=Phoenix_meeting_2004-06-27">Ellis
+S Nolley</A>. It was last updated on 25 October 2006.</FONT></P>
+
+<P><FONT FACE="Times New Roman">The author(s) provide this information
+as a public service, and agree to place any novel and useful inventions
+disclosed herein into the public domain. They are not aware that
+this material infringes on the patent, copyright, trademark or
+trade secret rights of others. However, there is a possibility
+that such infringement may exist without their knowledge. The
+user assumes all responsibility for determining if this information
+infringes on the intellectual property rights of others before
+applying it to products or services.</FONT></P>
+
+<P><FONT FACE="Times New Roman">Copyright (C) 2006 Ellis S. Nolley.
+Copying and distribution of this page is permitted in any medium,
+provided this notice is preserved.</FONT></P>
+
+<BLOCKQUOTE>
+  <P><CENTER><A HREF="Phoenix_Meeting_Archive.htm"><FONT FACE="Times New Roman">Back
+  to the Meeting Archive Page</FONT></A></CENTER></P></BLOCKQUOTE>
+
+<P><CENTER><A HREF="../../index.htm"><FONT FACE="Times New Roman">Back
+to the Phoenix Home Page</FONT></A><BR>
+</CENTER>
+
+</BODY>
+</HTML>

@@ -21,15 +21,14 @@
 title: Hyde
 email: adamscj@ieee.org
 description: >- # this means to ignore newlines until "baseurl:"
-  Archive of site originally at phoenix.tc-ieee.org.
+  Archive of www.phoenix.tc-ieee.org
 baseurl: "/hyde/" # the subpath of your site, e.g. /blog
-url: "https://cadams4341/githun.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://cadams4341/github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  cadams4341
 
 # Build settings
 theme: minima
-plugins:
-  - jekyll-feed
+plugins: []
 
 # Exclude from processing.
 # The following items will not be processed, by default.

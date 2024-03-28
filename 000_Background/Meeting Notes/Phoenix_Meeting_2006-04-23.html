@@ -1,0 +1,244 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>2006-04-23 Meeting Notes</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H3><CENTER><FONT COLOR="#009900">Phoenix Ambulatory Blood Pressure
+Monitor Project<BR>
+<U>4/23/2006 Meeting Notes</U></FONT></CENTER></H3>
+
+<H3><BR>
+Attendees</H3>
+
+<UL>
+  <LI>Chris Adams
+  <LI>Norm Bayne
+  <LI>Larry Beaty
+  <LI>Germaine Cornelissen
+  <LI>Chris Fuller
+  <LI>Dwayne Hillman
+  <LI>Dennis Lienke
+  <LI>El Nolley
+  <LI>Dave Skramsted
+  <LI>Gerry Werth
+</UL>
+
+<H3>&nbsp;</H3>
+
+<H3>Discussion</H3>
+
+<P><B>Status Review:</B></P>
+
+<P>* Dave Skramsted: Went through the reading notes, using SciLab.
+Now, I'm building the sensor.</P>
+
+<P>* Larry Beatty: Finished changes to the Sphygmochron application.
+Germaine found the source for an older least squares Fortran program,
+using the Watcom and DotNet Fortran complier. Version 2 is the
+existing program, Version 3, does everything that is shown in
+the Data Analysis Methods Powerpoint Version 2 doesn't compute
+fractionated excess, just global excess. Germaine will handle
+the webpage, describing how to use Sphygmochron version 2. Beyond
+the original 3 changes, we changed some of the charting, worked
+around the restriction of contiguous data, and other things that
+seemed useful and Germaine wanted.</P>
+
+<P>* Chris Adams: Regarding the Sphygmochron prototype that will
+be posted on the website, we would like to gather requirements:
+specifically, 1) what do you want, 2) are the inputs to this all
+of the inputs that they would want, and the outputs all that they
+would want. (Germaine: a few answers would be that we want data
+overtop of the Sphygmochron: 1) information about the patient,
+their symptoms, gender, age. 2) The input file must be prepared,
+and it would be nice to not have to prepare it. 3) We get data
+from several hundred subjects, comparison of two drugs, effect
+of weight loss, dietary intervention; and we wouldn't use this
+program. We would like common data to be repeated without the
+data entry person having to enter it.</P>
+
+<P>* Gerry: arranging to work with Dr. Vergil Slee.</P>
+
+<P>* Chris: completed the assessment of privacy requirements.
+Wants to present them. Will present next time in 30 minutes. Responded
+to an interesting abstract Franz provided, about the device used
+in a telemedicine using internet resources. This could lead to
+additional requirements. We may want it to connect to another
+device, a 3rd party workstation. We should be prepared for networking
+the device, leading to privacy issues and security. Our current
+model is the medical information bus, a multilayered stack. Wants
+to know the next needs: 1) process engineering - project infrastructure
+- to leverage the graduate students - 2-3 month jobs, specifying
+application requirements for device, security requirements, eliciting
+analysis and workstation requirements for the prototype. So, next
+week, he would like: 1) 30 minutes to present privacy requirements,
+2) future direction, and 3) access to the standards documents.</P>
+
+<P>* Norm Bayne. He has become familiar with web page management
+and placed his outline of the quality system. Also, he met with
+a contact with an FDA accelerator, to help customers get through
+FDA compliance quickly. His needs are to find people to work on
+the quality system.</P>
+
+<P>* Chris Fuller: talked with a field engineer for piezio film
+products at Specialty Products and got access to the project lab.
+Regarding sensor meetings, Chris is available to meet after the
+Phoenix meeting on Sundays, and Dave can meet weekday evenings
+and weekend afternoons. Chris is using the Eagle CAD application
+to do design, so that he isn't tied to a specific board manufacturers
+product.</P>
+
+<P>* Bob: Attended a conference on diagnostic imaging and software
+problems. They want to sell their ideas to companies, but they
+are finding that companies don't want to use open source software
+because they feel that they will lose proprietary pricing premiums.
+However, FDA wants open requirements and full disclosure.</P>
+
+<P>* Germaine: Met with Miguel Revilla. He said that Java may
+be appropriate because of security compliance, and he brought
+his supercomputer Fortran source code. Additionally, the Halberg
+Center received more data from the site in India where we had
+a problem. The data came in two files because the person was monitoring
+for more time than the program would hold (Sph ver 2), and they
+couldn't easily combine the two files into one. (Larry said it
+might be due to an impeded control Z, used by Dos for End of File.
+He said he could modify the Ver 3 application accommodate it.
+<BR>
+<BR>
+<B>Gerry Werth - Minitopic on Clinical Information Systems</B></P>
+
+<P><B>Entity Codes- Capturing Clinical Detail</B></P>
+
+<P>When you go from a specific set of clinical data to a class
+of data, specific detail is lost.</P>
+
+<P><I>Reference: Partnerships, Health Commons Institute, Fall
+2003, pp 7-8.</I></P>
+
+<P>Entity Codes: Capturing Clinical Detail - Outline</P>
+
+<P>Goals: Capturing exact diagnosis<BR>
+* Step 1: Input<BR>
+- FV Dx: Free Vocabulary Diagnosis<BR>
+* Step 2: Standardization<BR>
+- FV Code<BR>
+- CV Dx: Controlled Vocabulary Disagnosis<BR>
+- Entity Code<BR>
+* Step 3 : Coding<BR>
+- Classification: ICD-9-CM, ICD-10-CM, other.<BR>
+* Glossary</P>
+
+<P>Goals for Diagnosis Entry<BR>
+Capture Physician's Exact Clinical Diagnosis<BR>
+* Physician input must be barrier free<BR>
+- Must accept the physician's own words.<BR>
+* Must retain the exact language of phyusic8ian<BR>
+* Must also retain the preferred, standardized term forr the diagnosis.<BR>
+* Diagnosis must be coded to the appropriate classsific8iations
+(e.g. ICD-9-CM)</P>
+
+<P>Step 1: Input<BR>
+Capture the Original Diagnosis<BR>
+* Coder finds Free Vocabulary Diagnosis<BR>
+(FV Dx) in the medical record</P>
+
+<P>Step 2: Standardization<BR>
+Map to Controlled Vocabulary<BR>
+* f New <BR>
+Secretariat Maps FV Dx to Controlled vocabulary (CV)</P>
+
+<P>Step 3: Coding <BR>
+Code to ICD-9-CM<BR>
+(e.g. incidences of West Nile are lumped with others. If you give
+people an ill structured process, they will structure it but everyone
+will structure it differently. Reliability will vary unpredictably.)<BR>
+* System uses Entity Code:<BR>
+- IDC-9-CM<BR>
+- ICD-10-CM</P>
+
+<P>Glossary<BR>
+* Dx: Diagnosis<BR>
+* FV: free vocabulary<BR>
+* FC Dx: original diagnosis verbatim.<BR>
+* FV Code: An accession number assigned to each Free Vocabulary
+Diagnosis.<BR>
+* FV Database: A list off Free Vocabulary diagns9oses used by
+physicians, complied from actual usage, and their codes.<BR>
+* CV: Controlled Vocabulary: A set of preferred terms used to
+standardize terminology within a field or profession - e.g. SNOMED0-CT.<BR>
+* CV Dx: The standard, preferred term for a given diagnosis.<BR>
+* Entity Code: Diagnosis Entity <BR>
+* Code: A permanent, unalterable code assigned to each diagnostic
+term in the Controlled Vocabulary.<BR>
+* Secretariat: A permanent facility which maintains the FV Database
+mapped to the CV database and provides coders, in real time, FV
+codes and cor3espoinding CV Diagnoses and Entity Codes for new
+terminology.</P>
+
+<P>Currently, there are only controlled vocabularies, driven by
+either the clinicians or the billing agencies.</P>
+
+<P>Originally, ICD was developed by pathologists and usurped by
+billing agencies. It is an international classification, managed
+by World Health Organization. In the US, the CM, HC, the generic
+term is called cross-walking to map one set of codes to another.
+Almost all are cross-walked to DSM then into HC (healthcare codes).
+This is a large bureaucratic process.</P>
+
+<P>The current process starts at Step 3. (ICD for diagnosis, and
+CPT for treatment) so that it gets paid for.</P>
+
+<P>Q&amp;A: <BR>
+* How has this proposal been accepted? He'll find out next week.<BR>
+* How do we apply this to ambulatory blood pressure monitors?
+At least use the FV.<BR>
+* What are cardiologists doing with blood pressure?</P>
+
+<P>&nbsp;</P>
+
+<P><B>Bob Schlentz: Data Analysis Methods Review</B></P>
+
+<P>* Bob has created two sine waves, one with a period of 180
+units of time, second with a 90 units time period, summed them,
+and applied the Sphygmochron algorithm. He'll use the second as
+a measure of noise, and change it from a deterministic source
+to a random source and see how the solutions behave. He needs
+the Excel techniques for finding a matrix inverse and performing
+matrix computations . El will email him the process and an example.
+He will continue next week. <BR>
+<BR>
+</P>
+
+<H3>&nbsp;</H3>
+
+<H3>About This Page</H3>
+
+<P><FONT FACE="Times New Roman">This page is maintained by <A
+HREF="mailto:e.nolley@ieee.org?subject=Phoenix_meeting_2004-06-27">Ellis
+S Nolley</A>. It was last updated on 25 October 2006.</FONT></P>
+
+<P><FONT FACE="Times New Roman">The author(s) provide this information
+as a public service, and agree to place any novel and useful inventions
+disclosed herein into the public domain. They are not aware that
+this material infringes on the patent, copyright, trademark or
+trade secret rights of others. However, there is a possibility
+that such infringement may exist without their knowledge. The
+user assumes all responsibility for determining if this information
+infringes on the intellectual property rights of others before
+applying it to products or services.</FONT></P>
+
+<P><FONT FACE="Times New Roman">Copyright (C) 2006 Ellis S. Nolley.
+Copying and distribution of this page is permitted in any medium,
+provided this notice is preserved.</FONT></P>
+
+<BLOCKQUOTE>
+  <P><CENTER><A HREF="Phoenix_Meeting_Archive.htm"><FONT FACE="Times New Roman">Back
+  to the Meeting Archive Page</FONT></A></CENTER></P></BLOCKQUOTE>
+
+<P><CENTER><A HREF="../../index.htm"><FONT FACE="Times New Roman">Back
+to the Phoenix Home Page</FONT></A><BR>
+</CENTER>
+
+</BODY>
+</HTML>

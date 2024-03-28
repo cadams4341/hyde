@@ -1,0 +1,146 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>2005-12-11 Meeting Notes</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H3><CENTER><FONT COLOR="#009900">Phoenix Ambulatory Blood Pressure
+Monitor Project<BR>
+<U>12/11/2005 Meeting Notes</U></FONT></CENTER></H3>
+
+<H3><BR>
+Attendees</H3>
+
+<UL>
+  <LI>Chris Adams
+  <LI>Mike Balow
+  <LI>Norm Bayne
+  <LI>Larry Beatty
+  <LI>Trung Le
+  <LI>Dennis Lienke
+  <LI>El Nolley
+  <LI>Mary Jo Rawson
+  <LI>Bob Schlentz
+  <LI>Dave Skramstad<BR>
+</UL>
+
+<H3>Discussion</H3>
+
+<P>Status Review:</P>
+
+<UL>
+  <LI>Mary Jo: close to obtaining all of the piezo film components.
+  Then, she will implement and analyze the results.
+  <LI>Gerry Werth: Investigating how clinical information is coded,
+  especially in Pediatrics, and is collaborating with Vergi Slee.
+  <LI>Dennis: offered to navigzte the unversity hierarchy to get
+  a universal IP for a wiki. Get an IP, a machine installed and
+  deploy it. Trun suggested filesanywhere.com will provide free
+  universal IPs, 10 MB, used by organizations that need a point
+  beyond their firewall.
+  <LI>Germaine: working on an automated Cosinor program that implements
+  the data analysis presentation in an <BR>
+  Excel spreadsheet. She expects to complete it by next meeting.
+  Also, she discussed the ABPM discussed and informed by Larry
+  Beatty in Electronic Design, Tensys, PL150 ,
+  <LI>Norm Bayne joined us and will work on a quality system, and
+  Trung Le joined us.
+</UL>
+
+<P>Chris Adams continued leading development of system requirements,
+using MyPage, 2005-12-11.pdf or ppt. He summarized the major subsystems
+and interfaces including ABPM, ABP diary, Data Analysis Software,
+Medical Records System, ABPM wearer, ABPM administrator, physiologist.</P>
+
+<UL>
+  <LI>The device itself is a realtime embedded system. What are
+  the hard realtime vs soff realtime system requirements. In hard
+  realtime systems, missing means the system fails. In soft realtime
+  requirements, a recovery or alternative path is used to continue.
+  <LI>Device Subsystem portions: <BR>
+  - clock: sample beat to beat, 1 ms resolution.
+  <LI>Questions: what information do we need about the wearer.
+<BR>
+  Bob: We only need the serial number of the instrument. The rest
+  of the information that maps the instrument and time to the patient
+  identify. (PII - personal identifiable information). <BR>
+  Trun: Unique device identifier, and patient. Needs to be encrypted
+  for wireless and HIPPA. <BR>
+  Chris: We need to trace data to a device and to an individual.
+  The system is intended to be highly modular. <BR>
+  Norm: We might want a dual system for quality. <BR>
+  Bob: For any number, you would like redundancy for error correction
+  . <BR>
+  Trun: MAC addresses are getting full, instead use RFID number.
+  128 bytes.
+</UL>
+
+<P>Gerry Werth: Clinical Information System mini-topic.</P>
+
+<UL>
+  <LI>The System is Losing Data.
+  <LI>1978: What does final mean, or RTFM. (read the fine manual)<BR>
+  2005: Coding,
+  <LI>1978: Fungal Infection, Grand Rounds- the lab was unable
+  to grow the organism. Lab: the system is losing data. RFTM: fungal
+  cultures never say 'fuinal' on the printed report. MNediuical
+  RRecords: discard paper if it didn tnot say 'final'.
+  <LI>2005: The system will not alloww the exact diagnosis to be
+  recorded. No codes exist for the final system.
+  <LI>Diagnostis/Code/Classification.<BR>
+  - Diagnosis: free text used by trhe doctor.<BR>
+  - Code: a thinkg substituted for something else.<BR>
+  - Codes are Identifiers<BR>
+  - Classification are Organizers - sets of pigeonholes in which
+  to place other things.
+  <LI>Flaws in Coding/Classification<BR>
+  - Diganostic entity: no way to capture the permanent codes, exact
+  diagnosis which the physician records.<BR>
+  - Classification set: we can't tell what individal codes mean
+  because they contain no identifiers.We must make a single classification,
+  ICD-9-C, serves all purposes.<BR>
+  - One Classification Fits All.<BR>
+  - EMR The electronic medical record typically sacrifices completeness
+  and accuracy for convenience in data input.
+  <LI>Social Informatics:<BR>
+  - Initially, we must do hypothesis generating, then hypothesis
+  proving.<BR>
+  . Therefore, clinical computing and business computing are different
+  subspecialties of computing.
+</UL>
+
+<H3>&nbsp;</H3>
+
+<H3>&nbsp;</H3>
+
+<H3>About This Page</H3>
+
+<P><FONT FACE="Times New Roman">This page is maintained by <A
+HREF="mailto:e.nolley@ieee.org?subject=Phoenix_meeting_2004-06-27">Ellis
+S Nolley</A>. It was last updated on 15 December 2005.</FONT></P>
+
+<P><FONT FACE="Times New Roman">The author(s) provide this information
+as a public service, and agree to place any novel and useful inventions
+disclosed herein into the public domain. They are not aware that
+this material infringes on the patent, copyright, trademark or
+trade secret rights of others. However, there is a possibility
+that such infringement may exist without their knowledge. The
+user assumes all responsibility for determining if this information
+infringes on the intellectual property rights of others before
+applying it to products or services.</FONT></P>
+
+<P><FONT FACE="Times New Roman">Copyright (C) 2005 Ellis S. Nolley.
+Copying and distribution of this page is permitted in any medium,
+provided this notice is preserved.</FONT></P>
+
+<BLOCKQUOTE>
+  <P><CENTER><A HREF="Phoenix_Meeting_Archive.htm"><FONT FACE="Times New Roman">Back
+  to the Meeting Archive Page</FONT></A></CENTER></P></BLOCKQUOTE>
+
+<P><CENTER><A HREF="../../index.htm"><FONT FACE="Times New Roman">Back
+to the Phoenix Home Page</FONT></A><BR>
+</CENTER>
+
+</BODY>
+</HTML>
